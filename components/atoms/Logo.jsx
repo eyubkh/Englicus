@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { BrandPrimary, NeutralLight100, H3 } from '@tokens'
+import { BrandPrimary, NeutralLight100, BodyH3 } from '@tokens'
 
 const LogoComponent = styled.p`
-  ${H3}
+  ${BodyH3}
   text-transform: uppercase;
   color: ${NeutralLight100};
   span {
