@@ -1,4 +1,4 @@
-import { BodyTextRegularBold, Radius0, Spacing0, Spacing3 } from "@token:js";
+import { BodyTextRegularBold, Radius0, Spacing0, Spacing3 } from "@tokens";
 import styled from "styled-components";
 
 // box-shadow: 0px 4px ${(props) => {

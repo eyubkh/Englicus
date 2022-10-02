@@ -1,5 +1,5 @@
 import { Button } from "@components/atoms/Button";
-import {} from "@token:js";
+import {} from "@tokens";
 
 export default function Home() {
   return (
