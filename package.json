@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "standard",
     "sd": "style-dictionary build",
     "storybook": "start-storybook -p 6007",
     "build-storybook": "build-storybook"
@@ -30,11 +30,16 @@
     "@storybook/react": "^6.5.12",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5",
-    "eslint": "8.23.1",
-    "eslint-config-next": "12.3.0",
-    "eslint-plugin-storybook": "^0.6.4",
     "husky": "^8.0.1",
+    "standard": "^17.0.0",
     "style-dictionary": "^3.7.1",
     "webpack": "^5.74.0"
+  },
+  "standard": {
+    "env": [
+       "jest",
+       "es6",
+       "browser"
+    ]
   }
 }
