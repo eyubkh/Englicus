@@ -1,6 +1,5 @@
-import { BodyTextRegularBold, Radius0, Spacing0, Spacing3 } from "@tokens";
-import styled from "styled-components";
-
+import { BodyTextRegularBold, Radius0, Spacing0, Spacing3 } from '@tokens'
+import styled from 'styled-components'
 // box-shadow: 0px 4px ${(props) => {
 //   props.variant = props.variant.toLowerCase();
 //   switch (props.variant) {
@@ -55,7 +54,7 @@ const ButtonComponent = styled.button`
   :hover {
     filter: brightness(110%);
   }
-`;
+`
 export const Button = ({ handler, children }) => {
-  return <ButtonComponent onClick={handler}>{children}</ButtonComponent>;
-};
+  return <ButtonComponent onClick={handler}>{children} </ButtonComponent>
+}

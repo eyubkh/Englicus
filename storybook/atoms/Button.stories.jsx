@@ -1,19 +1,8 @@
-import { Button as Component } from "@component/atoms/Button";
+import { Button as Component } from '@components/atoms/Button'
 
 export default {
-  title: "UI Web/atoms",
-  component: Component,
-  argTypes: {
-    variant: {
-      options: ["Success", "Error", "Transparent", "Default"],
-      control: { type: "radio" },
-    },
-  },
-};
+  title: 'UI Web/atoms',
+  component: Component
+}
 
-export const Button = (args) => <Component {...args}></Component>;
-
-Button.args = {
-  children: "Default",
-  variant: "default",
-};
+export const Button = () => <Component>click here!</Component>

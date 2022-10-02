@@ -1,9 +1,9 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@components/*": ["components/*"],
-      "@tokens": ["tokens/build/js/_variables.js"]
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@components/*": ["components/*"],
+            "@tokens": ["tokens/build/js/_variables.js"]
+        }
     }
-  }
 }
