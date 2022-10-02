@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 17 Sep 2022 18:30:13 GMT
+ * Generated on Sun, 02 Oct 2022 18:15:43 GMT
  */
 
 export const BrandPrimary = '#faee7d'
@@ -27,8 +27,8 @@ export const LineHeights2 = '130%'
 export const LineHeights3 = '150%'
 export const LineHeights4 = '160%'
 export const LineHeights5 = '180%'
-export const FontWeightsRoundedMplus1c0 = 'ExtraBold'
-export const FontWeightsRoundedMplus1c1 = 'Regular'
+export const FontWeightsRoundedMplus1c0 = '800'
+export const FontWeightsRoundedMplus1c1 = '400'
 export const FontSize0 = '12px'
 export const FontSize1 = '17px'
 export const FontSize2 = '28px'
@@ -40,87 +40,14 @@ export const LetterSpacing1 = '-1%'
 export const LetterSpacing2 = '0%'
 export const LetterSpacing3 = '5%'
 export const ParagraphSpacing0 = '0'
-export const H1 = {
-  fontFamily: 'Rounded Mplus 1c',
-  fontWeight: 'ExtraBold',
-  lineHeight: '110%',
-  fontSize: '116px',
-  letterSpacing: '-2%',
-  paragraphSpacing: '0',
-  textCase: 'none',
-  textDecoration: 'none'
-}
-export const H2 = {
-  fontFamily: 'Rounded Mplus 1c',
-  fontWeight: 'ExtraBold',
-  lineHeight: '120%',
-  fontSize: '72px',
-  letterSpacing: '-1%',
-  paragraphSpacing: '0',
-  textCase: 'none',
-  textDecoration: 'none'
-}
-export const H3 = {
-  fontFamily: 'Rounded Mplus 1c',
-  fontWeight: 'ExtraBold',
-  lineHeight: '130%',
-  fontSize: '44px',
-  letterSpacing: '0%',
-  paragraphSpacing: '0',
-  textCase: 'none',
-  textDecoration: 'none'
-}
-export const H4 = {
-  fontFamily: 'Rounded Mplus 1c',
-  fontWeight: 'ExtraBold',
-  lineHeight: '150%',
-  fontSize: '28px',
-  letterSpacing: '0%',
-  paragraphSpacing: '0',
-  textCase: 'none',
-  textDecoration: 'none'
-}
-export const BodyTextRegular = {
-  fontFamily: 'Rounded Mplus 1c',
-  fontWeight: 'Regular',
-  lineHeight: '160%',
-  fontSize: '17px',
-  letterSpacing: '0%',
-  paragraphSpacing: '0',
-  textCase: 'none',
-  textDecoration: 'none'
-}
-export const BodyTextLarge = {
-  fontFamily: 'Rounded Mplus 1c',
-  fontWeight: 'Regular',
-  lineHeight: '150%',
-  fontSize: '28px',
-  letterSpacing: '0%',
-  paragraphSpacing: '0',
-  textCase: 'none',
-  textDecoration: 'none'
-}
-export const BodyTextSmall = {
-  fontFamily: 'Rounded Mplus 1c',
-  fontWeight: 'Regular',
-  lineHeight: '180%',
-  fontSize: '12px',
-  letterSpacing: '0%',
-  paragraphSpacing: '0',
-  textCase: 'none',
-  textDecoration: 'none'
-}
-export const BodyTextRegularBold = {
-  fontFamily: 'Rounded Mplus 1c',
-  fontWeight: 'ExtraBold',
-  lineHeight: '160%',
-  fontSize: '17px',
-  letterSpacing: '5%',
-  paragraphSpacing: '0',
-  textCase: 'none',
-  textDecoration: 'none'
-}
-export const SpacingColor = '#c4c4c4'
+export const BodyH1 = { fontFamily: 'Rounded Mplus 1c', fontWeight: '800', lineHeight: '110%', fontSize: '116px', letterSpacing: '-2%', paragraphSpacing: '0', textCase: 'none', textDecoration: 'none' }
+export const BodyH2 = { fontFamily: 'Rounded Mplus 1c', fontWeight: '800', lineHeight: '120%', fontSize: '72px', letterSpacing: '-1%', paragraphSpacing: '0', textCase: 'none', textDecoration: 'none' }
+export const BodyH3 = { fontFamily: 'Rounded Mplus 1c', fontWeight: '800', lineHeight: '130%', fontSize: '44px', letterSpacing: '0%', paragraphSpacing: '0', textCase: 'none', textDecoration: 'none' }
+export const BodyH4 = { fontFamily: 'Rounded Mplus 1c', fontWeight: '800', lineHeight: '150%', fontSize: '28px', letterSpacing: '0%', paragraphSpacing: '0', textCase: 'none', textDecoration: 'none' }
+export const BodyTextRegular = { fontFamily: 'Rounded Mplus 1c', fontWeight: '400', lineHeight: '160%', fontSize: '17px', letterSpacing: '0%', paragraphSpacing: '0', textCase: 'none', textDecoration: 'none' }
+export const BodyTextLarge = { fontFamily: 'Rounded Mplus 1c', fontWeight: '400', lineHeight: '150%', fontSize: '28px', letterSpacing: '0%', paragraphSpacing: '0', textCase: 'none', textDecoration: 'none' }
+export const BodyTextSmall = { fontFamily: 'Rounded Mplus 1c', fontWeight: '400', lineHeight: '180%', fontSize: '12px', letterSpacing: '0%', paragraphSpacing: '0', textCase: 'none', textDecoration: 'none' }
+export const BodyTextRegularBold = { fontFamily: 'Rounded Mplus 1c', fontWeight: '800', lineHeight: '160%', fontSize: '17px', letterSpacing: '5%', paragraphSpacing: '0', textCase: 'none', textDecoration: 'none' }
 export const TextCaseNone = 'none'
 export const TextDecorationNone = 'none'
 export const Spacing0 = '16px'
