@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "standard",
+    "lint": "standard --fix",
+    "test": "jest",
+    "test:w": "npm run test -- --watch",
     "sd": "style-dictionary build",
     "storybook": "start-storybook -p 6007",
     "build-storybook": "build-storybook"
@@ -29,17 +31,19 @@
     "@storybook/manager-webpack5": "^6.5.12",
     "@storybook/react": "^6.5.12",
     "@storybook/testing-library": "^0.0.13",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
     "babel-loader": "^8.2.5",
     "husky": "^8.0.1",
+    "jest": "^29.1.2",
+    "jest-environment-jsdom": "^29.1.2",
     "standard": "^17.0.0",
     "style-dictionary": "^3.7.1",
     "webpack": "^5.74.0"
   },
   "standard": {
     "env": [
-       "jest",
-       "es6",
-       "browser"
+      "jest"
     ]
   }
 }
