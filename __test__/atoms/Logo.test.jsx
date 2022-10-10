@@ -12,7 +12,7 @@ describe('Logo is rendering', () => {
 })
 
 describe('Logo contain englicus', () => {
-  test('find text eng', () => {
+  test('find text eng or licus', () => {
     expect(screen.getAllByText(/eng|licus/)).toBeDefined()
   })
 })
