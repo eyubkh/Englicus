@@ -12,6 +12,6 @@ const ButtonComponent = styled.button`
     filter: brightness(110%);
   }
 `
-export const Button = ({ handler, children }) => {
-  return <ButtonComponent onClick={handler}>{children} </ButtonComponent>
+export const Button = ({ className, handler, children }) => {
+  return <ButtonComponent className={className} onClick={handler}>{children}</ButtonComponent>
 }
