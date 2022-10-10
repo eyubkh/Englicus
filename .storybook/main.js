@@ -18,6 +18,7 @@ module.exports = {
         // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
         config.resolve.alias = {
             '@components': path.resolve(__dirname, '../components'),
+            '@assets': path.resolve(__dirname, '../src/assets'),
             '@tokens': path.resolve(
                 __dirname,
                 '../tokens/build/js/_variables.js'

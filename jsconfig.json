@@ -3,7 +3,8 @@
         "baseUrl": ".",
         "paths": {
             "@components/*": ["components/*"],
-            "@tokens": ["tokens/build/js/_variables.js"]
+            "@tokens": ["tokens/build/js/_variables.js"],
+            "@assets/*": ["src/assets/*"]
         }
     }
 }
