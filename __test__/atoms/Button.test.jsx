@@ -2,18 +2,21 @@ import { render, screen } from '@testing-library/react'
 import { Button } from '@components/atoms/Button'
 import { BodyTextRegularBold } from '@tokens'
 
+let component
+
 beforeEach(() => {
   render(<Button />)
+  component = screen.getByRole('button')
 })
 describe('Component is rendering', () => {
   test('exist on screen', () => {
-    expect(screen.getByRole('button')).toBeDefined()
+    expect(component).toBeDefined()
   })
 })
 
-describe('Component', () => {
+describe('Component style', () => {
   test('has BodyTextRegularBold style', () => {
-    const style = Object.entries(BodyTextRegularBold)
-    expect(screen.getByRole('button')).toHaveStyle(...style.map(style => `${style[0]}: ${style[1]}`))
+    const stylesBodyTextRegularBold = Object.entries(BodyTextRegularBold).map(style => `${style[0]}: ${style[1]}`)
+    expect(component).toHaveStyle(...stylesBodyTextRegularBold)
   })
 })
