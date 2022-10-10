@@ -10,11 +10,11 @@ const SuccessButtonComponent = styled(Button)`
     transition: box-shadow .1s, margin-top .1s;
 
     :active {
-      margin-top: 4px;
+      margin-top: ${Border0};
       box-shadow: 0px 0px 0px ${ActionSuccess300};
     }
 `
 
 export const SuccessButton = ({ children }) => {
-  return <SuccessButtonComponent>{children}</SuccessButtonComponent>
+  return <SuccessButtonComponent handler>{children}</SuccessButtonComponent>
 }
