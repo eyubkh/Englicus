@@ -1,5 +1,5 @@
 import { GameLayoutCard as Component } from '@components/molecules/GameLayoutCard'
-import Svg from '../../src/artDesign/FillTheGaps.svg'
+import Svg from '@assets/FillTheGaps.svg'
 
 export default {
   title: 'UI Web/molecules',
