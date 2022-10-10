@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 02 Oct 2022 18:15:43 GMT
+ * Generated on Mon, 10 Oct 2022 10:17:46 GMT
  */
 
 :root {
@@ -51,10 +51,13 @@
   --body-text-regular-bold: [object Object];
   --text-case-none: none;
   --text-decoration-none: none;
-  --spacing0: 16px;
-  --spacing1: 24px;
-  --spacing2: 32px;
-  --spacing3: 56px;
-  --spacing4: 96px;
-  --radius0: 8px;
+  --spacing-0: 16px;
+  --spacing-1: 24px;
+  --spacing-2: 32px;
+  --spacing-3: 56px;
+  --spacing-4: 96px;
+  --radius-0: 3px;
+  --radius-1: 6px;
+  --radius-2: 9px;
+  --border-0: 3px;
 }
