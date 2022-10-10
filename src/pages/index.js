@@ -1,12 +1,5 @@
-import { Button } from '@components/atoms/Button'
-import { SuccessButton } from '@components/molecules/SuccessButton'
+import { Home as HomeComponent } from '@components/pages/Home'
 
 export default function Home () {
-  return (
-    <>
-      <h1>Hello world!!!</h1>
-      <Button>click</Button>
-      <SuccessButton>Sampleeee</SuccessButton>
-    </>
-  )
+  return <HomeComponent />
 }
