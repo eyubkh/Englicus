@@ -1,7 +1,8 @@
+import React from 'react'
 import { BodyTextRegularBold, Radius2, Spacing0, Spacing3 } from '@tokens'
 import styled from 'styled-components'
 
-const ButtonComponent = styled.button`
+const ButtonComponent = styled.a`
   ${BodyTextRegularBold}
   border-radius: ${Radius2};
   padding: ${Spacing0} ${Spacing3};
@@ -12,6 +13,15 @@ const ButtonComponent = styled.button`
     filter: brightness(110%);
   }
 `
-export const Button = ({ className, handler, children }) => {
-  return <ButtonComponent className={className} onClick={handler}>{children}</ButtonComponent>
-}
+export const Button = React.forwardRef(({ onClick, href, className, children }, ref) => {
+  return (
+    <ButtonComponent
+      className={className}
+      href={href}
+      ref={ref}
+      onClick={onClick}
+    >
+      {children}
+    </ButtonComponent>
+  )
+})
