@@ -14,6 +14,6 @@ const ErrorButtonComponent = styled(Button)`
     }
 `
 
-export const ErrorButton = ({ children }) => {
-  return <ErrorButtonComponent handler>{children}</ErrorButtonComponent>
+export const ErrorButton = () => {
+  return <ErrorButtonComponent handler>Error</ErrorButtonComponent>
 }

@@ -8,6 +8,6 @@ const SkipButtonComponent = styled(Button)`
     border: ${Border0} solid ${BrandSecondary};
 `
 
-export const SkipButton = ({ children }) => {
-  return <SkipButtonComponent handler>{children}</SkipButtonComponent>
+export const SkipButton = () => {
+  return <SkipButtonComponent handler>Skip</SkipButtonComponent>
 }
