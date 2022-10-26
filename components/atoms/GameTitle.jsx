@@ -6,6 +6,7 @@ const GameTitleComponent = styled.h3`
     display: flex;
     align-items: center;
     text-align: center;
+    white-space: nowrap;
 
     ::before {
       content: '';
@@ -21,7 +22,7 @@ const GameTitleComponent = styled.h3`
     ::after {
       content: '';
       display: block;
-      height: 3px;
+      height: ${Border0};
       width: 100%;
       background-color: ${NeutralGrey100};
 
