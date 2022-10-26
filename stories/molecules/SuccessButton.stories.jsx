@@ -5,4 +5,4 @@ export default {
   component: Component
 }
 
-export const SuccessButton = () => <Component>Success</Component>
+export const SuccessButton = () => <Component />

@@ -5,4 +5,4 @@ export default {
   component: Component
 }
 
-export const CheckButton = () => <Component>Check</Component>
+export const CheckButton = () => <Component />

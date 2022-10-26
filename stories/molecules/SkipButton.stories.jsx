@@ -5,4 +5,4 @@ export default {
   component: Component
 }
 
-export const SkipButton = () => <Component>Skip</Component>
+export const SkipButton = () => <Component />

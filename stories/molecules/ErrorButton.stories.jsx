@@ -5,4 +5,4 @@ export default {
   component: Component
 }
 
-export const ErrorButton = () => <Component>Error</Component>
+export const ErrorButton = () => <Component />
