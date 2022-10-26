@@ -1,8 +1,11 @@
-import { BodyH4, Radius2, Spacing0, Spacing2 } from '@tokens'
+import { BodyH4, NeutralDark300, Radius2, Spacing0, Spacing2 } from '@tokens'
 import styled from 'styled-components'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const GameLayoutCardComponent = styled.div`
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
     text-align: center;
     padding: ${Spacing2};
     
@@ -11,17 +14,20 @@ const GameLayoutCardComponent = styled.div`
         border-radius: ${Radius2};
     }
 
-    h4 {
+    a {
         ${BodyH4}
         margin: 0;
+        color: ${NeutralDark300}
     }
 `
 
-export const GameLayoutCard = ({ src, children }) => {
+export const GameLayoutCard = ({ src, alt, href, children }) => {
   return (
     <GameLayoutCardComponent>
-      <img src={src} width='240' />
-      <h4>{children}</h4>
+      <Image src={src} alt={alt} width='240' height='120' />
+      <Link href={href}>
+        {children}
+      </Link>
     </GameLayoutCardComponent>
   )
 }
