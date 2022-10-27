@@ -1,3 +1,5 @@
+import { FillTheGaps as FillTheGapsPage } from '@components/pages/irregularVerbs/FillTheGaps'
+
 export default function FillTheGaps () {
-  return <h1>Welcome let's play</h1>
+  return <FillTheGapsPage />
 }
