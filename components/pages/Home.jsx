@@ -1,5 +1,5 @@
-import Moon from '@assets/Moon.svg'
-import Stars from '@assets/Stars.svg'
+import Moon from '@public/assets/Moon.svg'
+import Stars from '@public/assets/Stars.svg'
 import { Header } from '@components/molecules/Header'
 import { HeroText } from '@components/molecules/HeroText'
 import { NeutralDark300 } from '@tokens'
