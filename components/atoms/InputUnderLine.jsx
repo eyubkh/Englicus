@@ -13,6 +13,6 @@ const InputComponent = styled.input`
     outline: none;
 `
 
-export const InputUnderLine = ({ handler }) => {
-  return <InputComponent onChange={handler} type='text' placeholder='Text' />
+export const InputUnderLine = ({ handler, value = '', ...args }) => {
+  return <InputComponent onChange={handler} value={value} type='text' placeholder='Text' {...args} />
 }
