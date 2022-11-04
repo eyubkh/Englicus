@@ -33,13 +33,17 @@ export const GameFooterSuccess = () => {
     dispatch({
       type: 'current'
     })
+    dispatch({
+      type: 'textField',
+      payload: ''
+    })
   }
 
   return (
     <GameFooterSuccessComponent>
       <div>
         <CircleCrossIcon />
-        <p>success</p>
+        <h3>Good job!</h3>
       </div>
       <SuccessButton handler={handler} />
     </GameFooterSuccessComponent>

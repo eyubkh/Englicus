@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { ErrorButton } from '@components/molecules/ErrorButton'
 import { ActionError100 } from '@tokens'
 import { useContext } from 'react'
-import { DispatchContext } from 'utils/context'
+import { Context, DispatchContext } from 'utils/context'
 
 const GameFooterErrorComponent = styled.div`
   display: flex;
@@ -24,11 +24,23 @@ const GameFooterErrorComponent = styled.div`
 
 export const GameFooterError = () => {
   const dispatch = useContext(DispatchContext)
+  const state = useContext(Context)
+
+  const currentChallenge = state.api[state.current]
+  const filter = currentChallenge.choises.filter(chose => chose[currentChallenge.target])[0]
+  console.log(filter)
 
   const handler = () => {
     dispatch({
       type: 'isChecking',
       payload: false
+    })
+    dispatch({
+      type: 'current'
+    })
+    dispatch({
+      type: 'textField',
+      payload: ''
     })
   }
 
@@ -36,7 +48,7 @@ export const GameFooterError = () => {
     <GameFooterErrorComponent>
       <div>
         <CircleCrossIcon />
-        <p>error</p>
+        <p>{filter[currentChallenge.target]}</p>
       </div>
       <ErrorButton handler={handler} />
     </GameFooterErrorComponent>
