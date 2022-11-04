@@ -2,6 +2,8 @@ import { CircleCrossIcon } from '@components/molecules/CircleCrossIcon'
 import styled from 'styled-components'
 import { ErrorButton } from '@components/molecules/ErrorButton'
 import { ActionError100 } from '@tokens'
+import { useContext } from 'react'
+import { DispatchContext } from 'utils/context'
 
 const GameFooterErrorComponent = styled.div`
   display: flex;
@@ -21,13 +23,22 @@ const GameFooterErrorComponent = styled.div`
 `
 
 export const GameFooterError = () => {
+  const dispatch = useContext(DispatchContext)
+
+  const handler = () => {
+    dispatch({
+      type: 'isChecking',
+      payload: false
+    })
+  }
+
   return (
     <GameFooterErrorComponent>
       <div>
         <CircleCrossIcon />
         <p>error</p>
       </div>
-      <ErrorButton />
+      <ErrorButton handler={handler} />
     </GameFooterErrorComponent>
   )
 }
