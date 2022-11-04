@@ -55,7 +55,7 @@ export const IrregularVerbsSection = () => {
   }
   return (
     <Grid>
-      <H2>Translate</H2>
+      <H2>{currentChallenge.translation}</H2>
       <Component>
         {
           currentChallenge.choises.map((challeng, index) => {
@@ -65,7 +65,11 @@ export const IrregularVerbsSection = () => {
                 <p>{key}</p>
                 {
                   currentChallenge.target === key
-                    ? <InputUnderLine handler={handler} />
+                    ? <InputUnderLine
+                        value={state.textField}
+                        handler={handler}
+                        disabled={state.isChecking}
+                      />
                     : <H3>{challeng[key]}</H3>
                 }
               </div>

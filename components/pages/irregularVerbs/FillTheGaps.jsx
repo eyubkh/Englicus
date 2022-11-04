@@ -30,9 +30,9 @@ export const FillTheGaps = () => {
       })
   }, [])
 
-  if (state.isLoading) {
-    return <h1>Loading</h1>
-  }
+  if (state.isLoading) return <h1>Loading</h1>
+
+  if (state.current > state.api.length - 1) return <h1>Que quieres mas bro</h1>
 
   return (
     <FillTheGapsComponent>
