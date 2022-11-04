@@ -1,5 +1,7 @@
 import { CrossedProgressBar } from '@components/molecules/CrossedProgressBar'
+import { useContext, useState } from 'react'
 import styled from 'styled-components'
+import { Context } from 'utils/context'
 
 const GameHeaderComponent = styled.div`
   min-height: 20vh;
@@ -9,10 +11,10 @@ const GameHeaderComponent = styled.div`
 
 `
 
-export const GameHeader = ({ progress }) => {
+export const GameHeader = () => {
   return (
     <GameHeaderComponent>
-      <CrossedProgressBar href='/learn' progress={progress} />
+      <CrossedProgressBar href='/learn' progress={0} />
     </GameHeaderComponent>
   )
 }

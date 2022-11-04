@@ -28,41 +28,6 @@ export const IrregurlarVerbs = () => {
         >
           Fill the gaps
         </GameLayoutCard>
-        <GameLayoutCard
-          href='#'
-          src={FillTheGapsSvg}
-          alt='fill the gaps image'
-        >
-          Sample
-        </GameLayoutCard>
-        <GameLayoutCard
-          href='#'
-          src={FillTheGapsSvg}
-          alt='Sample image'
-        >
-          Sample
-        </GameLayoutCard>
-        <GameLayoutCard
-          href='#'
-          src={FillTheGapsSvg}
-          alt='Sample image'
-        >
-          Sample
-        </GameLayoutCard>
-        <GameLayoutCard
-          href='#'
-          src={FillTheGapsSvg}
-          alt='Sample image'
-        >
-          Sample
-        </GameLayoutCard>
-        <GameLayoutCard
-          href='#'
-          src={FillTheGapsSvg}
-          alt='Sample image'
-        >
-          Sample
-        </GameLayoutCard>
       </article>
     </IrregularVerbsSection>
   )
