@@ -1,5 +1,7 @@
 import { InputUnderLine } from '@components/atoms/InputUnderLine'
 import { BodyH2, BodyH3, BrandSecondary, Spacing3, Spacing4 } from '@tokens'
+import { useContext } from 'react'
+import { Context, DispatchContext } from 'utils/context'
 import styled from 'styled-components'
 
 const H2 = styled.h2`
@@ -40,23 +42,36 @@ const Grid = styled.div`
 `
 
 export const IrregularVerbsSection = () => {
+  const state = useContext(Context)
+  const dispatch = useContext(DispatchContext)
+  const currentChallenge = state.api[state.current]
+  const handler = (event) => {
+    let { value } = event.target
+    value = value.toLowerCase()
+    dispatch({
+      type: 'textField',
+      payload: value
+    })
+  }
   return (
     <Grid>
       <H2>Translate</H2>
       <Component>
-        <div>
-          <p>Irregular</p>
-          <H3>Irregular</H3>
-        </div>
-        <div>
-          <p>Past</p>
-          <InputUnderLine />
-        </div>
-        <div>
-          <p>Participle</p>
-          <H3>Particple</H3>
-        </div>
-
+        {
+          currentChallenge.choises.map((challeng, index) => {
+            const key = Object.keys(challeng)[0]
+            return (
+              <div key={index}>
+                <p>{key}</p>
+                {
+                  currentChallenge.target === key
+                    ? <InputUnderLine handler={handler} />
+                    : <H3>{challeng[key]}</H3>
+                }
+              </div>
+            )
+          })
+        }
       </Component>
     </Grid>
   )
