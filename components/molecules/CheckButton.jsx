@@ -15,6 +15,6 @@ const CheckButtonComponent = styled(Button)`
     }
 `
 
-export const CheckButton = () => {
-  return <CheckButtonComponent handler>Check</CheckButtonComponent>
+export const CheckButton = ({ handler }) => {
+  return <CheckButtonComponent onClick={handler}>Check</CheckButtonComponent>
 }
