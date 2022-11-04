@@ -15,5 +15,5 @@ const ErrorButtonComponent = styled(Button)`
 `
 
 export const ErrorButton = ({ handler }) => {
-  return <ErrorButtonComponent onClick={handler}>Error</ErrorButtonComponent>
+  return <ErrorButtonComponent onClick={handler}>Continue</ErrorButtonComponent>
 }

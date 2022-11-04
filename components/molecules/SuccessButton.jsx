@@ -16,5 +16,5 @@ const SuccessButtonComponent = styled(Button)`
 `
 
 export const SuccessButton = ({ handler }) => {
-  return <SuccessButtonComponent onClick={handler}>Success</SuccessButtonComponent>
+  return <SuccessButtonComponent onClick={handler}>Continue</SuccessButtonComponent>
 }
