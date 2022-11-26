@@ -5,7 +5,7 @@
             "@components/*": ["components/*"],
             "@tokens": ["tokens/build/js/_variables.js"],
             "@public/*": ["src/public/*"],
-            "@utils": ["uhirn/*"]
+            "@utils": ["utils/*"]
         }
     }
 }
