@@ -1,17 +1,14 @@
-import { CircleCrossIcon } from '@components/molecules/CircleCrossIcon'
 import styled from 'styled-components'
 import { ActionSuccess100 } from '@tokens'
 import { SuccessButton } from '@components/molecules/SuccessButton'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { DispatchContext } from 'utils/context'
+import { CircleCheckIcon } from '@components/molecules/CircleCheckIcon'
+import { GameFooterNeutralComponent } from './GameFooterNeutral'
 
-const GameFooterSuccessComponent = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 20vh;
+const GameFooterSuccessComponent = styled(GameFooterNeutralComponent)`
   background-color: ${ActionSuccess100};
-  padding: 20px 10%;
+  
   div {
     display: flex;
     align-items: center;
@@ -24,6 +21,12 @@ const GameFooterSuccessComponent = styled.div`
 
 export const GameFooterSuccess = () => {
   const dispatch = useContext(DispatchContext)
+  console.log('hellooo guys')
+  useEffect(() => {
+    dispatch({
+      type: 'progress'
+    })
+  }, [])
 
   const handler = () => {
     dispatch({
@@ -42,7 +45,7 @@ export const GameFooterSuccess = () => {
   return (
     <GameFooterSuccessComponent>
       <div>
-        <CircleCrossIcon />
+        <CircleCheckIcon />
         <h3>Good job!</h3>
       </div>
       <SuccessButton handler={handler} />

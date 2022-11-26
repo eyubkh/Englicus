@@ -4,11 +4,11 @@ import { SkipButton } from '@components/molecules/SkipButton'
 import styled from 'styled-components'
 import { Context, DispatchContext } from 'utils/context'
 
-const GameFooterNeutralComponent = styled.div`
+export const GameFooterNeutralComponent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 20vh;
+  min-height: 23vh;
   padding: 20px 10%;
 `
 
@@ -31,7 +31,7 @@ export const GameFooterNeutral = () => {
   return (
     <GameFooterNeutralComponent>
       <SkipButton />
-      <CheckButton handler={handler} disabled />
+      <CheckButton handler={handler} />
     </GameFooterNeutralComponent>
   )
 }

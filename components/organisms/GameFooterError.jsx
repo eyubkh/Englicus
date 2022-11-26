@@ -4,14 +4,11 @@ import { ErrorButton } from '@components/molecules/ErrorButton'
 import { ActionError100 } from '@tokens'
 import { useContext } from 'react'
 import { Context, DispatchContext } from 'utils/context'
+import { GameFooterNeutralComponent } from './GameFooterNeutral'
 
-const GameFooterErrorComponent = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 20vh;
+const GameFooterErrorComponent = styled(GameFooterNeutralComponent)`
   background-color: ${ActionError100};
-  padding: 20px 10%;
+
   div {
     display: flex;
     align-items: center;
