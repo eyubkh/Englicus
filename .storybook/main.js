@@ -23,6 +23,7 @@ module.exports = {
                 __dirname,
                 '../tokens/build/js/_variables.js'
             ),
+            '@utils': path.resolve(__dirname, '../utils')
         }
 
         return config

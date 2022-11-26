@@ -4,7 +4,8 @@
         "paths": {
             "@components/*": ["components/*"],
             "@tokens": ["tokens/build/js/_variables.js"],
-            "@public/*": ["src/public/*"]
+            "@public/*": ["src/public/*"],
+            "@utils": ["uhirn/*"]
         }
     }
 }
