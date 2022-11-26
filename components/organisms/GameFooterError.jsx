@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { ErrorButton } from '@components/molecules/ErrorButton'
 import { ActionError100 } from '@tokens'
 import { useContext } from 'react'
-import { Context, DispatchContext } from 'utils/context'
+import { Context, DispatchContext } from '@utils/context'
 import { GameFooterNeutralComponent } from './GameFooterNeutral'
 
 const GameFooterErrorComponent = styled(GameFooterNeutralComponent)`
@@ -25,7 +25,6 @@ export const GameFooterError = () => {
 
   const currentChallenge = state.api[state.current]
   const filter = currentChallenge.choises.filter(chose => chose[currentChallenge.target])[0]
-  console.log(filter)
 
   const handler = () => {
     dispatch({

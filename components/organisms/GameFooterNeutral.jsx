@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { CheckButton } from '@components/molecules/CheckButton'
 import { SkipButton } from '@components/molecules/SkipButton'
 import styled from 'styled-components'
-import { Context, DispatchContext } from 'utils/context'
+import { Context, DispatchContext } from '@utils/context'
 
 export const GameFooterNeutralComponent = styled.div`
   display: flex;

@@ -1,7 +1,7 @@
 import { InputUnderLine } from '@components/atoms/InputUnderLine'
 import { BodyH2, BodyH3, BrandSecondary, Spacing3, Spacing4 } from '@tokens'
 import { useContext } from 'react'
-import { Context, DispatchContext } from 'utils/context'
+import { Context, DispatchContext } from '@utils/context'
 import styled from 'styled-components'
 
 const H2 = styled.h2`

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { ActionSuccess100 } from '@tokens'
 import { SuccessButton } from '@components/molecules/SuccessButton'
 import { useContext, useEffect } from 'react'
-import { DispatchContext } from 'utils/context'
+import { DispatchContext } from '@utils/context'
 import { CircleCheckIcon } from '@components/molecules/CircleCheckIcon'
 import { GameFooterNeutralComponent } from './GameFooterNeutral'
 
@@ -21,7 +21,6 @@ const GameFooterSuccessComponent = styled(GameFooterNeutralComponent)`
 
 export const GameFooterSuccess = () => {
   const dispatch = useContext(DispatchContext)
-  console.log('hellooo guys')
   useEffect(() => {
     dispatch({
       type: 'progress'

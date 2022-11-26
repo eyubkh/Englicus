@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { Context } from 'utils/context'
+import { Context } from '@utils/context'
 import { GameFooterError } from './GameFooterError'
 import { GameFooterNeutral } from './GameFooterNeutral'
 import { GameFooterSuccess } from './GameFooterSuccess'
