@@ -13,7 +13,7 @@ export const reducer = (state, action) => {
     case 'progress':
       return {
         ...state,
-        progress: state.progress + 1
+        progress: state.progress + (100 / state.api.length) / 2
       }
     case 'current':
       return {
