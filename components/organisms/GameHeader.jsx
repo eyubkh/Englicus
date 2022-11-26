@@ -1,5 +1,5 @@
 import { CrossedProgressBar } from '@components/molecules/CrossedProgressBar'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import styled from 'styled-components'
 import { Context } from 'utils/context'
 
@@ -12,9 +12,11 @@ const GameHeaderComponent = styled.div`
 `
 
 export const GameHeader = () => {
+  const state = useContext(Context)
+
   return (
     <GameHeaderComponent>
-      <CrossedProgressBar href='/learn' progress={0} />
+      <CrossedProgressBar href='/learn' progress={state.progress} />
     </GameHeaderComponent>
   )
 }
