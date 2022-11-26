@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 import { StartButton } from './StartButton'
-import { BodyH3, NeutralLight100, BrandPrimary } from '@tokens'
+import { BodyH3, NeutralLight100, BrandPrimary, Spacing1 } from '@tokens'
 
 const HeroTextComponent = styled.div`
   display: flex;
   flex-direction: column;
+  gap: ${Spacing1};
   justify-content: center;
   align-items: center;
   max-width: 700px;
