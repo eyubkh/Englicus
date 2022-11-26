@@ -4,6 +4,8 @@ import { IrregularVerbsSection } from '@components/organisms/IrregularVerbsSecti
 import { useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import { Context, DispatchContext } from 'utils/context'
+import { Loading } from '@components/pages/Loading'
+import { EndLevel } from '@components/pages/EndLevel'
 
 const FillTheGapsComponent = styled.main`
   height: 100vh;
@@ -15,7 +17,6 @@ const FillTheGapsComponent = styled.main`
 export const FillTheGaps = () => {
   const dispatch = useContext(DispatchContext)
   const state = useContext(Context)
-
   useEffect(() => {
     window.fetch('/api/game')
       .then(res => res.json())
@@ -30,9 +31,9 @@ export const FillTheGaps = () => {
       })
   }, [])
 
-  if (state.isLoading) return <h1>Loading</h1>
+  if (state.isLoading) return <Loading />
 
-  if (state.current > state.api.length - 1) return <h1>Que quieres mas bro</h1>
+  if (state.current > state.api.length - 1) return <EndLevel />
 
   return (
     <FillTheGapsComponent>
