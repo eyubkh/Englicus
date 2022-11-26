@@ -8,12 +8,15 @@ const ProgressBarComponent = styled.div`
     border-radius: ${Radius2};
     width: 100%;
     overflow: hidden;
+    
+        
     ::after {
         content: '';
         position: absolute;
         left: -1px;
         top: 0;
         height: 20px;
+        transition: width 0.3s;
         width: ${(args) => args.progress + '%'};
         background-color: ${ActionSuccess100};
         animation: width .3s ease-in
