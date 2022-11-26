@@ -1,4 +1,5 @@
 import '../src/styles/globals.css'
+import { ContextProvider } from '@utils/context'
 
 // Nextjs Images can be used
 import * as NextImage from "next/image";
@@ -24,3 +25,11 @@ export const parameters = {
         },
     },
 }
+
+export const decorators = [
+  (Story) => (
+    <ContextProvider >
+      <Story />
+    </ContextProvider>
+  )
+]
