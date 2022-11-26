@@ -8,8 +8,7 @@ const StartButtonComponent = styled(Button)`
   text-align: center;
   border-radius: 100px;
   color: ${NeutralLight100};
-  max-width: 600px;
-  width: 100%;
+  min-width: 400px;
 `
 
 export const StartButton = () => {
