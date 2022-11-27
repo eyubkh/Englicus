@@ -38,6 +38,9 @@ export const GameFooterError = () => {
       type: 'textField',
       payload: ''
     })
+    dispatch({
+      type: 'fail'
+    })
   }
 
   return (

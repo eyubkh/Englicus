@@ -1,5 +1,6 @@
+import { ReloadIcon } from '@components/atoms/ReloadIcon'
 import { ActionError100, ActionSuccess100, BodyH2 } from '@tokens'
-import { Context } from '@utils/context'
+import { Context, DispatchContext } from '@utils/context'
 import { useContext } from 'react'
 import styled from 'styled-components'
 
@@ -15,6 +16,14 @@ const H2Component = styled.h2`
   }
 `
 
+const ButtonComponent = styled.button`
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+`
+
 const ScoreComponent = styled.div`
   display: inline-flex;
   flex-direction: column;
@@ -23,15 +32,26 @@ const ScoreComponent = styled.div`
 `
 
 export const Score = () => {
-  const { fail = 0, api } = useContext(Context)
+  const { fail, api } = useContext(Context)
+  const dispatch = useContext(DispatchContext)
+
+  const handlerReload = (event) => {
+    event.preventDefault()
+    dispatch({
+      type: 'reload'
+    })
+  }
 
   return (
     <ScoreComponent>
       <H2Component>
-        <span className='fail'>{fail}</span> / <span className='total'>{api.length}</span>
+        <span className='fail'>{fail.length}</span> / <span className='total'>{api.length}</span>
       </H2Component>
+
       <p>"feel free to put some text here"</p>
-      <span>reload</span>
+      <ButtonComponent onClick={handlerReload}>
+        <ReloadIcon />
+      </ButtonComponent>
     </ScoreComponent>
   )
 }

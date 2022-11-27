@@ -4,6 +4,7 @@ export const initialState = {
   isChecking: false,
   isLoading: true,
   progress: 0,
+  fail: [],
   api: [],
   textField: ''
 }
@@ -44,6 +45,19 @@ export const reducer = (state, action) => {
       return {
         ...state,
         textField: action.payload
+      }
+    case 'fail':
+      return {
+        ...state,
+        fail: [...state.fail, state.current]
+      }
+    case 'reload':
+      return {
+        ...state,
+        current: 0,
+        fail: [],
+        progress: 0,
+        textField: ''
       }
     default:
       return initialState
