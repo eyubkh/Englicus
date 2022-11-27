@@ -30,7 +30,7 @@ export const GameFooterNeutral = () => {
   }
   return (
     <GameFooterNeutralComponent>
-      <SkipButton />
+      <SkipButton handler={handler} />
       <CheckButton handler={handler} />
     </GameFooterNeutralComponent>
   )
