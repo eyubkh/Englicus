@@ -49,145 +49,21 @@ export default function handler (req, res) {
       target: 'past'
     },
     {
-      translation: 'surgir',
+      translation: 'golpear',
       choises: [
-        {
-          infinitive: 'arise'
-        },
-        {
-          past: 'arose'
-        },
-        {
-          participle: 'arisen'
-        }
+        { infinitive: 'beat' },
+        { past: 'beat' },
+        { participle: 'beaten' }
       ],
       correctIndex: 1,
       target: 'past'
     },
     {
-      translation: 'despertar(se)',
+      translation: 'convertirse en',
       choises: [
-        {
-          infinitive: 'awake'
-        },
-        {
-          past: 'awoke'
-        },
-        {
-          participle: 'awoken'
-        }
-      ],
-      correctIndex: 1,
-      target: 'past'
-    },
-    {
-      translation: 'soportar',
-      choises: [
-        {
-          infinitive: 'bear'
-        },
-        {
-          past: 'bore'
-        },
-        {
-          participle: 'borne'
-        }
-      ],
-      correctIndex: 1,
-      target: 'past'
-    },
-    {
-      translation: 'surgir',
-      choises: [
-        {
-          infinitive: 'arise'
-        },
-        {
-          past: 'arose'
-        },
-        {
-          participle: 'arisen'
-        }
-      ],
-      correctIndex: 1,
-      target: 'past'
-    },
-    {
-      translation: 'despertar(se)',
-      choises: [
-        {
-          infinitive: 'awake'
-        },
-        {
-          past: 'awoke'
-        },
-        {
-          participle: 'awoken'
-        }
-      ],
-      correctIndex: 1,
-      target: 'past'
-    },
-    {
-      translation: 'soportar',
-      choises: [
-        {
-          infinitive: 'bear'
-        },
-        {
-          past: 'bore'
-        },
-        {
-          participle: 'borne'
-        }
-      ],
-      correctIndex: 1,
-      target: 'past'
-    },
-    {
-      translation: 'surgir',
-      choises: [
-        {
-          infinitive: 'arise'
-        },
-        {
-          past: 'arose'
-        },
-        {
-          participle: 'arisen'
-        }
-      ],
-      correctIndex: 1,
-      target: 'past'
-    },
-    {
-      translation: 'despertar(se)',
-      choises: [
-        {
-          infinitive: 'awake'
-        },
-        {
-          past: 'awoke'
-        },
-        {
-          participle: 'awoken'
-        }
-      ],
-      correctIndex: 1,
-      target: 'past'
-    },
-    {
-      translation: 'soportar',
-      choises: [
-        {
-          infinitive: 'bear'
-        },
-        {
-          past: 'bore'
-        },
-        {
-          participle: 'borne'
-        }
+        { infinitive: 'become' },
+        { past: 'became' },
+        { participle: 'become' }
       ],
       correctIndex: 1,
       target: 'past'
