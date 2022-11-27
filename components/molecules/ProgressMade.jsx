@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { CrossedProgressBar } from './CrossedProgressBar'
 
 const ProgressMadeComponent = styled.div`
-    transform: rotate(90deg) translateX(50%);
+    transform: rotate(90deg);
     position: relative;
     width: 550px;
 
@@ -57,7 +57,7 @@ export const ProgressMade = () => {
       <div className='block2' />
       <div className='block3' />
       <div className='block4' />
-      <CrossedProgressBar href='#' progress={30} />
+      <CrossedProgressBar reverse />
     </ProgressMadeComponent>
   )
 }

@@ -4,8 +4,9 @@ import styled from 'styled-components'
 const ProgressBarComponent = styled.div`
     position: relative;
     background-color: ${NeutralLight300};
-    height: 20px;
+    height: 15px;
     border-radius: ${Radius2};
+    max-width: 800px;
     width: 100%;
     overflow: hidden;
     
@@ -13,9 +14,9 @@ const ProgressBarComponent = styled.div`
     ::after {
         content: '';
         position: absolute;
-        left: -1px;
+        ${(args) => args.reverse ? 'right' : 'left'}: -1px;
         top: 0;
-        height: 20px;
+        height: 15px;
         transition: width 0.3s;
         width: ${(args) => args.progress + '%'};
         background-color: ${ActionSuccess100};
@@ -24,6 +25,6 @@ const ProgressBarComponent = styled.div`
     }
 `
 
-export const ProgressBar = ({ progress }) => {
-  return <ProgressBarComponent progress={progress} />
+export const ProgressBar = ({ progress, ...args }) => {
+  return <ProgressBarComponent progress={progress} {...args} />
 }
