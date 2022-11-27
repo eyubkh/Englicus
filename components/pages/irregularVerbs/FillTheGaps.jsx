@@ -1,7 +1,7 @@
 import { GameFooter } from '@components/organisms/GameFooter'
 import { GameHeader } from '@components/organisms/GameHeader'
 import { IrregularVerbsSection } from '@components/organisms/IrregularVerbsSection'
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { Context, DispatchContext } from '@utils/context'
 import { Loading } from '@components/pages/Loading'
@@ -17,8 +17,11 @@ const FillTheGapsComponent = styled.main`
 export const FillTheGaps = () => {
   const dispatch = useContext(DispatchContext)
   const state = useContext(Context)
+  const fetching = useRef(false)
 
   useEffect(() => {
+    if (fetching.current === true) return
+    fetching.current = true
     window.fetch('/api/game')
       .then(res => res.json())
       .then(data => {
