@@ -5,7 +5,7 @@ import { useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import { Context, DispatchContext } from '@utils/context'
 import { Loading } from '@components/pages/Loading'
-import { EndLevel } from '@components/pages/EndLevel'
+import { EndLevel } from '@components/organisms/EndLevel'
 
 const FillTheGapsComponent = styled.main`
   height: 100vh;
