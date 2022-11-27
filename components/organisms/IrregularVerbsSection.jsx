@@ -19,9 +19,9 @@ const H3 = styled.h3`
 `
 
 const Component = styled.div`
-  
   display: flex;
   gap: ${Spacing4};
+
   div {
     text-align: center;
   }
@@ -39,6 +39,8 @@ const Grid = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100%;
 `
 
 export const IrregularVerbsSection = () => {
