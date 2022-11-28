@@ -45,7 +45,7 @@ export const GameFooterSuccess = () => {
     <GameFooterSuccessComponent>
       <div>
         <CircleCheckIcon />
-        <h3>Good job!</h3>
+        <h3>¡Correcto!</h3>
       </div>
       <SuccessButton handler={handler} />
     </GameFooterSuccessComponent>
