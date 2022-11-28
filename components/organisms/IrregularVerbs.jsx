@@ -2,8 +2,9 @@ import { GameTitle } from '@components/atoms/GameTitle'
 import { GameLayoutCard } from '@components/molecules/GameLayoutCard'
 import styled from 'styled-components'
 import FillTheGapsSvg from '@public/assets/FillTheGaps.svg'
+import Sample from '@public/assets/sample.svg'
 
-const IrregularVerbsSection = styled.section`
+const IrregularVerbsComponent = styled.section`
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -18,8 +19,8 @@ const IrregularVerbsSection = styled.section`
 
 export const IrregurlarVerbs = () => {
   return (
-    <IrregularVerbsSection>
-      <GameTitle>IrregularVerbs</GameTitle>
+    <IrregularVerbsComponent>
+      <GameTitle>Irregular Verbs</GameTitle>
       <article>
         <GameLayoutCard
           href='/irregularVerbs/FillTheGaps'
@@ -28,7 +29,15 @@ export const IrregurlarVerbs = () => {
         >
           Fill the gaps
         </GameLayoutCard>
+
+        <GameLayoutCard
+          href='/irregularVerbs/FindTheWords'
+          src={Sample}
+          alt='find the words image'
+        >
+          Find the words
+        </GameLayoutCard>
       </article>
-    </IrregularVerbsSection>
+    </IrregularVerbsComponent>
   )
 }
