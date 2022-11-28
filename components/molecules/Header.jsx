@@ -10,7 +10,7 @@ const HeaderComponent = styled.header`
   display: flex;
   align-items: center;
   background-color: ${NeutralDark300};
-  padding-left: 10%;
+  padding: 20px 15%;
 `
 
 export const Header = () => {

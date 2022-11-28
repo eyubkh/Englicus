@@ -24,7 +24,8 @@ const MainComponent = styled.main`
   background-image: url(${Stars.src});
   background-size: 80%;
   background-position: center;
-  padding: 0px 30px;
+  display: flex;
+  justify-content: center;
 
   width: 100vw;
   height: 100vh;

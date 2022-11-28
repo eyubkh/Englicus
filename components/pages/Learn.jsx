@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { IrregurlarVerbs } from '@components/organisms/IrregularVerbs'
 
 const MainComponent = styled.main`
-  margin-top: 50px;
+  margin-top: 90px;
   padding: 0px 10%;
 `
 
