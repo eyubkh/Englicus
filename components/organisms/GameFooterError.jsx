@@ -1,7 +1,7 @@
 import { CircleCrossIcon } from '@components/molecules/CircleCrossIcon'
 import styled from 'styled-components'
 import { ErrorButton } from '@components/molecules/ErrorButton'
-import { ActionError100 } from '@tokens'
+import { ActionError100, NeutralLight100 } from '@tokens'
 import { useContext } from 'react'
 import { Context, DispatchContext } from '@utils/context'
 import { GameFooterNeutralComponent } from './GameFooterNeutral'
@@ -13,8 +13,11 @@ const GameFooterErrorComponent = styled(GameFooterNeutralComponent)`
     display: flex;
     align-items: center;
     gap: 20px;
+    section {
+      display: block;
+    }
     p {
-      color: white;
+      color: ${NeutralLight100};
     }
   }
 `
@@ -47,7 +50,10 @@ export const GameFooterError = () => {
     <GameFooterErrorComponent>
       <div>
         <CircleCrossIcon />
-        <p>{filter[currentChallenge.target]}</p>
+        <section>
+          <h2>Solucion correcta:</h2>
+          <p>{filter[currentChallenge.target]}</p>
+        </section>
       </div>
       <ErrorButton handler={handler} />
     </GameFooterErrorComponent>

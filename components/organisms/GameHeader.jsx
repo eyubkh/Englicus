@@ -2,9 +2,9 @@ import { CrossedProgressBar } from '@components/molecules/CrossedProgressBar'
 import styled from 'styled-components'
 
 const GameHeaderComponent = styled.div`
-  min-height: 20vh;
+  display: flex;
   padding: 20px 10%;
-  display: block;
+  min-height: 20vh;
   width: 100%;
 
 `
