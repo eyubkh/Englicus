@@ -1,14 +1,18 @@
 import styled from 'styled-components'
 import { CheckIcon } from '@components/atoms/CheckIcon'
-import { NeutralLight100 } from '@tokens'
+import { ActionSuccess200, NeutralLight100 } from '@tokens'
 
 const CircleSuccesIconComponent = styled.div`
     display: grid;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
     place-content: center;
     background-color: ${NeutralLight100};
+
+    svg {
+      fill: ${ActionSuccess200};
+    }
 `
 
 export const CircleCheckIcon = () => {
