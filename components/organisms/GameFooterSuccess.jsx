@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import { ActionSuccess100 } from '@tokens'
-import { SuccessButton } from '@components/molecules/SuccessButton'
 import { useContext, useEffect } from 'react'
 import { DispatchContext } from '@utils/context'
 import { CircleCheckIcon } from '@components/molecules/CircleCheckIcon'
 import { GameFooterNeutralComponent } from './GameFooterNeutral'
+import { GreenButton } from '@components/molecules/GreenButton'
 
 const GameFooterSuccessComponent = styled(GameFooterNeutralComponent)`
   background-color: ${ActionSuccess100};
@@ -47,7 +47,9 @@ export const GameFooterSuccess = () => {
         <CircleCheckIcon />
         <h3>¡Correcto!</h3>
       </div>
-      <SuccessButton handler={handler} />
+      <GreenButton handler={handler}>
+        Continue
+      </GreenButton>
     </GameFooterSuccessComponent>
   )
 }
