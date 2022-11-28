@@ -1,4 +1,4 @@
-export const handlerEnterPress = (event) => {
+const handler = (event) => {
   if (event.key === 'Enter') {
     const button = window.document.getElementById('button')
     if (!button) return
@@ -14,9 +14,15 @@ export const handlerEnterPress = (event) => {
   }
 }
 
-function enterEventListener () {
-  console.log('event enter listening...')
-  document.addEventListener('keypress', handlerEnterPress, true)
+function handlerCleanUp () {
+  document.removeEventListener('keypress', handler, true)
 }
 
-export default enterEventListener
+function handlerEnterPress () {
+  document.addEventListener('keypress', handler, true)
+}
+
+export {
+  handlerCleanUp,
+  handlerEnterPress
+}

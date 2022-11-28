@@ -6,6 +6,8 @@ import styled from 'styled-components'
 import { Context, DispatchContext } from '@utils/context'
 import { Loading } from '@components/pages/Loading'
 import { EndLevel } from '@components/organisms/EndLevel'
+import dataFetching from '@utils/dataFetching'
+import { handlerCleanUp, handlerEnterPress } from '@utils/handlerEventListener'
 
 const FillTheGapsComponent = styled.main`
   height: 100vh;
@@ -20,10 +22,12 @@ export const FillTheGaps = () => {
   const fetching = useRef(false)
 
   useEffect(() => {
-    if (fetching.current === true) return
+    if (fetching.current === true) return handlerCleanUp
     fetching.current = true
-    window.fetch('/api/game')
-      .then(res => res.json())
+
+    handlerEnterPress()
+
+    dataFetching('/api/game')
       .then(data => {
         dispatch({
           type: 'api',
