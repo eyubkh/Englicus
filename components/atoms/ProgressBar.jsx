@@ -1,4 +1,4 @@
-import { ActionSuccess100, NeutralLight300, Radius2 } from '@tokens'
+import { ActionSuccess100, ActionSuccess200, NeutralLight300, Radius2 } from '@tokens'
 import styled from 'styled-components'
 
 const ProgressBarComponent = styled.div`
@@ -17,6 +17,11 @@ const ProgressBarComponent = styled.div`
         ${(args) => args.reverse ? 'right' : 'left'}: -1px;
         top: 0;
         height: 15px;
+        border-radius: 8px;
+        box-shadow: 
+          inset 10px -6px ${ActionSuccess200}, 
+          inset 10px 4px ${ActionSuccess200}, 
+          inset -8px 0px ${ActionSuccess200};
         transition: width 0.3s;
         width: ${(args) => args.progress + '%'};
         background-color: ${ActionSuccess100};
