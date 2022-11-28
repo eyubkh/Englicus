@@ -16,6 +16,7 @@ const ButtonComponent = styled.a`
 export const Button = React.forwardRef(({ onClick, href, className, children }, ref) => {
   return (
     <ButtonComponent
+      id='button'
       className={className}
       href={href}
       ref={ref}
