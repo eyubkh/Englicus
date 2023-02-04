@@ -1,14 +1,12 @@
-# Welcome to Englicus
+<div id="desc">
+  <h1>Englicus</h1>
+  <p><a href="https://englicus.vercel.app/">Englicus</a>  is an interactive platform designed to help users learn and improve their English language skills. Through the use of engaging and educational games, Englicus provides a fun and effective way for individuals to practice their English language abilities. The website currently features a game called "Fill the Gaps", which challenges players to fill in the past tense form of a verb given the infinitive and participle. This game helps users improve their understanding of verb conjugation and expand their vocabulary. Whether you are a beginner learner or an advanced student.</p>
+  <iframe src="https://drive.google.com/file/d/1hAg_pHa0AIv66NSrNdVZQiveTJaxWrNM/preview" width="640" height="480" allow="autoplay" alt="Browsing the Englicus website using a GIF" ></iframe>
+</div>
 
-## What's Englicus?
+## Why am I doing this project?
 
-[Englicus](https://englicus.vercel.app/) is a website for learn engilsh throw mini-game and improv the language in a funny way.
-
-
-
-## Why the project?
-
-I'm learning english and also learning how to code. It isn't a easy path... then I realise that How can I make my engilsh learing more easy through my basics code skills? and also how to improve my code skills and put on practis what I'm learning.
+I am currently learning English and coding, but the journey isn't easy. I am thinking of ways to make English learning easier through my coding skills. Additionally, I aim to enhance my coding skills by putting what I learn into practice.
 
 ## Technology idea
 
@@ -24,7 +22,6 @@ I'm learning english and also learning how to code. It isn't a easy path... then
 -   Jest
 -   Styled Component
 -   Next
--   Turborepo
 -   Node
 -   Figma
 
