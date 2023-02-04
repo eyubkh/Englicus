@@ -1,9 +1,11 @@
 <div id="desc">
   <h1>Englicus</h1>
   <p><a href="https://englicus.vercel.app/" target="_blank">Englicus</a>  is an interactive platform designed to help users learn and improve their English language skills. Through the use of engaging and educational games, Englicus provides a fun and effective way for individuals to practice their English language abilities. The website currently features a game called "Fill the Gaps", which challenges players to fill in the past tense form of a verb given the infinitive and participle. This game helps users improve their understanding of verb conjugation and expand their vocabulary. Whether you are a beginner learner or an advanced student.</p>
-  <a href="https://youtu.be/YT3fT6dRCP0">
-    <image src="https://user-images.githubusercontent.com/66533853/216763659-97111abb-0ec2-4a06-b6b6-5bef7fa093c5.gif" alt="Browsing the Englicus website using a GIF"/>
-  </a>
+
+  <figure>  
+      <image src="https://user-images.githubusercontent.com/66533853/216763659-97111abb-0ec2-4a06-b6b6-5bef7fa093c5.gif" alt="Browsing the Englicus website using a GIF"/></br>
+      <figcaption>NextJS | React | StoryBook | Jest </figcaption>
+  </figure>
   
   <ul>
     <li>
@@ -46,7 +48,7 @@ I am currently learning English and coding, but the journey isn't easy. I am thi
 -   Style Dictionary
 -   Jest
 -   Styled Component
--   Next
+-   NextJS
 -   Node
 -   Figma
 
