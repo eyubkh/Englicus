@@ -4,7 +4,7 @@ import { useContext, useEffect } from 'react'
 import { DispatchContext } from '@utils/context'
 import { CircleCheckIcon } from '@components/molecules/CircleCheckIcon'
 import { GameFooterNeutralComponent } from './GameFooterNeutral'
-import { GreenButton } from '@components/molecules/GreenButton'
+import { GreenButton } from '@components/molecules/buttons/GreenButton'
 
 const GameFooterSuccessComponent = styled(GameFooterNeutralComponent)`
   background-color: ${ActionSuccess100};

@@ -1,6 +1,6 @@
 import { useContext } from 'react'
-import { GreenButton } from '@components/molecules/GreenButton'
-import { BorderButton } from '@components/molecules/BorderButton'
+import { GreenButton } from '@components/molecules/buttons/GreenButton'
+import { TransparentButton } from '@components/molecules/buttons/TransparentButton'
 import styled from 'styled-components'
 import { Context, DispatchContext } from '@utils/context'
 
@@ -30,9 +30,9 @@ export const GameFooterNeutral = () => {
   }
   return (
     <GameFooterNeutralComponent>
-      <BorderButton handler={handler}>
+      <TransparentButton handler={handler}>
         Skip
-      </BorderButton>
+      </TransparentButton>
       <GreenButton handler={handler}>
         Check
       </GreenButton>

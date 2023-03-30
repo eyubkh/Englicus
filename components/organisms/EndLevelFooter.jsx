@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { GreenButton } from '@components/molecules/GreenButton'
-import { BorderButton } from '@components/molecules/BorderButton'
+import { BorderButton } from '@components/molecules/buttons/TransparentButton'
 import { BrandSecondary } from '@tokens'
 
 const EndLevelFooterComponent = styled.div`
