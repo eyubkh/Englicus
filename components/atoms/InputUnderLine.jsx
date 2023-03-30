@@ -1,4 +1,4 @@
-import { BodyH3, Border0, BrandSecondary, Spacing0, Spacing1 } from '@tokens'
+import { BodyH3, BodyH4, Border0, BrandSecondary, DimensionSmall, Spacing0, Spacing1 } from '@tokens'
 import styled from 'styled-components'
 
 const InputComponent = styled.input`
@@ -11,6 +11,10 @@ const InputComponent = styled.input`
     padding: ${Spacing0} ${Spacing1};
     max-width: 300px;
     outline: none;
+
+    @media (max-width: ${DimensionSmall}) {
+        ${BodyH4}
+    }
 `
 
 export const InputUnderLine = ({ handler, value = '', ...args }) => {

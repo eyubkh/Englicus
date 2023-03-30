@@ -1,5 +1,5 @@
 import { InputUnderLine } from '@components/atoms/InputUnderLine'
-import { BodyH2, BodyH3, BrandSecondary, Spacing3, Spacing4 } from '@tokens'
+import { BodyH2, BodyH3, BodyH4, BrandSecondary, DimensionSmall, Spacing3, Spacing4 } from '@tokens'
 import { useContext } from 'react'
 import { Context, DispatchContext } from '@utils/context'
 import styled from 'styled-components'
@@ -10,11 +10,19 @@ const H2 = styled.h2`
   margin-top: 0;
   margin-bottom: ${Spacing3};
   color: ${BrandSecondary};
+
+  @media (max-width: ${DimensionSmall}) {
+        ${BodyH3}
+    }
 `
 
 const H3 = styled.h3`
   ${BodyH3}
   margin: 0;
+
+  @media (max-width: ${DimensionSmall}) {
+      ${BodyH4}
+    }
   
 `
 
@@ -33,6 +41,11 @@ const Component = styled.div`
     padding-bottom: 19px;
     height: auto;
   }
+
+  @media (max-width: ${DimensionSmall}) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 `
 
 const Grid = styled.div`
@@ -41,6 +54,7 @@ const Grid = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
+  overflow-y: scroll;
 `
 
 export const IrregularVerbsSection = () => {

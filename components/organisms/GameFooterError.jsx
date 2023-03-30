@@ -20,6 +20,12 @@ const GameFooterErrorComponent = styled(GameFooterNeutralComponent)`
       color: ${NeutralLight100};
     }
   }
+
+  @media (max-width: 500px) {
+        div {
+          opacity: 0;
+        }
+    }
 `
 
 export const GameFooterError = () => {
@@ -51,7 +57,7 @@ export const GameFooterError = () => {
       <div>
         <CircleCrossIcon />
         <section>
-          <h2>Solucion correcta:</h2>
+          <h2>Good solution:</h2>
           <p>{filter[currentChallenge.target]}</p>
         </section>
       </div>

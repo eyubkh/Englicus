@@ -17,6 +17,12 @@ const GameFooterSuccessComponent = styled(GameFooterNeutralComponent)`
       color: #333;
     }
   }
+
+  @media (max-width: 500px) {
+      div {
+        opacity: 0;
+      }
+    }
 `
 
 export const GameFooterSuccess = () => {
@@ -45,7 +51,7 @@ export const GameFooterSuccess = () => {
     <GameFooterSuccessComponent>
       <div>
         <CircleCheckIcon />
-        <h3>¡Correcto!</h3>
+        <h3>!Well done!</h3>
       </div>
       <GreenButton onClick={handler}>
         Continue

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { CheckIcon } from '@components/atoms/CheckIcon'
-import { ActionSuccess200, NeutralLight100 } from '@tokens'
+import { ActionSuccess200, DimensionSmall, NeutralLight100 } from '@tokens'
 
 const CircleSuccesIconComponent = styled.div`
     display: grid;
@@ -12,6 +12,10 @@ const CircleSuccesIconComponent = styled.div`
 
     svg {
       fill: ${ActionSuccess200};
+    }
+
+    @media (max-width: ${DimensionSmall}) {
+        display: none !important;
     }
 `
 

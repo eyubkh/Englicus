@@ -3,6 +3,7 @@ import { GreenButton } from '@components/molecules/buttons/GreenButton'
 import { TransparentButton } from '@components/molecules/buttons/TransparentButton'
 import styled from 'styled-components'
 import { Context, DispatchContext } from '@utils/context'
+import { DimensionSmall } from '@tokens'
 
 export const GameFooterNeutralComponent = styled.div`
   display: flex;
@@ -10,6 +11,12 @@ export const GameFooterNeutralComponent = styled.div`
   justify-content: space-between;
   min-height: 23vh;
   padding: 20px 20%;
+
+  @media (max-width: ${DimensionSmall}) {
+      a:first-child {
+        opacity: 0;
+      }
+    }
 `
 
 export const GameFooterNeutral = () => {
