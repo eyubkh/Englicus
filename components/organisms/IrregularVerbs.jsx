@@ -2,7 +2,7 @@ import { GameTitle } from '@components/atoms/GameTitle'
 import { GameLayoutCard } from '@components/molecules/GameLayoutCard'
 import styled from 'styled-components'
 import FillTheGapsSvg from '@public/assets/FillTheGaps.svg'
-import Sample from '@public/assets/sample.svg'
+import Sample from '@public/assets/Sample.svg'
 
 const IrregularVerbsComponent = styled.section`
   max-width: 1200px;
