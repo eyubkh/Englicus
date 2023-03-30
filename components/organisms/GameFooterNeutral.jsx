@@ -33,7 +33,7 @@ export const GameFooterNeutral = () => {
       <TransparentButton handler={handler}>
         Skip
       </TransparentButton>
-      <GreenButton handler={handler}>
+      <GreenButton onClick={handler}>
         Check
       </GreenButton>
     </GameFooterNeutralComponent>

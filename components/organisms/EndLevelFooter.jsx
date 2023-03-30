@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { GreenButton } from '@components/molecules/GreenButton'
+import { GreenButton } from '@components/molecules/buttons/GreenButton'
 import { BorderButton } from '@components/molecules/buttons/TransparentButton'
 import { BrandSecondary } from '@tokens'
 

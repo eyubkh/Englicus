@@ -3,11 +3,13 @@ import { Button } from '@components/atoms/Button'
 import { Border0, BrandSecondary } from '@tokens'
 
 const TransparentButtonComponent = styled(Button)`
-    background-color: transparent;
-    color: ${BrandSecondary};
-    border: ${Border0} solid ${BrandSecondary};
+  text-align: center;
+  width: ${({ large }) => large ? '350px' : 'auto'};
+  background-color: transparent;
+  color: ${BrandSecondary};
+  border: ${Border0} solid ${BrandSecondary};
 `
 
-export const TransparentButton = ({ handler, children }) => {
-  return <TransparentButtonComponent onClick={handler}>{children}</TransparentButtonComponent>
+export const TransparentButton = ({ handler, children, ...props }) => {
+  return <TransparentButtonComponent onClick={handler} {...props}>{children}</TransparentButtonComponent>
 }

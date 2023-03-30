@@ -11,8 +11,10 @@ const IrregularVerbsComponent = styled.section`
 
   article {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
   }
 
 `
@@ -29,13 +31,19 @@ export const IrregurlarVerbs = () => {
         >
           Fill the gaps
         </GameLayoutCard>
-
         <GameLayoutCard
-          href='/irregularVerbs/FindTheWords'
+          href='#'
           src={Sample}
-          alt='find the words image'
+          alt='sample text'
         >
-          Find the words
+          Sample text
+        </GameLayoutCard>
+        <GameLayoutCard
+          href='#'
+          src={Sample}
+          alt='sample text'
+        >
+          Sample text
         </GameLayoutCard>
       </article>
     </IrregularVerbsComponent>

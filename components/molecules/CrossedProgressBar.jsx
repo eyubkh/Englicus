@@ -19,7 +19,7 @@ export const CrossedProgressBar = ({ progress, href, ...args }) => {
 
   return (
     <CrossedProgressBarComponent>
-      <Link href='/learn' passHref legacyBehavior>
+      <Link href='/grammar' passHref legacyBehavior>
         <a>
           <CrossIcon />
         </a>

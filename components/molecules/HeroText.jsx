@@ -1,6 +1,10 @@
 import styled from 'styled-components'
-import { StartButton } from './StartButton'
-import { BodyH3, NeutralLight100, BrandPrimary, Spacing1 } from '@tokens'
+import { NeutralLight100, BrandPrimary, Spacing1, BodyH4 } from '@tokens'
+
+import { GreenButton } from './buttons/GreenButton'
+import { TransparentButton } from './buttons/TransparentButton'
+import Link from 'next/link'
+import { grammarHref } from '@utils/globalData'
 
 const HeroTextComponent = styled.div`
   display: flex;
@@ -8,15 +12,14 @@ const HeroTextComponent = styled.div`
   gap: ${Spacing1};
   justify-content: center;
   align-items: center;
-  max-width: 700px;
 
-  h3 {
+  h4 {
     text-align: center;
-      ${BodyH3}
+      ${BodyH4}
       color: ${NeutralLight100};
   }
 
-  h3 span {
+  h4 span {
       color: ${BrandPrimary}
   }
 `
@@ -24,8 +27,12 @@ const HeroTextComponent = styled.div`
 export const HeroText = () => {
   return (
     <HeroTextComponent>
-      <h3>¡Improve your english with <span>eng</span>licus gradually!</h3>
-      <StartButton>Start</StartButton>
+      <h4>¡Improve your english with <br /> <span>eng</span>licus gradually!</h4>
+      <Link href={grammarHref} passHref legacyBehavior>
+        <GreenButton large>Start</GreenButton>
+      </Link>
+      <TransparentButton large>Login</TransparentButton>
+
     </HeroTextComponent>
   )
 }

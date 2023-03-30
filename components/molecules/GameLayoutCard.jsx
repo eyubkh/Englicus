@@ -27,7 +27,6 @@ export const GameLayoutCard = ({ src, alt, href, children }) => {
     <Link href={href}>
       <GameLayoutCardComponent>
         <Image src={src} alt={alt} width='240' height='120' />
-
         <p>{children}</p>
       </GameLayoutCardComponent>
     </Link>
