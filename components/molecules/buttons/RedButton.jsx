@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Button } from '@components/atoms/Button'
 import { ActionError200, ActionError300, Border0, NeutralLight100 } from '@tokens'
 
-const ErrorButtonComponent = styled(Button)`
+const RedButtonComponent = styled(Button)`
     background-color: ${ActionError200};
     color: ${NeutralLight100};
     box-shadow: 0px ${Border0} 0px ${ActionError300};
@@ -14,6 +14,6 @@ const ErrorButtonComponent = styled(Button)`
     }
 `
 
-export const ErrorButton = ({ handler }) => {
-  return <ErrorButtonComponent onClick={handler}>Continue</ErrorButtonComponent>
+export const RedButton = ({ handler }) => {
+  return <RedButtonComponent onClick={handler}>Continue</RedButtonComponent>
 }
