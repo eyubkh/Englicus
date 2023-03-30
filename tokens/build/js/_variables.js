@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 10 Oct 2022 10:17:46 GMT
+ * Generated on Thu, 30 Mar 2023 09:04:57 GMT
  */
 
 export const BrandPrimary = '#faee7d'
@@ -50,12 +50,16 @@ export const BodyTextSmall = { fontFamily: 'Rounded Mplus 1c', fontWeight: '400'
 export const BodyTextRegularBold = { fontFamily: 'Rounded Mplus 1c', fontWeight: '800', lineHeight: '160%', fontSize: '17px', letterSpacing: '5%', paragraphSpacing: '0', textCase: 'none', textDecoration: 'none' }
 export const TextCaseNone = 'none'
 export const TextDecorationNone = 'none'
-export const Spacing0 = '16px'
-export const Spacing1 = '24px'
-export const Spacing2 = '32px'
-export const Spacing3 = '56px'
-export const Spacing4 = '96px'
+export const Spacing0 = '8px'
+export const Spacing1 = '16px'
+export const Spacing2 = '24px'
+export const Spacing3 = '32px'
+export const Spacing4 = '56px'
+export const Spacing5 = '96px'
 export const Radius0 = '3px'
 export const Radius1 = '6px'
 export const Radius2 = '9px'
 export const Border0 = '3px'
+export const Border1 = '6px'
+export const Border2 = '9px'
+export const DimensionSmall = '1000px'
