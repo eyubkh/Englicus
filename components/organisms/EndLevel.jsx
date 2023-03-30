@@ -24,7 +24,7 @@ export const EndLevel = () => {
     <EndLevelComponent>
       <section>
         <div>
-          <Link href='/learn' passHref legacyBehavior>
+          <Link href='/grammar' passHref legacyBehavior>
             <a>
               <CrossIcon />
             </a>

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { GreenButton } from '@components/molecules/buttons/GreenButton'
-import { BorderButton } from '@components/molecules/buttons/TransparentButton'
+import { TransparentButton } from '@components/molecules/buttons/TransparentButton'
 import { BrandSecondary } from '@tokens'
 
 const EndLevelFooterComponent = styled.div`
@@ -16,9 +16,9 @@ const EndLevelFooterComponent = styled.div`
 export const EndLevelFooter = () => {
   return (
     <EndLevelFooterComponent>
-      <BorderButton>
+      <TransparentButton>
         try again
-      </BorderButton>
+      </TransparentButton>
       <GreenButton>
         Continue
       </GreenButton>
