@@ -1,8 +1,8 @@
-import { BodyH3, Border0, NeutralGrey100, Radius0, Spacing2 } from '@tokens'
+import { BodyH4, Border0, NeutralGrey100, Radius0, Spacing2 } from '@tokens'
 import styled from 'styled-components'
 
-const GameTitleComponent = styled.h3`
-    ${BodyH3}
+const GameTitleComponent = styled.h4`
+    ${BodyH4}
     display: flex;
     align-items: center;
     text-align: center;
