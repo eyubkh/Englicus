@@ -12,7 +12,7 @@ const GameHeaderComponent = styled.div`
 export const GameHeader = () => {
   return (
     <GameHeaderComponent>
-      <CrossedProgressBar />
+      <CrossedProgressBar progress={0} />
     </GameHeaderComponent>
   )
 }
