@@ -20,12 +20,6 @@ const GameFooterErrorComponent = styled(GameFooterNeutralComponent)`
       color: ${NeutralLight100};
     }
   }
-
-  @media (max-width: 500px) {
-        div {
-          opacity: 0;
-        }
-    }
 `
 
 export const GameFooterError = () => {
