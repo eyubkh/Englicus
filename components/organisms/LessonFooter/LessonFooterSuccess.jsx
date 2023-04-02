@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import { ActionSuccess100 } from '@tokens'
-import { useContext, useEffect } from 'react'
-import { DispatchContext } from '@utils/context'
+import { useContext } from 'react'
 import { CircleCheckIcon } from '@components/molecules/CircleCheckIcon'
-import { GameFooterNeutralComponent } from './LessonFooterNeutral'
+import { LessonFooterNeutralComponent } from './LessonFooterNeutral'
 import { GreenButton } from '@components/molecules/buttons/GreenButton'
+import { LessonDispatch } from '@redux/LessonContext'
 
-const GameFooterSuccessComponent = styled(GameFooterNeutralComponent)`
+const LessonFooterSuccessComponent = styled(LessonFooterNeutralComponent)`
   background-color: ${ActionSuccess100};
   
   div {
@@ -17,38 +17,19 @@ const GameFooterSuccessComponent = styled(GameFooterNeutralComponent)`
       color: #333;
     }
   }
-
-  @media (max-width: 500px) {
-      div {
-        opacity: 0;
-      }
-    }
 `
 
-export const GameFooterSuccess = () => {
-  const dispatch = useContext(DispatchContext)
-  useEffect(() => {
-    dispatch({
-      type: 'progress'
-    })
-  }, [])
+export const LessonFooterSuccess = () => {
+  const dispatch = useContext(LessonDispatch)
 
   const handler = () => {
     dispatch({
-      type: 'isChecking',
-      payload: false
-    })
-    dispatch({
-      type: 'current'
-    })
-    dispatch({
-      type: 'textField',
-      payload: ''
+      type: 'finishChecking'
     })
   }
 
   return (
-    <GameFooterSuccessComponent>
+    <LessonFooterSuccessComponent>
       <div>
         <CircleCheckIcon />
         <h3>!Well done!</h3>
@@ -56,6 +37,6 @@ export const GameFooterSuccess = () => {
       <GreenButton onClick={handler}>
         Continue
       </GreenButton>
-    </GameFooterSuccessComponent>
+    </LessonFooterSuccessComponent>
   )
 }
