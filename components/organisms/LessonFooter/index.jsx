@@ -1,17 +1,17 @@
 import { useContext } from 'react'
-import { Context } from '@utils/context'
 import { LessonFooterError } from './LessonFooterError'
 import { LessonFooterNeutral } from './LessonFooterNeutral'
 import { LessonFooterSuccess } from './LessonFooterSuccess'
+import { LessonState } from '@redux/LessonContext'
 
 export const LessonFooter = () => {
-  const state = useContext(Context)
+  const { isChecking, isCorrect } = useContext(LessonState)
 
-  if (state.isChecking && state.isCorrect) {
+  if (isChecking && isCorrect) {
     return <LessonFooterSuccess />
   }
 
-  if (state.isChecking && !state.isCorrect) {
+  if (isChecking && isCorrect === false) {
     return <LessonFooterError />
   }
 
