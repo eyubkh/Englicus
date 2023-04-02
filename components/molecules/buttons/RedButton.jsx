@@ -12,6 +12,10 @@ const RedButtonComponent = styled(Button)`
         margin-top: ${Border0};
         box-shadow: 0px 0px 0px ${ActionError300};
     }
+
+    @media (max-width: 500px) {
+        width: 100%;
+    }
 `
 
 export const RedButton = ({ handler }) => {

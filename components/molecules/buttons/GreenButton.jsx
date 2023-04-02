@@ -27,6 +27,10 @@ const GreenButtonComponent = styled.a`
       margin-top: ${Border0};
       box-shadow: 0px 0px 0px ${ActionSuccess300};
     }
+
+    @media (max-width: 500px) {
+        width: 100%;
+    }
 `
 
 export const GreenButton = React.forwardRef(({ href, className, children, onClick, ...props }, ref) => {

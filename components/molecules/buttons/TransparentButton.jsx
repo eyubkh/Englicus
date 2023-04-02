@@ -8,6 +8,10 @@ const TransparentButtonComponent = styled(Button)`
   background-color: transparent;
   color: ${BrandSecondary};
   border: ${Border0} solid ${BrandSecondary};
+
+  @media (max-width: 500px) {
+      display: none;
+    }
 `
 
 export const TransparentButton = ({ handler, children, ...props }) => {
