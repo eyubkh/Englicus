@@ -14,7 +14,8 @@ export default function handler (req, res) {
         }
       ],
       correctIndex: 1,
-      target: 'past'
+      target: 'past',
+      type: 'three-options'
     },
     {
       translation: 'despertar(se)',
@@ -30,7 +31,8 @@ export default function handler (req, res) {
         }
       ],
       correctIndex: 1,
-      target: 'past'
+      target: 'past',
+      type: 'three-options'
     },
     {
       translation: 'soportar',
@@ -46,7 +48,8 @@ export default function handler (req, res) {
         }
       ],
       correctIndex: 1,
-      target: 'past'
+      target: 'past',
+      type: 'three-options'
     },
     {
       translation: 'golpear',
@@ -56,7 +59,8 @@ export default function handler (req, res) {
         { participle: 'beaten' }
       ],
       correctIndex: 1,
-      target: 'past'
+      target: 'past',
+      type: 'three-options'
     },
     {
       translation: 'convertirse en',
@@ -66,7 +70,8 @@ export default function handler (req, res) {
         { participle: 'become' }
       ],
       correctIndex: 1,
-      target: 'past'
+      target: 'past',
+      type: 'three-options'
     }
   ]
 
