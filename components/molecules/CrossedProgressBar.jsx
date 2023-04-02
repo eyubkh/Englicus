@@ -1,9 +1,7 @@
 import { CrossIcon } from '@components/atoms/CrossIcon'
 import { ProgressBar } from '@components/atoms/ProgressBar'
 import { Spacing2 } from '@tokens'
-import { Context } from '@utils/context'
 import Link from 'next/link'
-import { useContext } from 'react'
 import styled from 'styled-components'
 
 const CrossedProgressBarComponent = styled.div`
@@ -15,8 +13,6 @@ const CrossedProgressBarComponent = styled.div`
 `
 
 export const CrossedProgressBar = ({ progress, href, ...args }) => {
-  const state = useContext(Context)
-
   return (
     <CrossedProgressBarComponent>
       <Link href='/grammar' passHref legacyBehavior>
@@ -24,7 +20,7 @@ export const CrossedProgressBar = ({ progress, href, ...args }) => {
           <CrossIcon />
         </a>
       </Link>
-      <ProgressBar progress={state?.progress} {...args} />
+      <ProgressBar progress={progress} {...args} />
     </CrossedProgressBarComponent>
   )
 }
