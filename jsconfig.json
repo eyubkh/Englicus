@@ -5,7 +5,9 @@
             "@components/*": ["components/*"],
             "@tokens": ["tokens/build/js/_variables.js"],
             "@public/*": ["src/public/*"],
-            "@utils/*": ["utils/*"]
+            "@utils/*": ["utils/*"],
+            "@libs/*": ["libs/*"],
+            "@redux/*": ["redux/*"]
         }
     }
 }

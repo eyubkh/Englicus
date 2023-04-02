@@ -6,8 +6,8 @@ import styled from 'styled-components'
 import { Context, DispatchContext } from '@utils/context'
 import { Loading } from '@components/pages/Loading'
 import { EndLevel } from '@components/organisms/EndLevel'
-import dataFetching from '@utils/dataFetching'
-import { handlerCleanUp, handlerEnterPress } from '@utils/handlerEventListener'
+import dataFetching from '@libs/dataFetching'
+import { handlerCleanUp, handlerEnterPress } from 'libs/handlerEventListener'
 
 const FillTheGapsComponent = styled.main`
   height: 100vh;

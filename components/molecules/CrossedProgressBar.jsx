@@ -24,7 +24,7 @@ export const CrossedProgressBar = ({ progress, href, ...args }) => {
           <CrossIcon />
         </a>
       </Link>
-      <ProgressBar progress={state.progress} {...args} />
+      <ProgressBar progress={state?.progress} {...args} />
     </CrossedProgressBarComponent>
   )
 }
