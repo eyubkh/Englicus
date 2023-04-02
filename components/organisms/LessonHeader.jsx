@@ -1,4 +1,6 @@
 import { CrossedProgressBar } from '@components/molecules/CrossedProgressBar'
+import { LessonState } from '@redux/LessonContext'
+import { useContext } from 'react'
 import styled from 'styled-components'
 
 const LessonHeaderComponent = styled.div`
@@ -10,9 +12,11 @@ const LessonHeaderComponent = styled.div`
 `
 
 export const LessonHeader = () => {
+  const { progress } = useContext(LessonState)
+
   return (
     <LessonHeaderComponent>
-      <CrossedProgressBar />
+      <CrossedProgressBar progress={progress} />
     </LessonHeaderComponent>
   )
 }
