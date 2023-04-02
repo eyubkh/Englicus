@@ -1,5 +1,5 @@
 export const initialState = {
-  currentChallenge: 0,
+  currentChallengeIndex: 0,
   challenges: [],
   failedChallenges: [],
   progress: 0,
@@ -9,13 +9,35 @@ export const initialState = {
 }
 
 export const reducer = (state, action) => {
-  switch (action.type) {
-    case 'init': {
-      const { payload } = action
+  const { type, payload } = action
+  switch (type) {
+    case 'init':
       return {
         ...state,
         isLoading: false,
         challenges: payload
+      }
+    case 'isCorrect':
+      return {
+        ...state,
+        isChecking: true,
+        isCorrect: payload
+      }
+    case 'finishChecking': {
+      const { currentChallengeIndex } = state
+      return {
+        ...state,
+        isChecking: false,
+        currentChallengeIndex: currentChallengeIndex + 1
+
+      }
+    }
+    case 'failedChallenges': {
+      const { failedChallenges, challenges, currentChallengeIndex } = state
+      return {
+        ...state,
+        isChecking: false,
+        failedChallenges: [...failedChallenges, challenges[currentChallengeIndex]]
       }
     }
     default:

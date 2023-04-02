@@ -4,7 +4,7 @@ import { initialState, reducer } from './lessonReducer'
 export const LessonState = createContext(null)
 export const LessonDispatch = createContext(null)
 
-export const GameContextProvider = ({ children }) => {
+export const LessonContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
   return (
     <LessonState.Provider value={state}>
