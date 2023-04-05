@@ -1,5 +1,5 @@
-import { Speaking as SpeakingComponent } from '@components/pages/Speaking'
+import { Speaking } from '@components/pages/Speaking'
 
-export default function Speaking () {
-  return <SpeakingComponent />
+export default function speaking () {
+  return <Speaking />
 }

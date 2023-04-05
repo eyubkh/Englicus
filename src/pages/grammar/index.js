@@ -1,5 +1,5 @@
-import { Grammar as GrammarComponent } from '@components/pages/Grammar'
+import { Grammar } from '@components/pages/Grammar'
 
-export default function Grammar () {
-  return <GrammarComponent />
+export default function grammar () {
+  return <Grammar />
 }

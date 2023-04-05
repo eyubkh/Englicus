@@ -3,7 +3,7 @@ import { ActionSuccess100 } from '@tokens'
 import { useContext } from 'react'
 import { CircleCheckIcon } from '@components/molecules/CircleCheckIcon'
 import { LessonFooterNeutralComponent } from './LessonFooterNeutral'
-import { GreenButton } from '@components/molecules/buttons/GreenButton'
+import { GreenButton } from '@components/atoms/buttons/GreenButton'
 import { LessonDispatch } from '@redux/LessonContext'
 
 const LessonFooterSuccessComponent = styled(LessonFooterNeutralComponent)`

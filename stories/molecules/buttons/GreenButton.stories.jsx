@@ -1,4 +1,4 @@
-import { GreenButton as Component } from '@components/molecules/buttons/GreenButton'
+import { GreenButton as Component } from '@components/atoms/buttons/GreenButton'
 
 export default {
   title: 'UI Web/molecules',

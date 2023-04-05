@@ -1,6 +1,6 @@
 import { useContext } from 'react'
-import { GreenButton } from '@components/molecules/buttons/GreenButton'
-import { TransparentButton } from '@components/molecules/buttons/TransparentButton'
+import { GreenButton } from '@components/atoms/buttons/GreenButton'
+import { TransparentButton } from '@components/atoms/buttons/TransparentButton'
 import styled from 'styled-components'
 import { LessonDispatch, LessonState } from '@redux/LessonContext'
 

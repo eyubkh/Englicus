@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { CircleCrossIcon } from '@components/molecules/CircleCrossIcon'
-import { RedButton } from '@components/molecules/buttons/RedButton'
+import { RedButton } from '@components/atoms/buttons/RedButton'
 import { ActionError100, NeutralLight100 } from '@tokens'
 import { useContext } from 'react'
 import { LessonFooterNeutralComponent } from './LessonFooterNeutral'

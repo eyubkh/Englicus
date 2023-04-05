@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { HomeHeader } from '@components/organisms/HomeHeader'
+// import { HomeHeader } from '@components/organisms/HomeHeader'
 import { HeroText } from '@components/molecules/HeroText'
 import { DimensionSmall, NeutralDark300 } from '@tokens'
 
@@ -45,7 +45,7 @@ const MainComponent = styled.main`
 export const Home = () => {
   return (
     <MainComponent>
-      <HomeHeader />
+      {/* <HomeHeader /> */}
       <HeroComponent>
         <Image
           width={400}
