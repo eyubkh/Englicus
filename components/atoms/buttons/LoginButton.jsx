@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import { TransparentButton } from './TransparentButton'
 
@@ -8,6 +9,15 @@ const LoginButtonComponent = styled(TransparentButton)`
   }
 `
 
-export const LoginButton = ({ handler, children, ...props }) => {
-  return <LoginButtonComponent onClick={handler} {...props}>{children}</LoginButtonComponent>
-}
+export const LoginButton = React.forwardRef(({ href, className, onClick, children, ...props }, ref) => {
+  return (
+    <LoginButtonComponent
+      className={className}
+      onClick={onClick}
+      ref={ref}
+      {...props}
+    >
+      {children}
+    </LoginButtonComponent>
+  )
+})
