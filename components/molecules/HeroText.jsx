@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import { NeutralLight100, BrandPrimary, Spacing1, BodyH4 } from '@tokens'
 
-import { GreenButton } from './buttons/GreenButton'
-import { TransparentButton } from './buttons/TransparentButton'
+import { GreenButton } from '../atoms/buttons/GreenButton'
 import Link from 'next/link'
-import { grammarHref } from '@utils/globalData'
+import { grammarHref, loginHref } from '@utils/globalData'
+import { LoginButton } from '../atoms/buttons/LoginButton'
 
 const HeroTextComponent = styled.div`
   display: flex;
@@ -31,7 +31,9 @@ export const HeroText = () => {
       <Link href={grammarHref} passHref legacyBehavior>
         <GreenButton large>Start</GreenButton>
       </Link>
-      <TransparentButton large>Login</TransparentButton>
+      <Link href={loginHref} passHref legacyBehavior>
+        <LoginButton large>Login</LoginButton>
+      </Link>
 
     </HeroTextComponent>
   )
