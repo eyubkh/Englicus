@@ -19,13 +19,14 @@ const GreenButtonComponent = styled(BaseButton)`
     }
 `
 
-export const GreenButton = React.forwardRef(({ href, className, children, onClick, ...props }, ref) => {
+export const GreenButton = React.forwardRef(({ href, className, children, type = 'button', onClick, ...props }, ref) => {
   return (
     <GreenButtonComponent
       className={className}
       href={href}
       ref={ref}
       onClick={onClick}
+      type={type}
       {...props}
     >
       {children}
