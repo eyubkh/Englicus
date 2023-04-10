@@ -1,8 +1,8 @@
-import { BodyH3, BodyH4, Border0, BrandSecondary, DimensionSmall, Spacing0, Spacing1 } from '@tokens'
+import { BodyH4, Border0, BrandSecondary, DimensionSmall, Spacing0, Spacing1 } from '@tokens'
 import styled from 'styled-components'
 
 const InputComponent = styled.input`
-  ${BodyH3}
+  ${BodyH4}
     border-bottom: ${Border0} solid ${BrandSecondary};
     border-top: none;
     border-right: none;
@@ -17,6 +17,6 @@ const InputComponent = styled.input`
     }
 `
 
-export const InputUnderLine = ({ handler, value = '', ...args }) => {
-  return <InputComponent onChange={handler} value={value} type='text' placeholder='Text' {...args} />
+export const InputUnderLine = ({ onChange, value = '', ...args }) => {
+  return <InputComponent onChange={onChange} value={value} type='text' placeholder='Text' {...args} />
 }

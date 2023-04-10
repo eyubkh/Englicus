@@ -2,40 +2,14 @@
   "games": {
     "Irregular Verbs": [
       {
-        "name": "Fill the gaps",
+        "name": "fill the gaps",
         "href": "/grammar/lessons",
-        "src": "/assets/fillthegaps.svg",
+        "src": "/fillthegaps.png",
         "alt": "fill the gaps image",
         "img": {
           "src": "/",
           "alt": ""
         }
-      },
-      {
-        "name": "Sample",
-        "href": "#",
-        "src": "/",
-        "alt": "Sample image"
-      },
-      {
-        "name": "Sample",
-        "href": "#",
-        "src": "/",
-        "alt": "Sample image"
-      },
-      {
-        "name": "Sample",
-        "href": "#",
-        "src": "/",
-        "alt": "Sample image"
-      }
-    ],
-    "Sample": [
-      {
-        "name": "Sample",
-        "href": "#",
-        "src": "/sample.svg",
-        "alt": "Sample image"
       }
     ]
   }

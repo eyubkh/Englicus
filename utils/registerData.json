@@ -1,0 +1,19 @@
+[
+  {
+    "prompt": "Que te motiva a aprender un idoma?",
+    "choices": [
+      "Oportunidades laborales",
+      "Familia y amigos",
+      "Estudios",
+      "Ejercicio mental",
+      "Turismo",
+      "Cultura",
+      "Otros"
+    ],
+    "type": "assist"
+  }, 
+  {
+    "prompt": "Elige tu ruta",
+    "type": "experience"
+  }
+]

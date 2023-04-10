@@ -1,5 +1,5 @@
-async function dataFetching (url) {
-  return await window.fetch(url)
+async function dataFetching (url, options = {}) {
+  return await window.fetch(url, options)
     .then(res => res.json())
 }
 

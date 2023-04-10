@@ -3,7 +3,6 @@ import { NeutralLight100, BrandPrimary, Spacing1, BodyH4 } from '@tokens'
 
 import { GreenButton } from '../atoms/buttons/GreenButton'
 import Link from 'next/link'
-import { grammarHref, loginHref } from '@utils/globalData'
 import { LoginButton } from '../atoms/buttons/LoginButton'
 
 const HeroTextComponent = styled.div`
@@ -28,10 +27,10 @@ export const HeroText = () => {
   return (
     <HeroTextComponent>
       <h4>¡Improve your english with <br /> <span>eng</span>licus gradually!</h4>
-      <Link href={grammarHref} passHref legacyBehavior>
+      <Link href='/register' passHref legacyBehavior>
         <GreenButton large>Start</GreenButton>
       </Link>
-      <Link href={loginHref} passHref legacyBehavior>
+      <Link href='/login' passHref legacyBehavior>
         <LoginButton large>Login</LoginButton>
       </Link>
 

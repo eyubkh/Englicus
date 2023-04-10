@@ -5,12 +5,21 @@ import dataFetching from '@libs/dataFetching'
 import { handlerCleanUp, handlerEnterPress } from '@libs/handlerEventListener'
 import { LessonDispatch, LessonState } from '@redux/LessonContext'
 import { useContext, useEffect, useRef } from 'react'
-import { EndLesson } from './EndLesson'
 import { Loading } from './Loading'
+import styled from 'styled-components'
+
+const LessonComponent = styled.main`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+
+
+`
 
 export const Lesson = () => {
   const dispatch = useContext(LessonDispatch)
-  const { isLoading, currentChallengeIndex, challenges } = useContext(LessonState)
+  const { isLoading, correctChallenges, challenges } = useContext(LessonState)
 
   const fetching = useRef(false)
 
@@ -19,24 +28,33 @@ export const Lesson = () => {
     fetching.current = true
     handlerEnterPress()
 
-    dataFetching('/api/game')
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: window.localStorage.getItem('userData')
+    }
+
+    dataFetching('/api/path/sessions', options)
       .then((data) => {
         dispatch({
           type: 'init',
-          payload: data
+          payload: {
+            challenges: data.challenges,
+            lessonId: ''
+          }
         })
       })
   }, [])
 
   if (isLoading) return <Loading />
 
-  if (currentChallengeIndex > challenges.length - 1) return <EndLesson />
-
   return (
-    <>
+    <LessonComponent>
       <LessonHeader />
       <LessonSection />
       <LessonFooter />
-    </>
+    </LessonComponent>
   )
 }

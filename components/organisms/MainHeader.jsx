@@ -1,10 +1,9 @@
 import styled from 'styled-components'
-import IconBook from '@public/icons/book.png'
+// import IconBook from '@public/icons/book.png'
 import IconHearing from '@public/icons/hearing.png'
-import IconMouth from '@public/icons/mouth.png'
+// import IconMouth from '@public/icons/mouth.png'
 import { NeutralLight300, Spacing2 } from '@tokens'
 import { Logo } from '@components/atoms/Logo'
-import { grammarHref, listeningHref, speakingHref } from '@utils/globalData'
 import { HeaderLink } from '@components/molecules/HeaderLink'
 
 const MainHeaderComponent = styled.header`
@@ -24,24 +23,24 @@ export const MainHeader = () => {
   return (
     <MainHeaderComponent>
       <Logo dark />
-      <HeaderLink
+      {/* <HeaderLink
         href={grammarHref}
         iconSrc={IconBook}
       >
         grammar
-      </HeaderLink>
+      </HeaderLink> */}
       <HeaderLink
-        href={listeningHref}
+        href='/path'
         iconSrc={IconHearing}
       >
-        Listening
+        Path
       </HeaderLink>
-      <HeaderLink
+      {/* <HeaderLink
         href={speakingHref}
         iconSrc={IconMouth}
       >
         Speaking
-      </HeaderLink>
+      </HeaderLink> */}
     </MainHeaderComponent>
   )
 }

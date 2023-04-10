@@ -6,6 +6,8 @@ import { DimensionSmall, NeutralDark300 } from '@tokens'
 import Image from 'next/image'
 import Stars from '@public/assets/Stars.svg'
 import Moon from '@public/assets/Moon.svg'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 const HeroComponent = styled.div`
     position: absolute;
@@ -43,6 +45,13 @@ const MainComponent = styled.main`
   height: 100vh;
 `
 export const Home = () => {
+  const router = useRouter()
+  useEffect(() => {
+    const localData = window.localStorage.key('userData')
+    if (localData) {
+      router.push('/path')
+    }
+  }, [])
   return (
     <MainComponent>
       {/* <HomeHeader /> */}

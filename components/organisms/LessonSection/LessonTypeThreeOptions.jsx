@@ -1,30 +1,25 @@
 import { LessonState } from '@redux/LessonContext'
 import { useContext } from 'react'
-import { InputUnderLine } from '@components/atoms/InputUnderLine'
+import styled from 'styled-components'
+import { ThreeOptions } from '@components/molecules/lessonType/ThreeOptions'
+
+const LessonTypeThreeOptionsComponent = styled.section`
+  display: grid;
+  height: 100%;
+  overflow-y: scroll;
+  grid-template-rows: 100px 1fr;
+  place-content: center;
+  text-align: center;
+`
 
 export const LessonTypeThreeOptions = () => {
   const { challenges, currentChallengeIndex } = useContext(LessonState)
-  const { translation, choises, target } = challenges[currentChallengeIndex]
+  const { translation } = challenges[currentChallengeIndex]
 
   return (
-    <>
+    <LessonTypeThreeOptionsComponent>
       <h2>{translation}</h2>
-      {
-          choises.map((choise, index) => {
-            const choiseKey = Object.keys(choise)[0]
-
-            return (
-              <div key={index}>
-                <p>{choiseKey}</p>
-                {
-                  target === choiseKey
-                    ? <InputUnderLine />
-                    : <h3>{choise[choiseKey]}</h3>
-                }
-              </div>
-            )
-          })
-        }
-    </>
+      <ThreeOptions />
+    </LessonTypeThreeOptionsComponent>
   )
 }

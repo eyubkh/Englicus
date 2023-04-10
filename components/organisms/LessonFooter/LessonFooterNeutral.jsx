@@ -14,15 +14,15 @@ export const LessonFooterNeutralComponent = styled.div`
 
 export const LessonFooterNeutral = () => {
   const dispatch = useContext(LessonDispatch)
-  const { challenges, currentChallengeIndex } = useContext(LessonState)
-  const { choises, target, correctIndex } = challenges[currentChallengeIndex]
+  const { challenges, currentChallengeIndex, userInput } = useContext(LessonState)
+  const { choices, correctIndex } = challenges[currentChallengeIndex]
 
-  console.log(choises[correctIndex][target])
+  console.log(choices[correctIndex])
 
   const handlerIsCorrect = () => {
     dispatch({
       type: 'isCorrect',
-      payload: choises[correctIndex][target] === ''
+      payload: choices[correctIndex] === userInput
     })
   }
   return (

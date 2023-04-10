@@ -1,0 +1,34 @@
+{
+  "challenges": [
+    {
+      "prompt": "cat",
+      "choices": ["perro", "gato", "conejo"],
+      "correctIndex": 1,
+      "type": "assist"
+      },
+      {
+      "prompt": "red",
+      "choices": ["verde", "azul", "rojo"],
+      "correctIndex": 2,
+      "type": "assist"
+      },
+      {
+      "prompt": "happy",
+      "choices": ["feliz", "triste", "enojado"],
+      "correctIndex": 0,
+      "type": "assist"
+      },
+      {
+      "prompt": "chair",
+      "choices": ["silla", "mesa", "sofá"],
+      "correctIndex": 0,
+      "type": "assist"
+      },
+      {
+      "prompt": "water",
+      "choices": ["agua", "fuego", "aire"],
+      "correctIndex": 0,
+      "type": "assist"
+      }
+  ]
+}

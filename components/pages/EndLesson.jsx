@@ -2,7 +2,7 @@ import { Ad } from '@components/atoms/Ad'
 import Link from 'next/link'
 import { CrossIcon } from 'stories/atoms/CrossIcon.stories'
 import styled from 'styled-components'
-import { EndLessonFooter } from '../organisms/EndLessonFooter'
+import { LessonFooterEnd } from '../organisms/LessonFooter/LessonFooterEnded'
 
 const EndLessonComponent = styled.div`
   display: flex;
@@ -32,7 +32,7 @@ export const EndLesson = () => {
         </div>
         <Ad />
       </section>
-      <EndLessonFooter />
+      <LessonFooterEnd />
     </EndLessonComponent>
   )
 }

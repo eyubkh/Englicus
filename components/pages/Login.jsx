@@ -1,5 +1,6 @@
 import { GreenButton } from '@components/atoms/buttons/GreenButton'
 import { CrossIcon } from '@components/atoms/CrossIcon'
+import { homeHref } from '@utils/globalData'
 import Link from 'next/link'
 import { useState } from 'react'
 import styled from 'styled-components'
@@ -11,9 +12,9 @@ const LoginComponent = styled.main`
   width: 100vw;
   height: 100vh;
 
-  /* a {
+  a:first-child {
     position: absolute;
-  } */
+  }
   form {
     display: flex;
     flex-direction: column;
@@ -41,14 +42,14 @@ export const Login = () => {
 
   return (
     <LoginComponent onSubmit={handlerSubmit}>
-      <Link href='/' passHref legacyBehavior>
+      <Link href={homeHref} passHref legacyBehavior>
         <CrossIcon />
       </Link>
       <form>
         <h1>log in</h1>
         <input placeholder='username' onChange={(event) => handlerOnChange(event, 'username')} />
         <input placeholder='password' type='password' onChange={(event) => handlerOnChange(event, 'password')} />
-        <GreenButton onClick={handlerSubmit} type='sumbit'>Log in</GreenButton>
+        <GreenButton onClick={handlerSubmit}>Log in</GreenButton>
       </form>
     </LoginComponent>
   )

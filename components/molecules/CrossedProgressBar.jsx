@@ -15,7 +15,7 @@ const CrossedProgressBarComponent = styled.div`
 export const CrossedProgressBar = ({ progress, href, ...args }) => {
   return (
     <CrossedProgressBarComponent>
-      <Link href='/grammar' passHref legacyBehavior>
+      <Link href='/path' passHref legacyBehavior>
         <CrossIcon />
       </Link>
       <ProgressBar progress={progress} {...args} />
