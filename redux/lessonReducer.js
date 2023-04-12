@@ -10,6 +10,7 @@ export const initialState = {
   isLoading: true,
   isCorrect: false,
   isChecking: false,
+  isDone: false,
   userInput: ''
 }
 
@@ -26,23 +27,35 @@ export const reducer = (state, action) => {
       }
     }
     case 'isCorrect':{
-      const { progress, challenges } = state
+      const { progress, challenges, correctChallenges } = state
       return {
         ...state,
         isChecking: true,
         isCorrect: payload,
-        progress: payload ? progress + (100 / challenges.length) : progress
+        progress: payload ? progress + (100 / challenges.length) : progress,
+        correctChallenges: correctChallenges + 1
       }
     }
     case 'finishChecking': {
-      const { currentChallengeIndex, correctChallenges } = state
+      const {
+        currentChallengeIndex,
+        challenges,
+        failedChallenges
+      } = state
+
+      const isRetrying = currentChallengeIndex + 1 > challenges.length - 1 && failedChallenges.length > 0
+      const fChallenges = isRetrying ? [] : failedChallenges
+      console.log(fChallenges)
+
       return {
         ...state,
         isChecking: false,
-        currentChallengeIndex: currentChallengeIndex + 1,
-        correctChallenges: correctChallenges + 1,
-        userInput: ''
-
+        currentChallengeIndex: isRetrying ? 0 : currentChallengeIndex + 1,
+        userInput: '',
+        isRetrying,
+        challenges: isRetrying ? failedChallenges : challenges,
+        failedChallenges: fChallenges,
+        isDone: currentChallengeIndex + 1 > challenges.length && fChallenges.length === 0
       }
     }
     case 'failedChallenges': {

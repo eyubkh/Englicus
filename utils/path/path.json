@@ -1,0 +1,84 @@
+{
+  "A1": {
+    "Basic Communication": [
+      "Basics",
+      "Phrases"
+    ],
+    "People": [
+      "Animals",
+      "People",
+      "Family"
+    ],
+    "Travel": [
+      "Travel",
+      "Activities",
+      "Time"
+    ],
+    "Vocabulary": [
+      "Plurals",
+      "Clothing",
+      "Health"
+    ]
+  },
+  "A2": {
+    "Food": [
+      "Food"
+    ],
+    "Nature": [
+      "Nature"
+    ],
+    "Travel": [
+      "Verbs",
+      "Travel phrases",
+      "Directions"
+    ],
+    "Vocabulary": [
+      "Education",
+      "Questions",
+      "Pronouns",
+      "Numbers",
+      "Occupations",
+      "Weather",
+      "Holidays",
+      "Conjunctions",
+      "Prepositions",
+      "Sports"
+    ]
+  },
+  "B1": {
+    "Home": [
+      "House"
+    ],
+    "Science and Environment": [
+      "Science"
+    ],
+    "Language Structures": [
+      "Superlatives",
+      "Future tense",
+      "Present perfect tense",
+      "Reflexive pronouns",
+      "Possessive pronouns",
+      "Demonstrative pronouns"
+    ],
+    "Modals and Verbs": [
+      "Modal verbs",
+      "Infinitives",
+      "Gerunds",
+      "Participles"
+    ],
+    "Business": [
+      "Business"
+    ]
+  },
+  "B2": {
+    "Verb Tenses": [
+      "Conditional tense",
+      "Past perfect tense"
+    ],
+    "Grammar Structures": [
+      "Passive voice",
+      "Imperative mood",
+      "Subjunctive mood"
+    ]
+  }
+}

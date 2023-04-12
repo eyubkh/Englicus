@@ -7,6 +7,8 @@ import { LessonDispatch, LessonState } from '@redux/LessonContext'
 import { useContext, useEffect, useRef } from 'react'
 import { Loading } from './Loading'
 import styled from 'styled-components'
+import { UserState } from '@redux/user/userContext'
+import { EndLesson } from './EndLesson'
 
 const LessonComponent = styled.main`
   display: flex;
@@ -19,7 +21,8 @@ const LessonComponent = styled.main`
 
 export const Lesson = () => {
   const dispatch = useContext(LessonDispatch)
-  const { isLoading, correctChallenges, challenges } = useContext(LessonState)
+  const { isLoading, isDone } = useContext(LessonState)
+  const userStata = useContext(UserState)
 
   const fetching = useRef(false)
 
@@ -28,27 +31,20 @@ export const Lesson = () => {
     fetching.current = true
     handlerEnterPress()
 
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: window.localStorage.getItem('userData')
-    }
-
-    dataFetching('/api/path/sessions', options)
+    dataFetching('/api/sessions', userStata)
       .then((data) => {
         dispatch({
           type: 'init',
           payload: {
-            challenges: data.challenges,
-            lessonId: ''
+            challenges: data.challenges
           }
         })
       })
   }, [])
 
   if (isLoading) return <Loading />
+
+  if (isDone) return <EndLesson />
 
   return (
     <LessonComponent>

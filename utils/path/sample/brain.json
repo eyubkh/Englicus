@@ -1,0 +1,55 @@
+{
+  "A1": {
+    "Basic Communication": [
+      "Basics",
+      "Phrases"
+    ],
+    "Vocabulary": [
+      "Numbers",
+      "Education"
+    ],
+    "Brain Training": [
+      "Verbs",
+      "Questions"
+    ]
+  },
+  "A2": {
+    "Vocabulary": [
+      "Occupations",
+      "Science"
+    ],
+    "Brain Training": [
+      "Adjectives",
+      "Pronouns",
+      "Conjunctions",
+      "Prepositions"
+    ]
+  },
+  "B1": {
+    "Language Structures": [
+      "Reflexive pronouns",
+      "Possessive pronouns",
+      "Demonstrative pronouns",
+      "Modal verbs",
+      "Infinitives",
+      "Gerunds",
+      "Participles"
+    ],
+    "Brain Training": [
+      "Superlatives",
+      "Conditional tense"
+    ]
+  },
+  "B2": {
+    "Grammar Structures": [
+      "Passive voice",
+      "Subjunctive mood"
+    ],
+    "Brain Training": [
+      "Modal verbs",
+      "Infinitives",
+      "Gerunds",
+      "Participles"
+    ]
+  }
+}

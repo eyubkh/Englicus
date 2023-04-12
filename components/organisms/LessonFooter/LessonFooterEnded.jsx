@@ -16,13 +16,7 @@ const LessonFooterEndedComponent = styled.div`
 
 export const LessonFooterEnded = () => {
   const handlerLevelUp = () => {
-    const localData = window.localStorage.getItem('userData')
-    const objData = JSON.parse(localData)
-
-    objData.courses['Fill the gaps'].level = objData.courses['Fill the gaps'].level + 1
-    window.localStorage.setItem('userData', JSON.stringify(objData))
-
-    console.log(objData)
+    console.log('lesson footer end,  level up')
   }
   return (
     <LessonFooterEndedComponent>

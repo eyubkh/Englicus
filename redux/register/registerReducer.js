@@ -1,10 +1,9 @@
 export const initialState = {
-  userId: '',
   registerProccess: [],
   registerProccessIndex: 0,
   isLoading: true,
-  progress: 0,
-  userInput: ''
+  isDone: false,
+  progress: 0
 }
 
 export const reducer = (state, action) => {
@@ -17,18 +16,13 @@ export const reducer = (state, action) => {
         registerProccess: payload
       }
     }
-    case 'userInput': {
-      return {
-        ...state,
-        userInput: payload
-      }
-    }
     case 'next': {
       const { registerProccessIndex, registerProccess, progress } = state
       return {
         ...state,
         registerProccessIndex: registerProccessIndex + 1,
-        progress: progress + (100 / registerProccess.length)
+        progress: progress + (100 / registerProccess.length),
+        isDone: registerProccessIndex + 2 > registerProccess.length
       }
     }
     default:

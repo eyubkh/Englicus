@@ -1,15 +1,23 @@
 import { RegisterState } from '@redux/register/registerContext'
+import { UserDispatch } from '@redux/user/userContext'
+import writeLocalData from '@utils/writeLocalData'
 import { useContext } from 'react'
 
 export const RegisterTypeExperience = () => {
   const { registerProccess, registerProccessIndex } = useContext(RegisterState)
   const { prompt } = registerProccess[registerProccessIndex]
 
+  const userDispatch = useContext(UserDispatch)
+
   const handler = (event) => {
-    const localData = window.localStorage.getItem('register')
-    const registerData = JSON.parse(localData)
-    registerData.beginner = event.target.innerText === 'beginner'
-    window.localStorage.setItem('register', JSON.stringify(registerData))
+    writeLocalData({
+      beginner: event.target.innerText === 'beginner'
+    })
+
+    userDispatch({
+      type: 'beginner',
+      payload: event.target.innerText === 'beginner'
+    })
   }
 
   return (

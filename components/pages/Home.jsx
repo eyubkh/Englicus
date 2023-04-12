@@ -47,7 +47,7 @@ const MainComponent = styled.main`
 export const Home = () => {
   const router = useRouter()
   useEffect(() => {
-    const localData = window.localStorage.key('userData')
+    const localData = window.localStorage.getItem('state')
     if (localData) {
       router.push('/path')
     }

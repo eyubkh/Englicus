@@ -1,20 +1,21 @@
-import { RegisterDispatch, RegisterState } from '@redux/register/registerContext'
+import { RegisterState } from '@redux/register/registerContext'
+import { UserDispatch } from '@redux/user/userContext'
+import writeLocalData from '@utils/writeLocalData'
 import { useContext } from 'react'
 
 export const RegisterTypeAssist = () => {
   const { registerProccess, registerProccessIndex } = useContext(RegisterState)
   const { prompt, choices } = registerProccess[registerProccessIndex]
 
-  const dispatch = useContext(RegisterDispatch)
+  const userDispatch = useContext(UserDispatch)
 
   const handlerUserInput = (event) => {
-    const localData = window.localStorage.getItem('register')
-    const registerData = JSON.parse(localData)
-    registerData.goal = event.target.innerText
-    window.localStorage.setItem('register', JSON.stringify(registerData))
+    writeLocalData({
+      goal: event.target.innerText
+    })
 
-    dispatch({
-      type: 'userInput',
+    userDispatch({
+      type: 'goal',
       payload: event.target.innerText
     })
   }

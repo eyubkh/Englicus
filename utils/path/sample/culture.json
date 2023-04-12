@@ -1,0 +1,95 @@
+{
+  "A1": {
+    "Basic Communication": [
+      "Basics",
+      "Phrases"
+    ],
+    "People": [
+      "Animals",
+      "People",
+      "Family"
+    ],
+    "Travel": [
+      "Travel",
+      "Activities",
+      "Time"
+    ],
+    "Vocabulary": [
+      "Plurals",
+      "Clothing",
+      "Food",
+      "Holidays",
+      "Nature",
+      "Weather"
+    ]
+  },
+  "A2": {
+    "Art and Literature": [
+      "Education"
+    ],
+    "Cultural Activities": [
+      "Activities"
+    ],
+    "Geography and History": [
+      "Travel phrases",
+      "Directions"
+    ],
+    "Vocabulary": [
+      "Questions",
+      "Pronouns",
+      "Numbers",
+      "Occupations",
+      "Conjunctions",
+      "Prepositions",
+      "Sports"
+    ]
+  },
+  "B1": {
+    "Cultural Traditions": [
+      "Culture"
+    ],
+    "Language Structures": [
+      "Superlatives",
+      "Future tense",
+      "Present perfect tense",
+      "Reflexive pronouns",
+      "Possessive pronouns",
+      "Demonstrative pronouns"
+    ],
+    "Modals and Verbs": [
+      "Modal verbs",
+      "Infinitives",
+      "Gerunds",
+      "Participles"
+    ],
+    "Vocabulary": [
+      "Education",
+      "Food",
+      "Nature",
+      "Weather",
+      "Holidays"
+    ]
+  },
+  "B2": {
+    "Arts and Culture": [
+      "Art",
+      "Literature"
+    ],
+    "History and Society": [
+      "Science"
+    ],
+    "Language Structures": [
+      "Conditional tense",
+      "Past perfect tense"
+    ],
+    "Vocabulary": [
+      "Business",
+      "Holidays",
+      "Conjunctions",
+      "Prepositions",
+      "Sports",
+      "Nature",
+      "Weather"
+    ]
+  }
+}

@@ -2,13 +2,13 @@
   {
     "prompt": "Que te motiva a aprender un idoma?",
     "choices": [
-      "Oportunidades laborales",
-      "Familia y amigos",
-      "Estudios",
-      "Ejercicio mental",
-      "Turismo",
-      "Cultura",
-      "Otros"
+      "School",
+      "Family and Friends",
+      "Culture",
+      "Brain Training",
+      "Job Opportunities",
+      "Travel",
+      "Other"
     ],
     "type": "assist"
   }, 

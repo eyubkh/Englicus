@@ -17,8 +17,6 @@ export const LessonFooterNeutral = () => {
   const { challenges, currentChallengeIndex, userInput } = useContext(LessonState)
   const { choices, correctIndex } = challenges[currentChallengeIndex]
 
-  console.log(choices[correctIndex])
-
   const handlerIsCorrect = () => {
     dispatch({
       type: 'isCorrect',

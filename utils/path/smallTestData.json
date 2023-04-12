@@ -1,0 +1,42 @@
+[
+  {
+    "prompt": "Dog",
+    "choices": ["Gato", "Perro", "Elefante", "Mono"],
+    "correctIndex": 1,
+    "type": "assist",
+    "difficulty": 0.950,
+    "level": "A1",
+    "categories": ["Animals"],
+    "goals": ["Culture", "Brain Training", "Vocabulary Building", "Language Practice"]
+  },
+  {
+    "prompt": "Sister",
+    "choices": ["Hermana", "Hermano", "Padre", "Madre"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 0.900,
+    "level": "A1",
+    "categories": ["Family", "People"],
+    "goals": ["Family and Friends", "Vocabulary Building", "Language Practice"]
+  },
+  {
+    "prompt": "Bathroom",
+    "choices": ["Sala", "Comedor", "Baño", "Cocina"],
+    "correctIndex": 2,
+    "type": "assist",
+    "difficulty": 0.800,
+    "level": "A1",
+    "categories": ["House"],
+    "goals": ["Culture", "Vocabulary Building", "Language Practice"]
+  },
+  {
+    "prompt": "Goodbye",
+    "choices": ["Hola", "Adiós", "Gracias", "Por favor"],
+    "correctIndex": 1,
+    "type": "assist",
+    "difficulty": 0.750,
+    "level": "A1",
+    "categories": ["Phrases"],
+    "goals": ["Vocabulary Building", "Language Practice"]
+  }
+]
