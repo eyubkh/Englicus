@@ -27,9 +27,6 @@ export const LessonFooterError = () => {
 
   const handler = () => {
     dispatch({
-      type: 'failedChallenges'
-    })
-    dispatch({
       type: 'finishChecking'
     })
   }

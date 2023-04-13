@@ -4,66 +4,70 @@ export const initialState = {
   challenges: [],
   failedChallenges: [],
   correctChallenges: 0,
+  progressSteps: 0,
+  progress: 0,
+  userInput: '',
   isRetrying: false,
   isLessonEnded: false,
-  progress: 0,
   isLoading: true,
   isCorrect: false,
-  isChecking: false,
-  isDone: false,
-  userInput: ''
+  isIncorrect: false,
+  isChecking: false
 }
 
 export const reducer = (state, action) => {
   const { type, payload } = action
   switch (type) {
     case 'init':{
-      const { lessonId, challenges } = payload
+      const { challenges } = payload
       return {
         ...state,
         isLoading: false,
-        lessonId,
+        progressSteps: (100 / challenges.length),
         challenges
       }
     }
     case 'isCorrect':{
-      const { progress, challenges, correctChallenges } = state
+      const { progress, progressSteps, correctChallenges } = state
       return {
         ...state,
         isChecking: true,
-        isCorrect: payload,
-        progress: payload ? progress + (100 / challenges.length) : progress,
+        isIncorrect: false,
+        isRetrying: false,
+        isCorrect: true,
+        progress: progress + progressSteps,
         correctChallenges: correctChallenges + 1
       }
     }
-    case 'finishChecking': {
-      const {
-        currentChallengeIndex,
-        challenges,
-        failedChallenges
-      } = state
-
-      const isRetrying = currentChallengeIndex + 1 > challenges.length - 1 && failedChallenges.length > 0
-      const fChallenges = isRetrying ? [] : failedChallenges
-      console.log(fChallenges)
-
-      return {
-        ...state,
-        isChecking: false,
-        currentChallengeIndex: isRetrying ? 0 : currentChallengeIndex + 1,
-        userInput: '',
-        isRetrying,
-        challenges: isRetrying ? failedChallenges : challenges,
-        failedChallenges: fChallenges,
-        isDone: currentChallengeIndex + 1 > challenges.length && fChallenges.length === 0
-      }
-    }
-    case 'failedChallenges': {
+    case 'isIncorrect': {
       const { failedChallenges, challenges, currentChallengeIndex } = state
       return {
         ...state,
-        isChecking: false,
+        isChecking: true,
+        isRetrying: false,
+        isCorrect: false,
         failedChallenges: [...failedChallenges, challenges[currentChallengeIndex]]
+      }
+    }
+    case 'finishChecking': {
+      const { currentChallengeIndex, challenges, failedChallenges } = state
+
+      const cChallengeIndex = currentChallengeIndex + 1
+      const challengesLength = challenges.length - 1
+
+      const isRetrying = cChallengeIndex > challengesLength && failedChallenges.length > 0
+
+      console.log(cChallengeIndex > challengesLength && failedChallenges.length === 0)
+
+      return {
+        ...state,
+        isChecking: false,
+        currentChallengeIndex: isRetrying ? 0 : cChallengeIndex,
+        userInput: '',
+        isRetrying,
+        challenges: isRetrying ? failedChallenges : challenges,
+        failedChallenges: isRetrying ? [] : failedChallenges,
+        isLessonEnded: cChallengeIndex > challengesLength && failedChallenges.length === 0
       }
     }
     case 'userInput': {

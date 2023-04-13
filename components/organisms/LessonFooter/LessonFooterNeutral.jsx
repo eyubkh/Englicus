@@ -18,10 +18,11 @@ export const LessonFooterNeutral = () => {
   const { choices, correctIndex } = challenges[currentChallengeIndex]
 
   const handlerIsCorrect = () => {
-    dispatch({
-      type: 'isCorrect',
-      payload: choices[correctIndex] === userInput
-    })
+    if (choices[correctIndex] === userInput) {
+      dispatch({ type: 'isCorrect' })
+    } else {
+      dispatch({ type: 'isIncorrect' })
+    }
   }
   return (
     <LessonFooterNeutralComponent>

@@ -23,7 +23,7 @@ export const LessonFooterEnded = () => {
       <TransparentButton>
         try again
       </TransparentButton>
-      <Link href='/grammar' passHref legacyBehavior>
+      <Link href='/path' passHref legacyBehavior>
         <GreenButton onClick={handlerLevelUp}>
           Continue
         </GreenButton>

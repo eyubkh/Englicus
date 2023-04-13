@@ -8,7 +8,8 @@ import { useContext, useEffect, useRef } from 'react'
 import { Loading } from './Loading'
 import styled from 'styled-components'
 import { UserState } from '@redux/user/userContext'
-import { EndLesson } from './EndLesson'
+import { LessonRetry } from '@components/organisms/LessonRetry'
+import { LessonEnded } from '@components/organisms/LessonEnded'
 
 const LessonComponent = styled.main`
   display: flex;
@@ -21,7 +22,7 @@ const LessonComponent = styled.main`
 
 export const Lesson = () => {
   const dispatch = useContext(LessonDispatch)
-  const { isLoading, isDone } = useContext(LessonState)
+  const { isLoading, isLessonEnded } = useContext(LessonState)
   const userStata = useContext(UserState)
 
   const fetching = useRef(false)
@@ -44,10 +45,11 @@ export const Lesson = () => {
 
   if (isLoading) return <Loading />
 
-  if (isDone) return <EndLesson />
+  if (isLessonEnded) return <LessonEnded />
 
   return (
     <LessonComponent>
+      <LessonRetry />
       <LessonHeader />
       <LessonSection />
       <LessonFooter />
