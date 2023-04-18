@@ -34,6 +34,27 @@ export const userReducer = (state, action) => {
         path: payload
       }
     }
+    case 'xp': {
+      const { currentLevel, currentSection, path } = state
+      const updatedSection = {
+        ...path[currentLevel],
+        [currentSection]: {
+          ...path[currentLevel][currentSection],
+          xp: path[currentLevel][currentSection].xp + payload
+        }
+      }
+      path[currentLevel] = updatedSection
+      const pathUpdated = [...path]
+      const maxLevelReached = updatedSection[currentSection].xp >= updatedSection[currentSection].max_xp
+      const nextSection = updatedSection[currentSection].next_level
+
+      return {
+        ...state,
+        path: pathUpdated,
+        currentSection: maxLevelReached ? nextSection : currentSection
+
+      }
+    }
     default:
       return initialState
   }

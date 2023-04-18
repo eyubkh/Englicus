@@ -1,0 +1,34 @@
+[
+  {
+    "Basic Communication": {
+      "completed": false,
+      "next_level": "Vocabulary",
+      "xp": 0,
+      "max_xp": 100,
+      "categories": [
+        "Basics",
+        "Phrases"
+      ]
+    },
+    "Vocabulary": {
+      "completed": false,
+      "next_level": "Brain Training",
+      "xp": 0,
+      "max_xp": 100,
+      "categories": [
+        "Numbers",
+        "Education"
+      ]
+    },
+    "Brain Training": {
+      "completed": false,
+      "next_level": null,
+      "xp": 0,
+      "max_xp": 100,
+      "categories": [
+        "Verbs",
+        "Questions"
+      ]
+    }
+  }  
+]

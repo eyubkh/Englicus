@@ -3,6 +3,9 @@ import { GreenButton } from '@components/atoms/buttons/GreenButton'
 import { TransparentButton } from '@components/atoms/buttons/TransparentButton'
 import { BrandSecondary } from '@tokens'
 import Link from 'next/link'
+import { useContext } from 'react'
+import { LessonState } from '@redux/LessonContext'
+import { UserDispatch } from '@redux/user/userContext'
 
 const LessonFooterEndedComponent = styled.div`
   display: flex;
@@ -15,8 +18,15 @@ const LessonFooterEndedComponent = styled.div`
 `
 
 export const LessonFooterEnded = () => {
+  const { xp } = useContext(LessonState)
+  const userDispatch = useContext(UserDispatch)
+
   const handlerLevelUp = () => {
     console.log('lesson footer end,  level up')
+    userDispatch({
+      type: 'xp',
+      payload: xp
+    })
   }
   return (
     <LessonFooterEndedComponent>

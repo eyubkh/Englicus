@@ -1,4 +1,5 @@
 import { LessonDispatch, LessonState } from '@redux/LessonContext'
+import { textToSpeech } from '@utils/textToSpeech'
 import { useContext } from 'react'
 
 export const LessonTypeAssist = () => {
@@ -7,8 +8,12 @@ export const LessonTypeAssist = () => {
 
   const dispatch = useContext(LessonDispatch)
 
-  const handlerSelect = (event) => {
-    console.log(event.target.innerText)
+  const handlerSelect = async (event) => {
+    textToSpeech({
+      value: event.target.innerText,
+      lang: 'es-ES'
+    })
+
     dispatch({
       type: 'userInput',
       payload: event.target.innerText

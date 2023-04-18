@@ -6,6 +6,7 @@ export const initialState = {
   correctChallenges: 0,
   progressSteps: 0,
   progress: 0,
+  xp: 0,
   userInput: '',
   isRetrying: false,
   isLessonEnded: false,
@@ -28,7 +29,7 @@ export const reducer = (state, action) => {
       }
     }
     case 'isCorrect':{
-      const { progress, progressSteps, correctChallenges } = state
+      const { progress, progressSteps, correctChallenges, xp } = state
       return {
         ...state,
         isChecking: true,
@@ -36,7 +37,8 @@ export const reducer = (state, action) => {
         isRetrying: false,
         isCorrect: true,
         progress: progress + progressSteps,
-        correctChallenges: correctChallenges + 1
+        correctChallenges: correctChallenges + 1,
+        xp: xp + 20
       }
     }
     case 'isIncorrect': {

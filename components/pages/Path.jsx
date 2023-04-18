@@ -1,6 +1,6 @@
 import { MainHeader } from '@components/organisms/MainHeader'
 import styled from 'styled-components'
-import sample from '@utils/path/sample'
+import smallSamples from '@utils/path/sample/smallSamples'
 import { useContext, useEffect } from 'react'
 import { Unit } from '@components/organisms/Unit'
 import { UserDispatch, UserState } from '@redux/user/userContext'
@@ -25,13 +25,13 @@ export const Path = () => {
   useEffect(() => {
     let definePath = []
 
-    if (goal === 'School') definePath = sample.school
-    if (goal === 'Family and Friends') definePath = sample.family
-    if (goal === 'Culture') definePath = sample.culture
-    if (goal === 'Brain Training') definePath = sample.brain
-    if (goal === 'Job Opportunities') definePath = sample.job
-    if (goal === 'Travel') definePath = sample.travel
-    if (goal === 'Other') definePath = sample.school
+    if (goal === 'School') definePath = smallSamples.school
+    if (goal === 'Family and Friends') definePath = smallSamples.family
+    if (goal === 'Culture') definePath = smallSamples.culture
+    if (goal === 'Brain Training') definePath = smallSamples.brain
+    if (goal === 'Job Opportunities') definePath = smallSamples.job
+    if (goal === 'Travel') definePath = smallSamples.travel
+    if (goal === 'Other') definePath = smallSamples.school
 
     userDispatch({
       type: 'path',

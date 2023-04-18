@@ -34,4 +34,5 @@ yarn-error.log*
 # babel
 .babelrc
 
+key.json
 
