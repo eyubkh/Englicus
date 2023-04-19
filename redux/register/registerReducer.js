@@ -3,7 +3,8 @@ export const initialState = {
   registerProccessIndex: 0,
   isLoading: true,
   isDone: false,
-  progress: 0
+  progress: 0,
+  userChoice: ''
 }
 
 export const reducer = (state, action) => {
@@ -23,6 +24,12 @@ export const reducer = (state, action) => {
         registerProccessIndex: registerProccessIndex + 1,
         progress: progress + (100 / registerProccess.length),
         isDone: registerProccessIndex + 2 > registerProccess.length
+      }
+    }
+    case 'userChoice': {
+      return {
+        ...state,
+        userChoice: payload
       }
     }
     default:

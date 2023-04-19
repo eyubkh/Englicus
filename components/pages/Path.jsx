@@ -25,13 +25,7 @@ export const Path = () => {
   useEffect(() => {
     let definePath = []
 
-    if (goal === 'School') definePath = smallSamples.school
     if (goal === 'Family and Friends') definePath = smallSamples.family
-    if (goal === 'Culture') definePath = smallSamples.culture
-    if (goal === 'Brain Training') definePath = smallSamples.brain
-    if (goal === 'Job Opportunities') definePath = smallSamples.job
-    if (goal === 'Travel') definePath = smallSamples.travel
-    if (goal === 'Other') definePath = smallSamples.school
 
     userDispatch({
       type: 'path',

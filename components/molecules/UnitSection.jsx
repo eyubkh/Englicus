@@ -3,23 +3,24 @@ import Link from 'next/link'
 import { useContext } from 'react'
 import { UserState } from '@redux/user/userContext'
 
-const UnitSectionComponent = styled.div`
-  
+const UnitSectionComponent = styled.article`
+  width: 200px; 
+  height: 200px;
+  background-color: ${({ isDisabled }) => isDisabled ? 'gray' : 'orangered'};
+  border-radius: 20px;
+  display: grid;
+  place-content: center;
+
 `
 
-export const UnitSection = ({ section, title }) => {
+export const UnitSection = ({ xp, maxXp, name, position }) => {
   const { currentSection } = useContext(UserState)
-  const { xp, max_xp: maxXp } = section
   return (
-    <UnitSectionComponent>
-      <p>current xp: {xp} --- xp to complete: {maxXp}</p>
-      <Link href='/lessons' key={title}>
-        <button
-          disabled={title !== currentSection}
-        >
-          {title}
-        </button><br />
-      </Link>
-    </UnitSectionComponent>
+    <Link href='/lessons'>
+      <UnitSectionComponent isDisabled={position !== currentSection}>
+        <p>{name}</p>
+        <p>{xp / maxXp * 100}%</p>
+      </UnitSectionComponent>
+    </Link>
   )
 }

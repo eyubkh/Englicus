@@ -212,7 +212,7 @@
     "difficulty": 0.6,
     "level": "B1",
     "categories": ["Family"],
-    "goals": ["Family and friends"]
+    "goals": ["Family and Friends"]
   },
   {
     "prompt": "Sleep",
@@ -222,7 +222,7 @@
     "difficulty": 0.8,
     "level": "B2",
     "categories": ["Health", "Activities"],
-    "goals": ["Brain training", "Travel"]
+    "goals": ["Brain training", "Travel", "Family and Friends"]
   },
   {
     "prompt": "Professor",
@@ -322,6 +322,6 @@
     "difficulty": 0.750,
     "level": "B2",
     "categories": ["Holidays"],
-    "goals": ["Travel", "Other"]
+    "goals": ["Travel", "Other", "Family and friends"]
   }
 ]

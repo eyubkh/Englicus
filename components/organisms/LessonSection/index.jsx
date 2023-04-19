@@ -3,6 +3,7 @@ import { useContext } from 'react'
 
 import { LessonTypeThreeOptions } from './LessonTypeThreeOptions'
 import { LessonTypeAssist } from './LessonTypeAssist'
+import { LessonTypeSelect } from './LessonTypeSelect'
 
 export const LessonSection = () => {
   const { challenges, currentChallengeIndex } = useContext(LessonState)
@@ -11,4 +12,6 @@ export const LessonSection = () => {
   if (type === 'three-options') return <LessonTypeThreeOptions />
 
   if (type === 'assist') return <LessonTypeAssist />
+
+  if (type === 'select') return <LessonTypeSelect />
 }

@@ -4,7 +4,7 @@ export const initialState = {
   path: [],
   beginner: true,
   currentLevel: 0,
-  currentSection: 'Basic Communication',
+  currentSection: 0,
   totalXp: 0
 }
 
@@ -37,21 +37,18 @@ export const userReducer = (state, action) => {
     case 'xp': {
       const { currentLevel, currentSection, path } = state
       const updatedSection = {
-        ...path[currentLevel],
-        [currentSection]: {
-          ...path[currentLevel][currentSection],
-          xp: path[currentLevel][currentSection].xp + payload
-        }
+        ...path[currentLevel][currentSection],
+        xp: path[currentLevel][currentSection].xp + payload
       }
-      path[currentLevel] = updatedSection
+
+      path[currentLevel][currentSection] = updatedSection
       const pathUpdated = [...path]
-      const maxLevelReached = updatedSection[currentSection].xp >= updatedSection[currentSection].max_xp
-      const nextSection = updatedSection[currentSection].next_level
+      const maxLevelReached = updatedSection.xp >= updatedSection.max_xp
 
       return {
         ...state,
         path: pathUpdated,
-        currentSection: maxLevelReached ? nextSection : currentSection
+        currentSection: maxLevelReached ? currentSection + 1 : currentSection
 
       }
     }

@@ -1,26 +1,34 @@
 import { UnitSection } from '@components/molecules/UnitSection'
 import styled from 'styled-components'
 
-const UnitComponent = styled.div``
+const UnitComponent = styled.main`
 
-export const Unit = ({ unit, title }) => {
-  const sectionKeys = Object.keys(unit)
+  section {
+    display: flex;
+    gap: 10px;
+  }
+`
 
+export const Unit = ({ unit }) => {
   return (
     <UnitComponent>
-      <h3>{title}</h3>
-      {
-        sectionKeys
-          .map((sectionTitle) => {
-            return (
-              <UnitSection
-                key={sectionTitle}
-                section={unit[sectionTitle]}
-                title={sectionTitle}
-              />
-            )
-          })
-      }
+      <h3>unit 1 </h3>
+      <section>
+        {
+          unit
+            .map(({ name, xp, max_xp: maxXp }, index) => {
+              return (
+                <UnitSection
+                  key={name}
+                  name={name}
+                  xp={xp}
+                  position={index}
+                  maxXp={maxXp}
+                />
+              )
+            })
+        }
+      </section>
     </UnitComponent>
   )
 }

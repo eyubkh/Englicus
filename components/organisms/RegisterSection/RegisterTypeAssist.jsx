@@ -1,9 +1,9 @@
 import { useContext } from 'react'
 import styled from 'styled-components'
-import { RegisterState } from '@redux/register/registerContext'
+import { RegisterDispatch, RegisterState } from '@redux/register/registerContext'
 import { UserDispatch } from '@redux/user/userContext'
 import writeLocalData from '@utils/writeLocalData'
-import { Border0, NeutralGrey300, NeutralLight100, NeutralLight300 } from '@tokens'
+import { SquareChoiceInput } from '@components/molecules/SquareChoiceInput'
 
 const RegisterTypeAssistComponent = styled.section`
   display: flex;
@@ -18,27 +18,13 @@ const RegisterTypeAssistComponent = styled.section`
     gap: 10px;
   }
 
-  article div {
-    background-color: ${NeutralLight100};
-    height: 180px;
-    width: 180px;
-    border-radius: 20px;
-    display: grid;
-    place-content: center;
-    border: ${Border0} solid ${NeutralGrey300};
-    cursor: pointer;
-
-    :hover {
-      background-color: ${NeutralLight300};
-    }
-  }
-
 `
 
 export const RegisterTypeAssist = () => {
-  const { registerProccess, registerProccessIndex } = useContext(RegisterState)
+  const { registerProccess, registerProccessIndex, userChoice } = useContext(RegisterState)
   const { prompt, choices } = registerProccess[registerProccessIndex]
 
+  const registerdispatch = useContext(RegisterDispatch)
   const userDispatch = useContext(UserDispatch)
 
   const handlerUserInput = (event) => {
@@ -50,6 +36,11 @@ export const RegisterTypeAssist = () => {
       type: 'goal',
       payload: event.target.innerText
     })
+
+    registerdispatch({
+      type: 'userChoice',
+      payload: event.target.innerText
+    })
   }
   return (
     <RegisterTypeAssistComponent>
@@ -58,7 +49,15 @@ export const RegisterTypeAssist = () => {
         {
           choices
             .map((choice, index) => {
-              return <div onClick={handlerUserInput} key={index}>{choice}</div>
+              return (
+                <SquareChoiceInput
+                  key={index}
+                  onClick={handlerUserInput}
+                  activate={userChoice === choice}
+                >
+                  {choice}
+                </SquareChoiceInput>
+              )
             })
         }
       </article>

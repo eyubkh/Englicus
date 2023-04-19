@@ -6,15 +6,15 @@ export const LessonTypeAssist = () => {
   const { challenges, currentChallengeIndex } = useContext(LessonState)
   const challenge = challenges[currentChallengeIndex]
 
-  const dispatch = useContext(LessonDispatch)
+  const lessonDispatch = useContext(LessonDispatch)
 
-  const handlerSelect = async (event) => {
+  const handlerSelect = (event) => {
     textToSpeech({
       value: event.target.innerText,
       lang: 'es-ES'
     })
 
-    dispatch({
+    lessonDispatch({
       type: 'userInput',
       payload: event.target.innerText
     })

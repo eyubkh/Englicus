@@ -1,8 +1,8 @@
 [
-  {    
-    "Basic Communication": {
+  [
+    {
+      "name": "Basic Communication",
       "completed": false,
-      "next_level": "People",
       "xp": 0,
       "max_xp": 100,
       "categories": [
@@ -10,9 +10,9 @@
         "Phrases"
       ]
     },
-    "People": {
+    {
+      "name": "People",
       "completed": false,
-      "next_level": "Travel",
       "xp": 0,
       "max_xp": 100,
       "categories": [
@@ -21,9 +21,9 @@
         "Family"
       ]
     },
-    "Travel": {
+    {
+      "name": "Travel",
       "completed": false,
-      "next_level": "Vocabulary",
       "xp": 0,
       "max_xp": 100,
       "categories": [
@@ -31,6 +31,55 @@
         "Activities",
         "Time"
       ]
+    },
+    {
+      "name": "Vocabulary",
+      "completed": false,
+      "xp": 0,
+      "max_xp": 100,
+      "categories": [
+        "Food",
+        "Health"
+      ]
+    },
+    {
+      "name": "Nature",
+      "completed": false,
+      "xp": 0,
+      "max_xp": 100,
+      "categories": [
+        "Nature"
+      ]
+    },
+    {
+      "name": "Travel",
+      "completed": false,
+      "xp": 0,
+      "max_xp": 100,
+      "categories": [
+        "Travel phrases",
+        "Directions"
+      ]
     }
-  }
+  ],
+  [
+    {
+      "name": "Vocabulary",
+      "completed": false,
+      "xp": 0,
+      "max_xp": 100,
+      "categories": [
+        "Education",
+        "Questions",
+        "Pronouns",
+        "Numbers",
+        "Occupations",
+        "Weather",
+        "Holidays",
+        "Conjunctions",
+        "Prepositions",
+        "Sports"
+      ]
+    }
+  ]
 ]
