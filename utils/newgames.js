@@ -145,7 +145,7 @@ export default [
         text: 'favor'
       }
     ],
-    correctIndex: [0, 2, 7],
+    correctIndex: [3, 2, 6],
     type: 'translate' // Escribe esto en epañol
   },
   {

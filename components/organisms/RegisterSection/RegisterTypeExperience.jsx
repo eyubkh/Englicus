@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { SquareChoiceInput } from '@components/molecules/SquareChoiceInput'
+import { OptionSelect } from '@components/molecules/OptionSelect'
 import { RegisterDispatch, RegisterState } from '@redux/register/registerContext'
 import { UserDispatch } from '@redux/user/userContext'
 import writeLocalData from '@utils/writeLocalData'
@@ -45,8 +45,8 @@ export const RegisterTypeExperience = () => {
     <RegisterTypeExperienceComponent>
       <h3>{prompt}</h3>
       <article>
-        <SquareChoiceInput activate={userChoice === 'beginner'} onClick={handler}> beginner</SquareChoiceInput>
-        <SquareChoiceInput activate={userChoice === 'experienced'} onClick={handler}> experienced</SquareChoiceInput>
+        <OptionSelect activate={userChoice === 'beginner'} onClick={handler}> beginner</OptionSelect>
+        <OptionSelect activate={userChoice === 'experienced'} onClick={handler}> experienced</OptionSelect>
       </article>
     </RegisterTypeExperienceComponent>
   )

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { RegisterDispatch, RegisterState } from '@redux/register/registerContext'
 import { UserDispatch } from '@redux/user/userContext'
 import writeLocalData from '@utils/writeLocalData'
-import { SquareChoiceInput } from '@components/molecules/SquareChoiceInput'
+import { OptionSelect } from '@components/molecules/OptionSelect'
 
 const RegisterTypeAssistComponent = styled.section`
   display: flex;
@@ -50,13 +50,13 @@ export const RegisterTypeAssist = () => {
           choices
             .map((choice, index) => {
               return (
-                <SquareChoiceInput
+                <OptionSelect
                   key={index}
                   onClick={handlerUserInput}
                   activate={userChoice === choice}
                 >
                   {choice}
-                </SquareChoiceInput>
+                </OptionSelect>
               )
             })
         }

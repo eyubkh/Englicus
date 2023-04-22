@@ -1,15 +1,15 @@
 import { LessonState } from '@redux/LessonContext'
 import { useContext } from 'react'
 
-import { LessonTypeThreeOptions } from './LessonTypeThreeOptions'
 import { LessonTypeAssist } from './LessonTypeAssist'
 import { LessonTypeSelect } from './LessonTypeSelect'
+import { LessonTypeTranslate } from './LessonTypeTranslate'
 
 export const LessonSection = () => {
   const { challenges, currentChallengeIndex } = useContext(LessonState)
   const { type } = challenges[currentChallengeIndex]
 
-  if (type === 'three-options') return <LessonTypeThreeOptions />
+  if (type === 'translate') return <LessonTypeTranslate />
 
   if (type === 'assist') return <LessonTypeAssist />
 

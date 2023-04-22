@@ -1,4 +1,4 @@
-import { SquareChoiceInput } from '@components/molecules/SquareChoiceInput'
+import { SquareChoiceInput } from '@components/molecules/OptionsSelect'
 import { LessonDispatch, LessonState } from '@redux/LessonContext'
 import { textToSpeech } from '@utils/textToSpeech'
 import { useContext } from 'react'

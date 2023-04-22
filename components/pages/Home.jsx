@@ -28,6 +28,11 @@ const HeroComponent = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 0;
+
+      img {
+        width: 250px;
+      }
     }
 
 `

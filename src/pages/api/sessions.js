@@ -12,27 +12,32 @@ export default function sessions (request, response) {
   const object = {
     challenges: [
       {
-        prompt: 'café',
+        prompt: 'tea, please',
         choices: [
           {
-            text: 'tea',
-            img: '',
-            svg: ''
+            text: 'hola'
           },
           {
-            text: 'coffee',
-            img: '',
-            svg: ''
-
+            text: 'cafe'
           },
           {
-            text: 'water',
-            img: '',
-            svg: ''
+            text: 'por'
+          },
+          {
+            text: 'Te'
+          },
+          {
+            text: 'azucar'
+          },
+          {
+            text: 'un'
+          },
+          {
+            text: 'favor'
           }
         ],
-        correctIndex: 1,
-        type: 'select' // Cual de estos es [prompt]? elegir entre las opciones
+        correctIndex: [3, 2, 6],
+        type: 'translate' // Escribe esto en epañol
       }
     ]
   }
