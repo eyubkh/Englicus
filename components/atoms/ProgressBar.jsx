@@ -6,7 +6,6 @@ const ProgressBarComponent = styled.div`
     background-color: ${NeutralLight300};
     height: 15px;
     border-radius: ${Radius2};
-    max-width: 800px;
     width: 100%;
     overflow: hidden;
     

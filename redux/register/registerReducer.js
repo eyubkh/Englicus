@@ -14,7 +14,8 @@ export const reducer = (state, action) => {
       return {
         ...state,
         isLoading: false,
-        registerProccess: payload
+        registerProccess: payload,
+        progress: 100 / payload.length
       }
     }
     case 'next': {

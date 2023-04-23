@@ -4,6 +4,7 @@ import { RegisterDispatch, RegisterState } from '@redux/register/registerContext
 import { UserDispatch } from '@redux/user/userContext'
 import writeLocalData from '@utils/writeLocalData'
 import { OptionSelect } from '@components/molecules/OptionSelect'
+import { DimensionSmall } from '@tokens'
 
 const RegisterTypeAssistComponent = styled.section`
   display: flex;
@@ -11,11 +12,19 @@ const RegisterTypeAssistComponent = styled.section`
   justify-content: center;
   align-items: center;
   height: 60vh;
+  gap: 30px;
 
   article {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+  }
+
+  @media screen and (max-width: ${DimensionSmall}) {
+    article {
+      display: flex;
+    }
   }
 
 `

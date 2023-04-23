@@ -1,4 +1,4 @@
-import { MainHeader } from '@components/organisms/MainHeader'
+import { MainHeader } from '@components/organisms/headers/MainHeader'
 import styled from 'styled-components'
 import smallSamples from '@utils/path/sample/smallSamples'
 import { useContext, useEffect } from 'react'

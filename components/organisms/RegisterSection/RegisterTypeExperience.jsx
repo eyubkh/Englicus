@@ -4,16 +4,26 @@ import { RegisterDispatch, RegisterState } from '@redux/register/registerContext
 import { UserDispatch } from '@redux/user/userContext'
 import writeLocalData from '@utils/writeLocalData'
 import { useContext } from 'react'
+import { DimensionSmall } from '@tokens'
 
 const RegisterTypeExperienceComponent = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap:  30px;
   
   article {
     display: flex;
+    justify-content: center;
     gap: 20px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: ${DimensionSmall}) {
+    article {
+      flex-direction: column;
+    }
   }
 
 `

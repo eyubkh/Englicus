@@ -2,7 +2,7 @@ import { Ad } from '@components/atoms/Ad'
 import Link from 'next/link'
 import { CrossIcon } from 'stories/atoms/CrossIcon.stories'
 import styled from 'styled-components'
-import { LessonFooterEnd } from '../organisms/LessonFooter/LessonFooterEnded'
+import { LessonFooterEnd } from '../organisms/footers/LessonFooter/LessonFooterEnded'
 
 const EndLessonComponent = styled.div`
   display: flex;

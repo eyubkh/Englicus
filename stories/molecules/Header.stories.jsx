@@ -1,4 +1,4 @@
-import { Header as Component } from '@components/organisms/HomeHeader'
+import { Header as Component } from '@components/organisms/headers/HomeHeader'
 
 export default {
   title: 'UI Web/molecules',

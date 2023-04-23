@@ -1,4 +1,4 @@
-import { LearnHeader as Component } from '@components/organisms/MainHeader'
+import { LearnHeader as Component } from '@components/organisms/headers/MainHeader'
 
 export default {
   title: 'UI Web/organisms',

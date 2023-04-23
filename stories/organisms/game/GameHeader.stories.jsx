@@ -1,4 +1,4 @@
-import { GameHeader as Component } from '@components/organisms/LessonHeader'
+import { GameHeader as Component } from '@components/organisms/headers/LessonHeader'
 
 export default {
   title: 'UI Web/organisms',

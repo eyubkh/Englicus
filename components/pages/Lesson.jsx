@@ -1,5 +1,5 @@
-import { LessonFooter } from '@components/organisms/LessonFooter'
-import { LessonHeader } from '@components/organisms/LessonHeader'
+import { LessonFooter } from '@components/organisms/footers/LessonFooter'
+import { LessonHeader } from '@components/organisms/headers/LessonHeader'
 import { LessonSection } from '@components/organisms/LessonSection'
 import dataFetching from '@libs/dataFetching'
 import { handlerCleanUp, handlerEnterPress } from '@libs/handlerEventListener'

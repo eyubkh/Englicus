@@ -1,14 +1,14 @@
-import { GreenButton } from '@components/atoms/buttons/GreenButton'
 import { RegisterSection } from '@components/organisms/RegisterSection'
 import { Loading } from './Loading'
 import { useContext, useEffect } from 'react'
 import styled from 'styled-components'
 
 import registerData from '@utils/registerData.json'
-import { CrossedProgressBar } from '@components/molecules/CrossedProgressBar'
 import { useRouter } from 'next/router'
 import writeLocalData from '@utils/writeLocalData'
 import { RegisterDispatch, RegisterState } from '@redux/register/registerContext'
+import { RegisterHeader } from '@components/organisms/headers/RegisterHeader'
+import { RegisterFooter } from '@components/organisms/footers/RegisterFooter'
 
 const RegisterComponent = styled.main`
   display: flex;
@@ -42,13 +42,7 @@ export const Register = () => {
     })
   }, [])
 
-  const { isLoading, progress, isDone } = useContext(RegisterState)
-
-  const handler = () => {
-    dispatch({
-      type: 'next'
-    })
-  }
+  const { isLoading, isDone } = useContext(RegisterState)
 
   if (isLoading) return <Loading />
 
@@ -59,15 +53,9 @@ export const Register = () => {
 
   return (
     <RegisterComponent>
-      <header>
-        <CrossedProgressBar progress={progress} />
-      </header>
+      <RegisterHeader />
       <RegisterSection />
-      <footer>
-        <GreenButton large onClick={handler}>
-          Continue
-        </GreenButton>
-      </footer>
+      <RegisterFooter />
     </RegisterComponent>
   )
 }
