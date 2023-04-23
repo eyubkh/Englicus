@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { BrandPrimary, NeutralLight100, BodyH4, NeutralDark100, Spacing2 } from '@tokens'
 import Link from 'next/link'
-import { homeHref } from '@utils/globalData'
 
 const LogoComponent = styled.h4`
   position: absolute;
@@ -24,7 +23,7 @@ const LogoComponent = styled.h4`
 export const Logo = ({ dark }) => {
   return (
     <LogoComponent dark={dark}>
-      <Link href={homeHref}>
+      <Link href='/'>
         <span>eng</span>licus
       </Link>
     </LogoComponent>

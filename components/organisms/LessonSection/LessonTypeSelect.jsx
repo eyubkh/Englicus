@@ -1,4 +1,3 @@
-import { SquareChoiceInput } from '@components/molecules/OptionsSelect'
 import { LessonDispatch, LessonState } from '@redux/LessonContext'
 import { textToSpeech } from '@utils/textToSpeech'
 import { useContext } from 'react'
@@ -28,12 +27,12 @@ export const LessonTypeSelect = () => {
       challenge
         .choices.map(({ text }, index) => {
           return (
-            <SquareChoiceInput
+            <button
               onClick={handler}
               activate={userInput === text}
               key={index}
             >{text}
-            </SquareChoiceInput>
+            </button>
           )
         })
     }

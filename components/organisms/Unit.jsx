@@ -1,34 +1,35 @@
 import { UnitSection } from '@components/molecules/UnitSection'
+import { UserState } from '@redux/user/userContext'
+import { useContext } from 'react'
 import styled from 'styled-components'
 
-const UnitComponent = styled.main`
-
-  section {
+const UnitComponent = styled.section`
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-  }
+    align-items: center;
+    justify-content: center;
 `
 
-export const Unit = ({ unit }) => {
+export const Unit = () => {
+  const { path } = useContext(UserState)
+
   return (
     <UnitComponent>
-      <h3>unit 1 </h3>
-      <section>
-        {
-          unit
-            .map(({ name, xp, max_xp: maxXp }, index) => {
-              return (
-                <UnitSection
-                  key={name}
-                  name={name}
-                  xp={xp}
-                  position={index}
-                  maxXp={maxXp}
-                />
-              )
-            })
-        }
-      </section>
+      {
+        path
+          .map(({ name, xp, max_xp: maxXp }, index) => {
+            return (
+              <UnitSection
+                key={name}
+                name={name}
+                xp={xp}
+                position={index}
+                maxXp={maxXp}
+              />
+            )
+          })
+      }
     </UnitComponent>
   )
 }

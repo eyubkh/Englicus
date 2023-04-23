@@ -1,6 +1,5 @@
 import { GreenButton } from '@components/atoms/buttons/GreenButton'
 import { CrossIcon } from '@components/atoms/CrossIcon'
-import { homeHref } from '@utils/globalData'
 import Link from 'next/link'
 import { useState } from 'react'
 import styled from 'styled-components'
@@ -42,7 +41,7 @@ export const Login = () => {
 
   return (
     <LoginComponent onSubmit={handlerSubmit}>
-      <Link href={homeHref} passHref legacyBehavior>
+      <Link href='/' passHref legacyBehavior>
         <CrossIcon />
       </Link>
       <form>
