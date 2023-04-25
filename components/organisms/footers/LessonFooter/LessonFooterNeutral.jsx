@@ -9,7 +9,7 @@ export const LessonFooterNeutralComponent = styled.div`
   align-items: center;
   justify-content: space-between;
   min-height: 23vh;
-  padding: 20px 20%;
+  padding: 20px 10%;
 `
 
 export const LessonFooterNeutral = () => {

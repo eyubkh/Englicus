@@ -14,6 +14,8 @@ const LessonRetryComponent = styled.div`
   position: absolute;
   width: 100vw;
   height: 100vh;
+  display: grid;
+  place-content: center;
   animation: ${hide} 1s forwards step-end; 
   background-color: ${NeutralLight100};
   z-index: 3;

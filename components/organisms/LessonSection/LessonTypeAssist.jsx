@@ -2,52 +2,59 @@ import styled from 'styled-components'
 import { LessonDispatch, LessonState } from '@redux/LessonContext'
 import { textToSpeech } from '@utils/textToSpeech'
 import { useContext } from 'react'
+import { Border0, NeutralGrey100, NeutralLight100, NeutralLight200, NeutralLight300 } from '@tokens'
 
 const LessonTypeAssistComponent = styled.section`
   display: flex;
   flex-direction: column;
-
-  padding: 30px;
-  background-color: aliceblue;
+  gap: 20px;
+  padding: 20px 10%;
   height: 100%;
+  overflow-y: scroll;
 
   article {
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+`
 
-    div {
-      display: flex;
-      align-items: center;
-      padding-left: 30px;
-      gap: 10px;
-      background-color: antiquewhite;
-      height: 50px;
+const SelectChoice = styled.div`
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  gap: 10px;
+  background-color: ${({ active }) => active ? NeutralLight200 : NeutralLight100};
+  height: 60px;
+  cursor: pointer;
+  border-radius: ${Border0};
 
-      span {
-        padding: 7px;
-        border-radius: 5px;
-        border: 1px solid black;
-      }
-    }
+
+  span {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: ${NeutralLight300};
+    box-shadow: 1px 1px 0 0 ${NeutralGrey100};
   }
 `
 
 export const LessonTypeAssist = () => {
-  const { challenges, currentChallengeIndex } = useContext(LessonState)
+  const { challenges, currentChallengeIndex, userInput } = useContext(LessonState)
   const challenge = challenges[currentChallengeIndex]
 
   const lessonDispatch = useContext(LessonDispatch)
 
   const handlerSelect = (event) => {
+    const targetText = event.currentTarget.children[1].innerText
     textToSpeech({
-      value: event.target.innerText,
+      value: targetText,
       lang: 'es-ES'
     })
-
+    console.log()
     lessonDispatch({
       type: 'userInput',
-      payload: event.target.innerText
+      payload: targetText
     })
   }
 
@@ -59,7 +66,10 @@ export const LessonTypeAssist = () => {
           challenge
             .choices.map((choice, index) => {
               return (
-                <div onClick={handlerSelect} key={index}><span>{index}</span>{choice}</div>
+                <SelectChoice active={userInput === choice} onClick={handlerSelect} key={index}>
+                  <span>{index + 1}</span>
+                  <p>{choice}</p>
+                </SelectChoice>
               )
             })
         }

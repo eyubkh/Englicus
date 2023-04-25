@@ -8,6 +8,7 @@ import { LessonDispatch } from '@redux/LessonContext'
 
 const LessonFooterSuccessComponent = styled(LessonFooterNeutralComponent)`
   background-color: ${ActionSuccess100};
+  padding: 20px 10%;
   
   div {
     display: flex;

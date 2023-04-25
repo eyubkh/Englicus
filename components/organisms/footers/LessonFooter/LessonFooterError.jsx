@@ -8,7 +8,7 @@ import { LessonDispatch, LessonState } from '@redux/LessonContext'
 
 const LessonFooterErrorComponent = styled(LessonFooterNeutralComponent)`
   background-color: ${ActionError100};
-
+  padding: 20px 10%;
   div {
     display: flex;
     align-items: center;
