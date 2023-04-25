@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ActionSuccess100 } from '@tokens'
+import { ActionSuccess100, ActionSuccess300 } from '@tokens'
 import { useContext } from 'react'
 import { CircleCheckIcon } from '@components/molecules/CircleCheckIcon'
 import { LessonFooterNeutralComponent } from './LessonFooterNeutral'
@@ -16,6 +16,10 @@ const LessonFooterSuccessComponent = styled(LessonFooterNeutralComponent)`
     p {
       color: #333;
     }
+  }
+
+  h3 {
+    color: ${ActionSuccess300};
   }
 `
 

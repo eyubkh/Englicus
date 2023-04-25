@@ -1,18 +1,25 @@
-import { CrossIcon } from '@components/atoms/CrossIcon'
+import styled from 'styled-components'
 import { Ad } from '@components/atoms/Ad'
-import Link from 'next/link'
+import { LessonState } from '@redux/LessonContext'
+import { useContext } from 'react'
+
+const LessonSectionEndedComponent = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+
+  place-items: center;
+
+`
 
 export const LessonSectionEnded = () => {
+  const { xp } = useContext(LessonState)
   return (
-    <section>
+    <LessonSectionEndedComponent>
       <div>
-        <Link href='/path' passHref legacyBehavior>
-          <a>
-            <CrossIcon />
-          </a>
-        </Link>
+        <h3>xp ganado {xp}ps</h3>
       </div>
       <Ad />
-    </section>
+    </LessonSectionEndedComponent>
   )
 }

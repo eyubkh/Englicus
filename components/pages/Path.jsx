@@ -39,7 +39,6 @@ export const Path = () => {
   return (
     <PathComponent>
       <MainHeader />
-      <p>{goal}</p>
       <h1>Aprender Ingles</h1>
       <Unit />
     </PathComponent>

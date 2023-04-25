@@ -38,7 +38,7 @@ export const reducer = (state, action) => {
         isCorrect: true,
         progress: progress + progressSteps,
         correctChallenges: correctChallenges + 1,
-        xp: xp + 10
+        xp: xp + 5
       }
     }
     case 'isIncorrect': {

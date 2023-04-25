@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { GreenButton } from '@components/atoms/buttons/GreenButton'
-import { TransparentButton } from '@components/atoms/buttons/TransparentButton'
 import { BrandSecondary } from '@tokens'
 import Link from 'next/link'
 import { useContext } from 'react'
@@ -22,7 +21,6 @@ export const LessonFooterEnded = () => {
   const userDispatch = useContext(UserDispatch)
 
   const handlerLevelUp = () => {
-    console.log('lesson footer end,  level up')
     userDispatch({
       type: 'xp',
       payload: xp
@@ -30,11 +28,8 @@ export const LessonFooterEnded = () => {
   }
   return (
     <LessonFooterEndedComponent>
-      <TransparentButton>
-        try again
-      </TransparentButton>
       <Link href='/path' passHref legacyBehavior>
-        <GreenButton onClick={handlerLevelUp}>
+        <GreenButton large onClick={handlerLevelUp}>
           Continue
         </GreenButton>
       </Link>

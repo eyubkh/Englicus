@@ -1,11 +1,18 @@
 import data from '@utils/path/data.json'
 
 export default function sessions (request, response) {
-  const { goal } = request.body
+  const { goal, path, currentLevel } = request.body
 
+  const { categories } = path[currentLevel]
+
+  console.log(categories)
   const challenges = data
-    .filter(({ goals }) => goals.includes(goal))
+    .filter(({ goals, categories: catego }) => {
+      const cat = catego.some((c) => categories.includes(c))
+      return cat && goals.includes(goal)
+    })
 
+  console.log(challenges)
   const object = {
     challenges
   }

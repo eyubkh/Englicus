@@ -4,11 +4,11 @@ import { useContext } from 'react'
 import styled from 'styled-components'
 
 const UnitComponent = styled.section`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
 `
 
 export const Unit = () => {

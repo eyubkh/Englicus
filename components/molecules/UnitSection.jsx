@@ -2,38 +2,47 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import { useContext } from 'react'
 import { UserState } from '@redux/user/userContext'
-import { ActionSuccess100, BrandSecondary, NeutralGrey100 } from '@tokens'
+import { Border2, BrandSecondary, NeutralLight100, NeutralLight300 } from '@tokens'
 
 const UnitSectionComponent = styled.article`
-  width: 190px; 
-  height: 190px;
-  border-radius: 27px;
-  display: grid;
-  place-content: center;
+  width: 100%; 
+  height: 50px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
 
-  svg {
-    width: 114px;
-    height: 114px;
-    margin: 1em;
+  border-radius: 0 0 ${Border2} ${Border2} ;
+  background-color: ${({ isDisabled }) => isDisabled ? NeutralLight300 : NeutralLight100};
+  align-items: center;
+  border: 1px solid black;
+  border-top: none;
+  h4 {
+    color: black;
+    margin-left: 20px;
   }
 
-  .bg {
-    fill: ${({ isDisabled }) => isDisabled ? NeutralGrey100 : BrandSecondary};
-    stroke-width: 10px;
-    stroke: #1A2C34;
+  ::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    top: 0px;
+    left: -1px;
+        
+    background-color: ${({ isDisabled }) => isDisabled ? NeutralLight300 : NeutralLight100};
+    border: 1px solid black;
+    border-bottom: none;
   }
+  ::after {
+    content: '';
+    position: absolute;
+    width: ${({ progress }) => progress + '%'};
+    height: 8px;
+    top: 1px;
+    left: -1px;
+        
 
-  .meter-1 {
-    stroke-dasharray: 360;
-    stroke-dashoffset: ${({ progress }) => progress};
-    stroke: ${ActionSuccess100};
-    transition: stroke-dashoffset 1s ease-out;
-
-    fill: none;
-    stroke-width: 10px;
-    stroke-linecap: round;
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
+    background-color: ${BrandSecondary};
   }
 `
 
@@ -41,12 +50,8 @@ export const UnitSection = ({ xp, maxXp, name, position }) => {
   const { currentLevel } = useContext(UserState)
   return (
     <Link href={position !== currentLevel ? '#' : 'lessons'}>
-      <UnitSectionComponent progress={xp >= maxXp ? 0 : 360 - (xp / maxXp * 360)} isDisabled={position !== currentLevel}>
-        <svg>
-          <circle class='bg' cx='57' cy='57' r='52' />
-          <text x='35' y='60'>{name}</text>
-          <circle class='meter-1' cx='57' cy='57' r='52' />
-        </svg>
+      <UnitSectionComponent progress={xp / maxXp * 100} isDisabled={position !== currentLevel}>
+        <h4>{name}</h4>
       </UnitSectionComponent>
     </Link>
   )
