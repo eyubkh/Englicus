@@ -1,4 +1,4 @@
-import { LessonState } from '@redux/LessonContext'
+import { LessonState } from '@redux/lesson/lessonContext'
 import { NeutralLight100 } from '@tokens'
 import { useContext } from 'react'
 import styled, { keyframes } from 'styled-components'

@@ -1,5 +1,5 @@
 import { CrossedProgressBar } from '@components/molecules/CrossedProgressBar'
-import { LessonState } from '@redux/LessonContext'
+import { LessonState } from '@redux/lesson/lessonContext'
 import { useContext } from 'react'
 import styled from 'styled-components'
 

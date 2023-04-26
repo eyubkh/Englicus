@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Ad } from '@components/atoms/Ad'
-import { LessonState } from '@redux/LessonContext'
+import { LessonState } from '@redux/lesson/lessonContext'
 import { useContext } from 'react'
 
 const LessonSectionEndedComponent = styled.section`

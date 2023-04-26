@@ -3,7 +3,7 @@ import { GreenButton } from '@components/atoms/buttons/GreenButton'
 import { BrandSecondary } from '@tokens'
 import Link from 'next/link'
 import { useContext } from 'react'
-import { LessonState } from '@redux/LessonContext'
+import { LessonState } from '@redux/lesson/lessonContext'
 import { UserDispatch } from '@redux/user/userContext'
 
 const LessonFooterEndedComponent = styled.div`

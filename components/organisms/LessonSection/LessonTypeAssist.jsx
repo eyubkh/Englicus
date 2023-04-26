@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { LessonDispatch, LessonState } from '@redux/LessonContext'
+import { LessonDispatch, LessonState } from '@redux/lesson/lessonContext'
 import { textToSpeech } from '@utils/textToSpeech'
 import { useContext } from 'react'
 import { Border0, NeutralGrey100, NeutralLight100, NeutralLight200, NeutralLight300 } from '@tokens'

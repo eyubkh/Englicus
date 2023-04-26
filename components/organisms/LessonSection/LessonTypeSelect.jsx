@@ -1,4 +1,4 @@
-import { LessonDispatch, LessonState } from '@redux/LessonContext'
+import { LessonDispatch, LessonState } from '@redux/lesson/lessonContext'
 import { textToSpeech } from '@utils/textToSpeech'
 import { useContext } from 'react'
 

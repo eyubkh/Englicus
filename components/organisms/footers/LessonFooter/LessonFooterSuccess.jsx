@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { CircleCheckIcon } from '@components/molecules/CircleCheckIcon'
 import { LessonFooterNeutralComponent } from './LessonFooterNeutral'
 import { GreenButton } from '@components/atoms/buttons/GreenButton'
-import { LessonDispatch } from '@redux/LessonContext'
+import { LessonDispatch } from '@redux/lesson/lessonContext'
 
 const LessonFooterSuccessComponent = styled(LessonFooterNeutralComponent)`
   background-color: ${ActionSuccess100};

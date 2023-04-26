@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { InputUnderLine } from '@components/atoms/InputUnderLine'
 import { useContext } from 'react'
-import { LessonDispatch, LessonState } from '@redux/LessonContext'
+import { LessonDispatch, LessonState } from '@redux/lesson/lessonContext'
 
 const ThreeOptionsComponent = styled.article`
   display: inline-flex;

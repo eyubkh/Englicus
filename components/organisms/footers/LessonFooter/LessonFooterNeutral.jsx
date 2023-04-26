@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { GreenButton } from '@components/atoms/buttons/GreenButton'
 import { TransparentButton } from '@components/atoms/buttons/TransparentButton'
 import styled from 'styled-components'
-import { LessonDispatch, LessonState } from '@redux/LessonContext'
+import { LessonDispatch, LessonState } from '@redux/lesson/lessonContext'
 
 export const LessonFooterNeutralComponent = styled.div`
   display: flex;

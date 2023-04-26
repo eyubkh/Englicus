@@ -4,7 +4,7 @@ import { RedButton } from '@components/atoms/buttons/RedButton'
 import { ActionError100, ActionError300, NeutralLight100 } from '@tokens'
 import { useContext } from 'react'
 import { LessonFooterNeutralComponent } from './LessonFooterNeutral'
-import { LessonDispatch, LessonState } from '@redux/LessonContext'
+import { LessonDispatch, LessonState } from '@redux/lesson/lessonContext'
 
 const LessonFooterErrorComponent = styled(LessonFooterNeutralComponent)`
   background-color: ${ActionError100};

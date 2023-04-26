@@ -1,4 +1,4 @@
-import { LessonState } from '@redux/LessonContext'
+import { LessonState } from '@redux/lesson/lessonContext'
 import { useContext, useState } from 'react'
 
 export const LessonTypeTranslate = () => {
