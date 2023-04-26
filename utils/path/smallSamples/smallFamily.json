@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Basic",
+    "completed": false,
+    "xp": 0,
+    "max_xp": 100,
+    "categories": [
+      "Basics",
+      "Phrases"
+    ]
+  },
+  {
+    "name": "People",
+    "completed": false,
+    "xp": 0,
+    "max_xp": 100,
+    "categories": [
+      "Animals",
+      "People",
+      "Family and Friends"
+    ]
+  },
+  {
+    "name": "Travel",
+    "completed": false,
+    "xp": 0,
+    "max_xp": 100,
+    "categories": [
+      "Travel",
+      "Activities",
+      "Time"
+    ]
+  },
+  {
+    "name": "Vocab",
+    "completed": false,
+    "xp": 0,
+    "max_xp": 100,
+    "categories": [
+      "Food",
+      "Health"
+    ]
+  },
+  {
+    "name": "Nature",
+    "completed": false,
+    "xp": 0,
+    "max_xp": 100,
+    "categories": [
+      "Nature"
+    ]
+  }
+]

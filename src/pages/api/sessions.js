@@ -6,11 +6,16 @@ export default function sessions (request, response) {
   const { categories } = path[currentLevel]
 
   console.log(categories)
-  const challenges = data
-    .filter(({ goals, categories: catego }) => {
-      const cat = catego.some((c) => categories.includes(c))
-      return cat && goals.includes(goal)
-    })
+  const challenges = []
+
+  for (const challenge of data) {
+    if (challenges.length >= 10) break
+
+    const cat = challenge.categories.some((c) => categories.includes(c))
+    if (cat && challenge.goals.includes(goal)) {
+      challenges.push(challenge)
+    }
+  }
 
   console.log(challenges)
   const object = {

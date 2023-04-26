@@ -1,6 +1,6 @@
 import { MainHeader } from '@components/organisms/headers/MainHeader'
 import styled from 'styled-components'
-import smallSamples from '@utils/path/sample/smallSamples'
+import smallSamples from '@utils/path/smallSamples'
 import { useContext, useEffect } from 'react'
 import { Unit } from '@components/organisms/Unit'
 import { UserDispatch, UserState } from '@redux/user/userContext'
