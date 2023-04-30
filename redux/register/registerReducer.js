@@ -20,11 +20,12 @@ export const reducer = (state, action) => {
     }
     case 'next': {
       const { registerProccessIndex, registerProccess, progress } = state
+      const rProccessIndex = registerProccessIndex + 1
       return {
         ...state,
-        registerProccessIndex: registerProccessIndex + 1,
+        registerProccessIndex: rProccessIndex,
         progress: progress + (100 / registerProccess.length),
-        isDone: registerProccessIndex + 2 > registerProccess.length
+        isDone: rProccessIndex > registerProccess.length - 1
       }
     }
     case 'userChoice': {

@@ -6,7 +6,7 @@ import writeLocalData from '@utils/writeLocalData'
 import { OptionSelect } from '@components/molecules/OptionSelect'
 import { DimensionSmall } from '@tokens'
 
-const RegisterTypeAssistComponent = styled.section`
+const RegisterTypeGoalComponent = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,11 +29,11 @@ const RegisterTypeAssistComponent = styled.section`
 
 `
 
-export const RegisterTypeAssist = () => {
+export const RegisterTypeGoal = () => {
   const { registerProccess, registerProccessIndex, userChoice } = useContext(RegisterState)
   const { prompt, choices } = registerProccess[registerProccessIndex]
 
-  const registerdispatch = useContext(RegisterDispatch)
+  const registerDispatch = useContext(RegisterDispatch)
   const userDispatch = useContext(UserDispatch)
 
   const handlerUserInput = (event) => {
@@ -46,13 +46,13 @@ export const RegisterTypeAssist = () => {
       payload: event.target.innerText
     })
 
-    registerdispatch({
+    registerDispatch({
       type: 'userChoice',
       payload: event.target.innerText
     })
   }
   return (
-    <RegisterTypeAssistComponent>
+    <RegisterTypeGoalComponent>
       <h3>{prompt}</h3>
       <article>
         {
@@ -70,6 +70,6 @@ export const RegisterTypeAssist = () => {
             })
         }
       </article>
-    </RegisterTypeAssistComponent>
+    </RegisterTypeGoalComponent>
   )
 }

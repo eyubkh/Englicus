@@ -24,7 +24,7 @@ export const Path = () => {
   useEffect(() => {
     let definePath = []
 
-    if (goal === 'Family and Friends') definePath = smallSamples.family
+    if (goal === 'school') definePath = smallSamples.school
 
     userDispatch({
       type: 'path',

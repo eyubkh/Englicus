@@ -1,75 +1,1112 @@
 [
   {
-    "prompt": "Hello",
+    "prompt": "bathroom",
     "choices": [
-      "Hola",
-      "Adiós",
-      "Por favor"
+      "cocina",
+      "baño",
+      "sala",
+      "dormitorio"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "type": "assist",
-    "difficulty": 0.2,
-    "level": "A1",
+    "difficulty": 300,
     "categories": [
-      "Basics"
+      "basics",
+      "home"
     ],
     "goals": [
-      "Family and Friends"
+      "school"
     ]
   },
   {
-    "prompt": "sorry",
+    "prompt": "shopping",
     "choices": [
-      "perdón",
-      "hasta luego",
-      "buenos días"
+      "deporte",
+      "compra",
+      "baile",
+      "cine",
+      "música"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "type": "assist",
-    "difficulty": 0.3,
-    "level": "A1",
+    "difficulty": 450,
     "categories": [
-      "Basics",
-      "Phrases"
+      "activities",
+      "travel"
     ],
     "goals": [
-      "Family and Friends"
+      "school"
     ]
   },
   {
-    "prompt": "how are you?",
+    "prompt": "dog",
     "choices": [
-      "cómo estás?",
-      "dónde está el baño?",
-      "cuál es tu nombre?"
+      "gato",
+      "conejo",
+      "perro",
+      "pájaro",
+      "pez"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "type": "assist",
-    "difficulty": 0.4,
-    "level": "A2",
+    "difficulty": 100,
     "categories": [
-      "Phrases"
+      "animals",
+      "nature"
     ],
     "goals": [
-      "Family and Friends"
+      "school"
     ]
   },
   {
-    "prompt": "my name is",
+    "prompt": "breakfast",
     "choices": [
-      "mi nombre es",
-      "qué tal?",
-      "cómo se llama usted?"
+      "almuerzo",
+      "desayuno",
+      "cena",
+      "merienda"
+    ],
+    "correctIndex": 1,
+    "type": "assist",
+    "difficulty": 200,
+    "categories": [
+      "food"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "doctor",
+    "choices": [
+      "maestro",
+      "abogado",
+      "enfermera",
+      "médico",
+      "policía"
+    ],
+    "correctIndex": 3,
+    "type": "assist",
+    "difficulty": 800,
+    "categories": [
+      "health",
+      "people"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "car",
+    "choices": [
+      "bicicleta",
+      "coche",
+      "avión",
+      "tren"
+    ],
+    "correctIndex": 1,
+    "type": "assist",
+    "difficulty": 300,
+    "categories": [
+      "travel",
+      "basics"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "hunger",
+    "choices": [
+      "sed",
+      "hambre",
+      "frío",
+      "calor",
+      "cansancio"
+    ],
+    "correctIndex": 1,
+    "type": "assist",
+    "difficulty": 200,
+    "categories": [
+      "food",
+      "health",
+      "phrases"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "beach",
+    "choices": [
+      "montaña",
+      "ciudad",
+      "playa",
+      "río",
+      "bosque"
+    ],
+    "correctIndex": 2,
+    "type": "assist",
+    "difficulty": 500,
+    "categories": [
+      "travel",
+      "nature",
+      "activities"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "bird",
+    "choices": [
+      "gato",
+      "perro",
+      "ave",
+      "pez",
+      "ratón"
+    ],
+    "correctIndex": 2,
+    "type": "assist",
+    "difficulty": 150,
+    "categories": [
+      "animals",
+      "nature"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "orange",
+    "choices": [
+      "manzana",
+      "pera",
+      "naranja",
+      "limón",
+      "plátano"
+    ],
+    "correctIndex": 2,
+    "type": "assist",
+    "difficulty": 200,
+    "categories": [
+      "food",
+      "nature"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "water",
+    "choices": [
+      "agua",
+      "leche",
+      "café",
+      "jugo",
+      "refresco"
     ],
     "correctIndex": 0,
     "type": "assist",
-    "difficulty": 0.5,
-    "level": "A2",
+    "difficulty": 100,
     "categories": [
-      "Phrases"
+      "basics",
+      "nature"
     ],
     "goals": [
-      "Family and Friends"
+      "school"
+    ]
+  },
+  {
+    "prompt": "happy",
+    "choices": [
+      "triste",
+      "feliz",
+      "enojado",
+      "cansado",
+      "sorprendido"
+    ],
+    "correctIndex": 1,
+    "type": "assist",
+    "difficulty": 300,
+    "categories": [
+      "phrases",
+      "people"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "beach",
+    "choices": [
+      "montaña",
+      "ciudad",
+      "playa",
+      "bosque",
+      "río"
+    ],
+    "correctIndex": 2,
+    "type": "assist",
+    "difficulty": 250,
+    "categories": [
+      "travel",
+      "nature"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "doctor",
+    "choices": [
+      "profesor",
+      "enfermera",
+      "médico",
+      "abogado",
+      "arquitecto"
+    ],
+    "correctIndex": 2,
+    "type": "assist",
+    "difficulty": 400,
+    "categories": [
+      "people",
+      "health"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "eat",
+    "choices": [
+      "dormir",
+      "caminar",
+      "bailar",
+      "comer",
+      "leer"
+    ],
+    "correctIndex": 3,
+    "type": "assist",
+    "difficulty": 150,
+    "categories": [
+      "activities",
+      "food"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "train",
+    "choices": [
+      "carro",
+      "tren",
+      "avión",
+      "bicicleta",
+      "barco"
+    ],
+    "correctIndex": 1,
+    "type": "assist",
+    "difficulty": 300,
+    "categories": [
+      "travel",
+      "activities"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "time",
+    "choices": [
+      "hora",
+      "día",
+      "semana",
+      "mes",
+      "año"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 100,
+    "categories": [
+      "time",
+      "basics"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Food",
+    "choices": [
+      "Comida",
+      "Música",
+      "Agua",
+      "Tren",
+      "Perro"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 500,
+    "categories": [
+      "food",
+      "activities"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "happy",
+    "choices": [
+      "feliz",
+      "triste",
+      "enojado",
+      "asustado",
+      "contento"
+    ],
+    "correctIndex": 4,
+    "type": "assist",
+    "difficulty": 500,
+    "categories": [
+      "basics",
+      "phrases"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "dog",
+    "choices": [
+      "perro",
+      "gato",
+      "pez",
+      "ave",
+      "ratón"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 250,
+    "categories": [
+      "animals",
+      "nature"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "swimming",
+    "choices": [
+      "nadar",
+      "correr",
+      "saltar",
+      "bailar",
+      "cantar"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 150,
+    "categories": [
+      "activities",
+      "health"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "tomorrow",
+    "choices": [
+      "mañana",
+      "tarde",
+      "noche",
+      "mediodía",
+      "amanecer"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 300,
+    "categories": [
+      "time",
+      "phrases"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "sick",
+    "choices": [
+      "enfermo",
+      "saludable",
+      "fuerte",
+      "débil",
+      "joven"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 200,
+    "categories": [
+      "health",
+      "phrases"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "jacket",
+    "choices": [
+      "chaqueta",
+      "pantalón",
+      "camisa",
+      "falda",
+      "zapatos"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 350,
+    "categories": [
+      "basics",
+      "clothing"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "beach",
+    "choices": [
+      "playa",
+      "río",
+      "lago",
+      "montaña",
+      "bosque"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 400,
+    "categories": [
+      "travel",
+      "nature"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "sad",
+    "choices": [
+      "triste",
+      "feliz",
+      "enojado",
+      "asustado",
+      "contento"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 100,
+    "categories": [
+      "phrases",
+      "emotions"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Table",
+    "choices": [
+      "Silla",
+      "Mesa",
+      "Sofá",
+      "Cama",
+      "Armario"
+    ],
+    "correctIndex": 1,
+    "type": "assist",
+    "difficulty": 250,
+    "categories": [
+      "basics",
+      "furniture"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Rain",
+    "choices": [
+      "Nieve",
+      "Sol",
+      "Lluvia",
+      "Viento",
+      "Tormenta"
+    ],
+    "correctIndex": 2,
+    "type": "assist",
+    "difficulty": 500,
+    "categories": [
+      "basics",
+      "weather"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Bicycle",
+    "choices": [
+      "Motocicleta",
+      "Bicicleta",
+      "Coche",
+      "Autobús",
+      "Barco"
+    ],
+    "correctIndex": 1,
+    "type": "assist",
+    "difficulty": 150,
+    "categories": [
+      "basics",
+      "travel"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Sister",
+    "choices": [
+      "Hermano",
+      "Padre",
+      "Hermana",
+      "Madre",
+      "Abuela"
+    ],
+    "correctIndex": 2,
+    "type": "assist",
+    "difficulty": 350,
+    "categories": [
+      "basics",
+      "family"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Morning",
+    "choices": [
+      "Tarde",
+      "Noche",
+      "Mañana",
+      "Mediodía",
+      "Amanecer"
+    ],
+    "correctIndex": 2,
+    "type": "assist",
+    "difficulty": 450,
+    "categories": [
+      "basics",
+      "time"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Football",
+    "choices": [
+      "Tenis",
+      "Natación",
+      "Baloncesto",
+      "Fútbol",
+      "Atletismo"
+    ],
+    "correctIndex": 3,
+    "type": "assist",
+    "difficulty": 550,
+    "categories": [
+      "basics",
+      "sports"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Beach",
+    "choices": [
+      "Montaña",
+      "Lago",
+      "Río",
+      "Playa",
+      "Desierto"
+    ],
+    "correctIndex": 3,
+    "type": "assist",
+    "difficulty": 350,
+    "categories": [
+      "basics",
+      "travel"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Doctor",
+    "choices": [
+      "Paciente",
+      "Enfermera",
+      "Doctor",
+      "Farmacéutico",
+      "Odontólogo"
+    ],
+    "correctIndex": 2,
+    "type": "assist",
+    "difficulty": 450,
+    "categories": [
+      "basics",
+      "health"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Happy",
+    "choices": [
+      "Enojado",
+      "Feliz",
+      "Triste",
+      "Cansado",
+      "Asustado"
+    ],
+    "correctIndex": 1,
+    "type": "assist",
+    "difficulty": 200,
+    "categories": [
+      "basics",
+      "emotions"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "water",
+    "choices": [
+      "fuego",
+      "sol",
+      "agua",
+      "aire",
+      "tierra"
+    ],
+    "correctIndex": 2,
+    "type": "assist",
+    "difficulty": 100,
+    "categories": [
+      "nature",
+      "basics"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "buenos dias",
+    "choices": [
+      "good night",
+      "good afternoon",
+      "good morning",
+      "good evening",
+      "goodbye"
+    ],
+    "correctIndex": 2,
+    "type": "assist",
+    "difficulty": 250,
+    "categories": [
+      "phrases",
+      "basics"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "travel",
+    "choices": [
+      "viajar",
+      "comida",
+      "amor",
+      "trabajo",
+      "ropa"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 600,
+    "categories": [
+      "travel",
+      "basics"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "plate",
+    "choices": [
+      "tenedor",
+      "cuchara",
+      "vaso",
+      "plato",
+      "cuchillo"
+    ],
+    "correctIndex": 3,
+    "type": "assist",
+    "difficulty": 350,
+    "categories": [
+      "food",
+      "basics"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "clock",
+    "choices": [
+      "reloj",
+      "libro",
+      "television",
+      "radio",
+      "ordenador"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 450,
+    "categories": [
+      "time",
+      "basics"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "to read",
+    "choices": [
+      "escribir",
+      "cocinar",
+      "bailar",
+      "leer",
+      "cantar"
+    ],
+    "correctIndex": 3,
+    "type": "assist",
+    "difficulty": 150,
+    "categories": [
+      "activities",
+      "basics"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "beach",
+    "choices": [
+      "montaña",
+      "lago",
+      "rio",
+      "parque",
+      "playa"
+    ],
+    "correctIndex": 4,
+    "type": "assist",
+    "difficulty": 550,
+    "categories": [
+      "travel",
+      "nature"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "money",
+    "choices": [
+      "dinero",
+      "trabajo",
+      "amor",
+      "familia",
+      "salud"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 700,
+    "categories": [
+      "basics"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "hiking",
+    "choices": [
+      "nadar",
+      "bucear",
+      "escalar",
+      "caminar",
+      "correr"
+    ],
+    "correctIndex": 3,
+    "type": "assist",
+    "difficulty": 400,
+    "categories": [
+      "activities",
+      "nature"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Water",
+    "choices": [
+      "Agua",
+      "Comida",
+      "Casa",
+      "Perro",
+      "Libro"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 250,
+    "categories": [
+      "basics",
+      "travel"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Toothbrush",
+    "choices": [
+      "Cepillo de dientes",
+      "Cama",
+      "Mesa",
+      "Televisor",
+      "Coche"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 350,
+    "categories": [
+      "health"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Morning",
+    "choices": [
+      "Mañana",
+      "Noche",
+      "Tarde",
+      "Casa",
+      "Comida"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 450,
+    "categories": [
+      "time"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Shoes",
+    "choices": [
+      "Zapatos",
+      "Camisa",
+      "Pantalón",
+      "Sombrero",
+      "Gafas"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 550,
+    "categories": [
+      "basics",
+      "travel"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Window",
+    "choices": [
+      "Ventana",
+      "Puerta",
+      "Pared",
+      "Techo",
+      "Suelo"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 650,
+    "categories": [
+      "basics"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Beach",
+    "choices": [
+      "Playa",
+      "Montaña",
+      "Ciudad",
+      "Parque",
+      "Río"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 750,
+    "categories": [
+      "travel"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Sunglasses",
+    "choices": [
+      "Gafas de sol",
+      "Sombrero",
+      "Bufanda",
+      "Guantes",
+      "Gorra"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 850,
+    "categories": [
+      "basics",
+      "travel"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Chair",
+    "choices": [
+      "Silla",
+      "Mesa",
+      "Cama",
+      "Armario",
+      "Estantería"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 950,
+    "categories": [
+      "basics"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "Book",
+    "choices": [
+      "Libro",
+      "Película",
+      "Canción",
+      "Juego",
+      "Revista"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 50,
+    "categories": [
+      "basics",
+      "activities"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "City",
+    "choices": [
+      "Ciudad",
+      "País",
+      "Continente",
+      "Océano",
+      "Lago"
+    ],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 150,
+    "categories": [
+      "travel"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "dog",
+    "choices": [
+      "gato",
+      "conejo",
+      "perro",
+      "pez",
+      "caballo"
+    ],
+    "correctIndex": 2,
+    "type": "assist",
+    "difficulty": 250,
+    "categories": [
+      "animals"
+    ],
+    "goals": [
+      "school"
+    ]
+  },
+  {
+    "prompt": "bathroom",
+    "choices": [
+      "cocina",
+      "baño",
+      "dormitorio",
+      "sala",
+      "comedor"
+    ],
+    "correctIndex": 1,
+    "type": "assist",
+    "difficulty": 500,
+    "categories": [
+      "basics",
+      "home"
+    ],
+    "goals": [
+      "school"
     ]
   },
   {
@@ -77,1050 +1114,354 @@
     "choices": [
       "adiós",
       "hola",
-      "gracias"
+      "gracias",
+      "por favor",
+      "bienvenido"
     ],
     "correctIndex": 0,
     "type": "assist",
-    "difficulty": 0.6,
-    "level": "A2",
+    "difficulty": 100,
     "categories": [
-      "Basics"
+      "phrases"
     ],
     "goals": [
-      "Family and Friends"
+      "school"
     ]
   },
   {
-    "prompt": "cat",
+    "prompt": "brother",
     "choices": [
-      "perro",
-      "gato",
-      "pez"
+      "madre",
+      "padre",
+      "abuela",
+      "hermano",
+      "hija"
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "type": "assist",
-    "difficulty": 0.025,
-    "level": "A1",
+    "difficulty": 600,
     "categories": [
-      "Basics",
-      "Phrases"
+      "family",
+      "people"
     ],
     "goals": [
-      "Family and Friends"
+      "school"
     ]
   },
   {
-    "prompt": "te amo",
+    "prompt": "banana",
     "choices": [
-      "I love you",
-      "Hello",
-      "Thank you"
+      "manzana",
+      "naranja",
+      "pera",
+      "plátano",
+      "sandía"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "type": "assist",
-    "difficulty": 0.05,
-    "level": "A1",
+    "difficulty": 300,
     "categories": [
-      "Basics",
-      "Phrases"
+      "food"
     ],
     "goals": [
-      "Family and Friends"
+      "school"
     ]
   },
   {
-    "prompt": "hermano",
-    "choices": [
-      "mother",
-      "sister",
-      "brother"
-    ],
+    "prompt": "Sister",
+    "choices": ["Padre", "Madre", "Hermana", "Hermano", "Amigo"],
     "correctIndex": 2,
     "type": "assist",
-    "difficulty": 0.2,
-    "level": "A2",
-    "categories": [
-      "Basics",
-      "Phrases"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "¿Cómo estás?",
-    "choices": [
-      "How are you?",
-      "What time is it?",
-      "Where is the bathroom?"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.3,
-    "level": "A2",
-    "categories": [
-      "Basics",
-      "Phrases"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "cumpleaños",
-    "choices": [
-      "birthday",
-      "Christmas",
-      "Halloween"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.4,
-    "level": "B1",
-    "categories": [
-      "Basics",
-      "Phrases"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Dog",
-    "choices": [
-      "Perro",
-      "Gato",
-      "Ratón",
-      "Caballo"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.6,
-    "categories": [
-      "Animals"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Red",
-    "choices": [
-      "Rojo",
-      "Azul",
-      "Verde",
-      "Amarillo"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.25,
-    "categories": [
-      "Basics"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Goodbye",
-    "choices": [
-      "Adiós",
-      "Hola",
-      "Gracias",
-      "Por favor"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.5,
-    "categories": [
-      "Phrases"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Mother",
-    "choices": [
-      "Madre",
-      "Padre",
-      "Hermano",
-      "Hermana"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.3,
-    "categories": [
-      "Family and Friends",
-      "People"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Train",
-    "choices": [
-      "Tren",
-      "Coche",
-      "Avión",
-      "Barco"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.35,
-    "categories": [
-      "Travel"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Breakfast",
-    "choices": [
-      "Desayuno",
-      "Comida",
-      "Cena",
-      "Postre"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.45,
-    "categories": [
-      "Food"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Doctor",
-    "choices": [
-      "Médico",
-      "Abogado",
-      "Ingeniero",
-      "Profesor"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.4,
-    "categories": [
-      "People"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Monday",
-    "choices": [
-      "Lunes",
-      "Martes",
-      "Miércoles",
-      "Jueves"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.15,
-    "categories": [
-      "Time"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Forest",
-    "choices": [
-      "Bosque",
-      "Desierto",
-      "Montaña",
-      "Playa"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.6,
-    "categories": [
-      "Nature"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Water",
-    "choices": [
-      "Agua",
-      "Fuego",
-      "Aire",
-      "Tierra"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.35,
-    "categories": [
-      "Nature"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Cat",
-    "choices": [
-      "Gato",
-      "Perro",
-      "Conejo",
-      "Pájaro"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.4,
-    "categories": [
-      "Animals"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Blue",
-    "choices": [
-      "Azul",
-      "Rojo",
-      "Verde",
-      "Amarillo"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.2,
-    "categories": [
-      "Basics"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Thank you",
-    "choices": [
-      "Gracias",
-      "Hola",
-      "Adiós",
-      "Por favor"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.5,
-    "categories": [
-      "Phrases"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Father",
-    "choices": [
-      "Padre",
-      "Madre",
-      "Hermano",
-      "Hermana"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.3,
-    "categories": [
-      "People"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Plane",
-    "choices": [
-      "Avión",
-      "Tren",
-      "Coche",
-      "Barco"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.4,
-    "categories": [
-      "Travel"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Lunch",
-    "choices": [
-      "Comida",
-      "Desayuno",
-      "Cena",
-      "Postre"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.45,
-    "categories": [
-      "Food"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Nurse",
-    "choices": [
-      "Enfermera",
-      "Médico",
-      "Abogado",
-      "Ingeniero"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.5,
-    "categories": [
-      "People"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Sunday",
-    "choices": [
-      "Domingo",
-      "Lunes",
-      "Martes",
-      "Miércoles"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.15,
-    "categories": [
-      "Time"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Mountain",
-    "choices": [
-      "Montaña",
-      "Bosque",
-      "Desierto",
-      "Playa"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.6,
-    "categories": [
-      "Nature"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Fire",
-    "choices": [
-      "Fuego",
-      "Agua",
-      "Aire",
-      "Tierra"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.35,
-    "categories": [
-      "Nature"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Library",
-    "choices": [
-      "Biblioteca",
-      "Museo",
-      "Cine",
-      "Teatro"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.45,
-    "categories": [
-      "Activities"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Sun",
-    "choices": [
-      "Sol",
-      "Luna",
-      "Estrella",
-      "Nube"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.2,
-    "categories": [
-      "Nature"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Hiking",
-    "choices": [
-      "Senderismo",
-      "Ciclismo",
-      "Natación",
-      "Pesca"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.55,
-    "categories": [
-      "Activities"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Cold",
-    "choices": [
-      "Frío",
-      "Calor",
-      "Húmedo",
-      "Seco"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.25,
-    "categories": [
-      "Nature"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Doctor",
-    "choices": [
-      "Doctor",
-      "Enfermera",
-      "Médico",
-      "Abogado"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.3,
-    "categories": [
-      "People"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Spring",
-    "choices": [
-      "Primavera",
-      "Verano",
-      "Otoño",
-      "Invierno"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.2,
-    "categories": [
-      "Time",
-      "Nature"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Friend",
-    "choices": [
-      "Amigo",
-      "Familia",
-      "Vecino",
-      "Compañero"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.35,
-    "categories": [
-      "People"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Beach",
-    "choices": [
-      "Playa",
-      "Montaña",
-      "Río",
-      "Lago"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.4,
-    "categories": [
-      "Travel"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Pasta",
-    "choices": [
-      "Pasta",
-      "Arroz",
-      "Carne",
-      "Pescado"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.25,
-    "categories": [
-      "Food"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Grandmother",
-    "choices": [
-      "Abuela",
-      "Abuelo",
-      "Padre",
-      "Madre"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.3,
-    "categories": [
-      "People"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Train",
-    "choices": [
-      "Tren",
-      "Coche",
-      "Bicicleta",
-      "Barco"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.35,
-    "categories": [
-      "Travel"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Happy",
-    "choices": [
-      "Feliz",
-      "Triste",
-      "Enojado",
-      "Sorprendido"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.2,
-    "categories": [
-      "Emotions"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Swimming",
-    "choices": [
-      "Natación",
-      "Ciclismo",
-      "Senderismo",
-      "Pesca"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.55,
-    "categories": [
-      "Activities"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Elephant",
-    "choices": [
-      "Elefante",
-      "León",
-      "Jirafa",
-      "Tigre"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.3,
-    "categories": [
-      "Animals"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Bus",
-    "choices": [
-      "Autobús",
-      "Tren",
-      "Coche",
-      "Avión"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.35,
-    "categories": [
-      "Travel"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Dinner",
-    "choices": [
-      "Cena",
-      "Desayuno",
-      "Almuerzo",
-      "Merienda"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.25,
-    "categories": [
-      "Food"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Hospital",
-    "choices": [
-      "Hospital",
-      "Escuela",
-      "Cine",
-      "Tienda"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.4,
-    "categories": [
-      "Places"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Rain",
-    "choices": [
-      "Lluvia",
-      "Nieve",
-      "Sol",
-      "Viento"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.25,
-    "categories": [
-      "Nature"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Doctor's appointment",
-    "choices": [
-      "Cita con el médico",
-      "Cita con el dentista",
-      "Cita con el abogado",
-      "Cita con el veterinario"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.6,
-    "categories": [
-      "Health"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Camera",
-    "choices": [
-      "Cámara",
-      "Televisor",
-      "Radio",
-      "Ordenador"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.35,
-    "categories": [
-      "Technology"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Boat",
-    "choices": [
-      "Barco",
-      "Coche",
-      "Tren",
-      "Bicicleta"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.35,
-    "categories": [
-      "Travel"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Breakfast",
-    "choices": [
-      "Desayuno",
-      "Cena",
-      "Almuerzo",
-      "Merienda"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.25,
-    "categories": [
-      "Food"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Bird",
-    "choices": [
-      "Pájaro",
-      "Perro",
-      "Gato",
-      "Conejo"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.2,
-    "categories": [
-      "Animals"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Movie theater",
-    "choices": [
-      "Cine",
-      "Hospital",
-      "Escuela",
-      "Iglesia"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.4,
-    "categories": [
-      "Places"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Beach",
-    "choices": [
-      "Playa",
-      "Montaña",
-      "Lago",
-      "Río"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.35,
-    "categories": [
-      "Travel"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Music",
-    "choices": [
-      "Música",
-      "Arte",
-      "Ciencia",
-      "Deporte"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.2,
-    "categories": [
-      "Arts"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Grandfather",
-    "choices": [
-      "Abuelo",
-      "Padre",
-      "Tío",
-      "Primo"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.3,
-    "categories": [
-      "Family"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Football",
-    "choices": [
-      "Fútbol",
-      "Baloncesto",
-      "Tenis",
-      "Golf"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.25,
-    "categories": [
-      "Sports"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-  {
-    "prompt": "Break",
-    "choices": [
-      "Descanso",
-      "Trabajo",
-      "Estudio",
-      "Ejercicio"
-    ],
-    "correctIndex": 0,
-    "type": "assist",
-    "difficulty": 0.25,
-    "categories": [
-      "Activities"
-    ],
-    "goals": [
-      "Family and Friends"
-    ]
-  },
-    {
-      "prompt": "How do I get to the museum?",
-      "choices": ["¿Cómo llego al museo?", "¿Dónde está el museo?", "¿Cuándo abre el museo?", "¿Qué hay en el museo?"],
-      "correctIndex": 0,
-      "type": "assist",
-      "difficulty": 0.450,
-      "categories": ["Travel phrases", "Directions"],
-      "goals": ["Family and Friends"]
-    },
-    {
-      "prompt": "Excuse me, where is the nearest gas station?",
-      "choices": ["Disculpe, ¿dónde está la gasolinera más cercana?", "Disculpe, ¿cuál es la dirección del hotel?", "Disculpe, ¿qué hora es?", "Disculpe, ¿dónde puedo comprar comida?"],
-      "correctIndex": 0,
-      "type": "assist",
-      "difficulty": 0.550,
-      "categories": ["Travel phrases", "Directions"],
-      "goals": ["Family and Friends"]
-    },
-    {
-      "prompt": "Is there a bus stop around here?",
-      "choices": ["¿Hay una parada de autobús por aquí?", "¿Dónde puedo comprar un billete de tren?", "¿Cuál es la mejor playa de la ciudad?", "¿Qué hay en el centro comercial?"],
-      "correctIndex": 0,
-      "type": "assist",
-      "difficulty": 0.450,
-      "categories": ["Travel phrases", "Directions"],
-      "goals": ["Family and Friends"]
-    },
-    {
-      "prompt": "Go straight ahead and turn left at the traffic lights.",
-      "choices": ["Siga derecho y gire a la izquierda en el semáforo.", "Gire a la derecha y siga recto.", "Vaya por esta calle hasta el final.", "Cruce la plaza y siga recto."],
-      "correctIndex": 0,
-      "type": "assist",
-      "difficulty": 0.550,
-      "categories": ["Travel phrases", "Directions"],
-      "goals": ["Family and Friends"]
-    },
-    {
-      "prompt": "Excuse me, how do I get to the train station?",
-      "choices": ["Disculpe, ¿cómo llego a la estación de tren?", "Disculpe, ¿dónde puedo comprar un mapa de la ciudad?", "Disculpe, ¿hay un restaurante bueno por aquí?", "Disculpe, ¿cuánto cuesta el billete de autobús?"],
-      "correctIndex": 0,
-      "type": "assist",
-      "difficulty": 0.450,
-      "categories": ["Travel phrases", "Directions"],
-      "goals": ["Family and Friends"]
-    },
-    {
-      "prompt": "Take the second street on the right and go straight ahead.",
-      "choices": ["Tome la segunda calle a la derecha y siga recto.", "Gire a la izquierda y siga recto.", "Cruce la plaza y tome la calle de la derecha.", "Vaya por esta calle hasta el final."],
-      "correctIndex": 0,
-      "type": "assist",
-      "difficulty": 0.550,
-      "categories": ["Travel phrases", "Directions"],
-      "goals": ["Family and Friends"]
-    }
+    "difficulty": 50,
+    "categories": ["People", "Family"],
+    "goals": ["school"]
+  }
+,  {
+  "prompt": "Red",
+  "choices": ["Amarillo", "Verde", "Azul", "Rojo", "Negro"],
+  "correctIndex": 3,
+  "type": "assist",
+  "difficulty": 30,
+  "categories": ["Basics", "Colors"],
+  "goals": ["school"]
+}
+,{
+  "prompt": "Tennis",
+  "choices": ["Fútbol", "Baloncesto", "Voleibol", "Tenis", "Golf"],
+  "correctIndex": 3,
+  "type": "assist",
+  "difficulty": 20,
+  "categories": ["Activities", "Sports"],
+  "goals": ["school"]
+}
+,{
+  "prompt": "July",
+  "choices": ["Abril", "Julio", "Octubre", "Diciembre", "Marzo"],
+  "correctIndex": 1,
+  "type": "assist",
+  "difficulty": 10,
+  "categories": ["Time", "Months"],
+  "goals": ["school"]
+}
+,{
+  "prompt": "Father",
+  "choices": ["Hermano", "Padre", "Abuelo", "Tío", "Primo"],
+  "correctIndex": 1,
+  "type": "assist",
+  "difficulty": 70,
+  "categories": ["People", "Family"],
+  "goals": ["school"]
+}
+,{
+  "prompt": "Fish",
+  "choices": ["Carne", "Pescado", "Pollo", "Cerdo", "Huevos"],
+  "correctIndex": 1,
+  "type": "assist",
+  "difficulty": 50,
+  "categories": ["Food"],
+  "goals": ["school"]
+}
+,{
+  "prompt": "Rain",
+  "choices": ["Nieve", "Lluvia", "Sol", "Viento", "Nublado"],
+  "correctIndex": 1,
+  "type": "assist",
+  "difficulty": 40,
+  "categories": ["Nature"],
+  "goals": ["school"]
+}
+,{
+  "prompt": "Holidays",
+  "choices": ["Vacaciones", "Fiesta", "Cumpleaños", "Boda", "Graduación"],
+  "correctIndex": 0,
+  "type": "assist",
+  "difficulty": 60,
+  "categories": ["Travel"],
+  "goals": ["school"]
+}
+,{
+  "prompt": "Doctor",
+  "choices": ["Carpintero", "Médico", "Maestro", "Policía", "Bombero"],
+  "correctIndex": 1,
+  "type": "assist",
+  "difficulty": 20,
+  "categories": ["People", "Health"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Dog",
+  "choices": [
+    "Gato",
+    "Perro",
+    "Caballo",
+    "Pato",
+    "Oso"
+  ],
+  "correctIndex": 1,
+  "type": "assist",
+  "difficulty": 74,
+  "categories": ["animals", "basics"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Goodbye",
+  "choices": [
+    "Adiós",
+    "Hola",
+    "Gato",
+    "Casa",
+    "Perro"
+  ],
+  "correctIndex": 0,
+  "type": "assist",
+  "difficulty": 30,
+  "categories": ["phrases", "basics"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Mother",
+  "choices": [
+    "Padre",
+    "Madre",
+    "Hermano",
+    "Hermana",
+    "Amigo"
+  ],
+  "correctIndex": 1,
+  "type": "assist",
+  "difficulty": 50,
+  "categories": ["people", "basics"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Book",
+  "choices": [
+    "Gato",
+    "Libro",
+    "Casa",
+    "Mesa",
+    "Perro"
+  ],
+  "correctIndex": 1,
+  "type": "assist",
+  "difficulty": 63,
+  "categories": ["basics"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Summer",
+  "choices": [
+    "Invierno",
+    "Otoño",
+    "Verano",
+    "Primavera",
+    "Lluvia"
+  ],
+  "correctIndex": 2,
+  "type": "assist",
+  "difficulty": 85,
+  "categories": ["time"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Water",
+  "choices": [
+    "Comida",
+    "Agua",
+    "Casa",
+    "Juego",
+    "Cama"
+  ],
+  "correctIndex": 1,
+  "type": "assist",
+  "difficulty": 42,
+  "categories": ["basics"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Dinner",
+  "choices": [
+    "Cena",
+    "Desayuno",
+    "Almuerzo",
+    "Merienda",
+    "Comida"
+  ],
+  "correctIndex": 0,
+  "type": "assist",
+  "difficulty": 20,
+  "categories": ["food"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Sun",
+  "choices": [
+    "Nube",
+    "Estrella",
+    "Sol",
+    "Luna",
+    "Viento"
+  ],
+  "correctIndex": 2,
+  "type": "assist",
+  "difficulty": 75,
+  "categories": ["nature"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Walk",
+  "choices": [
+    "Saltar",
+    "Correr",
+    "Caminar",
+    "Nadar",
+    "Escuchar"
+  ],
+  "correctIndex": 2,
+  "type": "assist",
+  "difficulty": 50,
+  "categories": ["activities"],
+  "goals": ["school"]
+}, {
+  "prompt": "House",
+  "choices": ["Perro", "Casa", "Gato", "Coche", "Jardín"],
+  "correctIndex": 1,
+  "type": "assist",
+  "difficulty": 60,
+  "categories": ["basics", "travel"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Apple",
+  "choices": ["Banana", "Cebolla", "Manzana", "Zanahoria", "Papa"],
+  "correctIndex": 2,
+  "type": "assist",
+  "difficulty": 80,
+  "categories": ["food"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Red",
+  "choices": ["Rojo", "Azul", "Amarillo", "Verde", "Naranja"],
+  "correctIndex": 0,
+  "type": "assist",
+  "difficulty": 40,
+  "categories": ["basics"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Beach",
+  "choices": ["Parque", "Montaña", "Lago", "Playa", "Ciudad"],
+  "correctIndex": 3,
+  "type": "assist",
+  "difficulty": 70,
+  "categories": ["travel", "nature"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Book",
+  "choices": ["Lápiz", "Libro", "Papel", "Goma de borrar", "Cuaderno"],
+  "correctIndex": 1,
+  "type": "assist",
+  "difficulty": 50,
+  "categories": ["basics"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Father",
+  "choices": ["Madre", "Padre", "Hermano", "Abuela", "Primo"],
+  "correctIndex": 1,
+  "type": "assist",
+  "difficulty": 90,
+  "categories": ["people"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Train",
+  "choices": ["Coche", "Autobús", "Tren", "Bicicleta", "Avión"],
+  "correctIndex": 2,
+  "type": "assist",
+  "difficulty": 60,
+  "categories": ["travel"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Water",
+  "choices": ["Fuego", "Aire", "Tierra", "Agua", "Energía"],
+  "correctIndex": 3,
+  "type": "assist",
+  "difficulty": 30,
+  "categories": ["nature"],
+  "goals": ["school"]
+},
+{
+  "prompt": "Eggs",
+  "choices": ["Cebolla", "Lechuga", "Pan", "Huevo", "Zanahoria"],
+  "correctIndex": 3,
+  "type": "assist",
+  "difficulty": 80,
+  "categories": ["food"],
+  "goals": ["school"]
+}
+
 ]

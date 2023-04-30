@@ -2,12 +2,16 @@
   {
     "prompt": "Que te motiva a aprender un idoma?",
     "choices": [
-      "Family and Friends"
+      "school"
     ],
-    "type": "assist"
+    "type": "goal"
   }, 
   {
     "prompt": "Elige tu ruta",
     "type": "experience"
+  },
+  {
+    "prompt": "Guarda tu progreso",
+    "type": "signup"
   }
 ]

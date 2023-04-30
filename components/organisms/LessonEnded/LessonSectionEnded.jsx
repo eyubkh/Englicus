@@ -7,6 +7,7 @@ const LessonSectionEndedComponent = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100%;
+  padding: 20px 20%;
 
   place-items: center;
 

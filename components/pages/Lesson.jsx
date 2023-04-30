@@ -21,7 +21,7 @@ const LessonComponent = styled.main`
 `
 
 export const Lesson = () => {
-  const dispatch = useContext(LessonDispatch)
+  const lessonDispatch = useContext(LessonDispatch)
   const { isLoading, isLessonEnded } = useContext(LessonState)
   const userStata = useContext(UserState)
 
@@ -34,12 +34,16 @@ export const Lesson = () => {
 
     dataFetching('/api/sessions', userStata)
       .then((data) => {
-        dispatch({
+        if (data.challenges.length === 0) throw new Error('no sessions available')
+        lessonDispatch({
           type: 'init',
           payload: {
             challenges: data.challenges
           }
         })
+      })
+      .catch((error) => {
+        console.error(error)
       })
   }, [])
 

@@ -4,7 +4,8 @@ import { useContext } from 'react'
 import { CircleCheckIcon } from '@components/molecules/CircleCheckIcon'
 import { LessonFooterNeutralComponent } from './LessonFooterNeutral'
 import { GreenButton } from '@components/atoms/buttons/GreenButton'
-import { LessonDispatch } from '@redux/lesson/lessonContext'
+import { LessonDispatch, LessonState } from '@redux/lesson/lessonContext'
+import { UserDispatch } from '@redux/user/userContext'
 
 const LessonFooterSuccessComponent = styled(LessonFooterNeutralComponent)`
   background-color: ${ActionSuccess100};
@@ -25,11 +26,19 @@ const LessonFooterSuccessComponent = styled(LessonFooterNeutralComponent)`
 `
 
 export const LessonFooterSuccess = () => {
-  const dispatch = useContext(LessonDispatch)
+  const lessonDispatch = useContext(LessonDispatch)
+  const { currentChallengeIndex, challenges } = useContext(LessonState)
+  const challenge = challenges[currentChallengeIndex]
+
+  const userDispatch = useContext(UserDispatch)
 
   const handler = () => {
-    dispatch({
+    lessonDispatch({
       type: 'finishChecking'
+    })
+    userDispatch({
+      type: 'fluency',
+      payload: challenge.difficulty
     })
   }
 

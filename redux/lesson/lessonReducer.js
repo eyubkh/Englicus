@@ -59,8 +59,6 @@ export const reducer = (state, action) => {
 
       const isRetrying = cChallengeIndex > challengesLength && failedChallenges.length > 0
 
-      console.log(cChallengeIndex > challengesLength && failedChallenges.length === 0)
-
       return {
         ...state,
         isChecking: false,

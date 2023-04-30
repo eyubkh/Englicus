@@ -5,6 +5,7 @@ import { ActionError100, ActionError300, NeutralLight100 } from '@tokens'
 import { useContext } from 'react'
 import { LessonFooterNeutralComponent } from './LessonFooterNeutral'
 import { LessonDispatch, LessonState } from '@redux/lesson/lessonContext'
+import { UserDispatch } from '@redux/user/userContext'
 
 const LessonFooterErrorComponent = styled(LessonFooterNeutralComponent)`
   background-color: ${ActionError100};
@@ -27,14 +28,21 @@ const LessonFooterErrorComponent = styled(LessonFooterNeutralComponent)`
 `
 
 export const LessonFooterError = () => {
-  const dispatch = useContext(LessonDispatch)
+  const lessonDispatch = useContext(LessonDispatch)
   const { challenges, currentChallengeIndex } = useContext(LessonState)
 
-  const { choices, correctIndex } = challenges[currentChallengeIndex]
+  const { choices, correctIndex, difficulty } = challenges[currentChallengeIndex]
+
+  const userDispatch = useContext(UserDispatch)
 
   const handler = () => {
-    dispatch({
+    lessonDispatch({
       type: 'finishChecking'
+    })
+
+    userDispatch({
+      type: 'fluency',
+      payload: -difficulty
     })
   }
 

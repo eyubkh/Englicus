@@ -4,7 +4,8 @@ export const initialState = {
   path: [],
   beginner: true,
   currentLevel: 0,
-  totalXp: 0
+  totalXp: 0,
+  fluency: 0
 }
 
 export const userReducer = (state, action) => {
@@ -31,6 +32,12 @@ export const userReducer = (state, action) => {
       return {
         ...state,
         path: payload
+      }
+    }
+    case 'fluency': {
+      return {
+        ...state,
+        fluency: state.fluency + (payload / 10)
       }
     }
     case 'xp': {

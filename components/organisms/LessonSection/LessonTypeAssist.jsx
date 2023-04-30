@@ -51,7 +51,7 @@ export const LessonTypeAssist = () => {
       value: targetText,
       lang: 'es-ES'
     })
-    console.log()
+
     lessonDispatch({
       type: 'userInput',
       payload: targetText
