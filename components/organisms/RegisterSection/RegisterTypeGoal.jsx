@@ -1,10 +1,10 @@
 import { useContext } from 'react'
 import styled from 'styled-components'
 import { RegisterDispatch, RegisterState } from '@redux/register/registerContext'
-import { UserDispatch } from '@redux/user/userContext'
-import writeLocalData from '@utils/writeLocalData'
+import { UserDispatch, UserState } from '@redux/user/userContext'
 import { OptionSelect } from '@components/molecules/OptionSelect'
 import { DimensionSmall } from '@tokens'
+import dataFetching from '@libs/dataFetching'
 
 const RegisterTypeGoalComponent = styled.section`
   display: flex;
@@ -35,15 +35,17 @@ export const RegisterTypeGoal = () => {
 
   const registerDispatch = useContext(RegisterDispatch)
   const userDispatch = useContext(UserDispatch)
+  const userState = useContext(UserState)
 
-  const handlerUserInput = (event) => {
-    writeLocalData({
+  const handlerUserInput = async (event) => {
+    const updatedUser = await dataFetching('/api/user/update', {
+      id: userState._id,
       goal: event.target.innerText
     })
 
     userDispatch({
-      type: 'goal',
-      payload: event.target.innerText
+      type: 'update',
+      payload: updatedUser
     })
 
     registerDispatch({

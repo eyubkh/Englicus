@@ -52,10 +52,8 @@ const MainComponent = styled.main`
 export const Home = () => {
   const router = useRouter()
   useEffect(() => {
-    const localData = window.localStorage.getItem('state')
-    if (localData) {
-      router.push('/path')
-    }
+    const localData = window.localStorage.getItem('user')
+    if (localData) router.push('/path')
   }, [])
   return (
     <MainComponent>

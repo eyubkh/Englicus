@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import { OptionSelect } from '@components/molecules/OptionSelect'
 import { RegisterDispatch, RegisterState } from '@redux/register/registerContext'
-import { UserDispatch } from '@redux/user/userContext'
-import writeLocalData from '@utils/writeLocalData'
+import { UserDispatch, UserState } from '@redux/user/userContext'
 import { useContext } from 'react'
 import { DimensionSmall } from '@tokens'
+import dataFetching from '@libs/dataFetching'
 
 const RegisterTypeExperienceComponent = styled.section`
   display: flex;
@@ -34,15 +34,17 @@ export const RegisterTypeExperience = () => {
   const { prompt } = registerProccess[registerProccessIndex]
 
   const userDispatch = useContext(UserDispatch)
+  const userState = useContext(UserState)
 
-  const handler = (event) => {
-    writeLocalData({
+  const handler = async (event) => {
+    console.log(event.target.innerText)
+    const updatedUser = await dataFetching('/api/user/update', {
+      id: userState._id,
       beginner: event.target.innerText === 'beginner'
     })
-
     userDispatch({
-      type: 'beginner',
-      payload: event.target.innerText === 'beginner'
+      type: 'update',
+      payload: updatedUser
     })
 
     registerDispatch({
@@ -55,8 +57,8 @@ export const RegisterTypeExperience = () => {
     <RegisterTypeExperienceComponent>
       <h3>{prompt}</h3>
       <article>
-        <OptionSelect activate={userChoice === 'beginner'} onClick={handler}> beginner</OptionSelect>
-        <OptionSelect activate={userChoice === 'experienced'} onClick={handler}> experienced</OptionSelect>
+        <OptionSelect activate={userChoice === 'beginner'} onClick={handler}>beginner</OptionSelect>
+        <OptionSelect activate={userChoice === 'experienced'} onClick={handler}>experienced</OptionSelect>
       </article>
     </RegisterTypeExperienceComponent>
   )

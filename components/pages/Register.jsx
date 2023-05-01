@@ -5,10 +5,12 @@ import styled from 'styled-components'
 
 import registerData from '@utils/registerData.json'
 import { useRouter } from 'next/router'
-import writeLocalData from '@utils/writeLocalData'
 import { RegisterDispatch, RegisterState } from '@redux/register/registerContext'
 import { RegisterHeader } from '@components/organisms/headers/RegisterHeader'
 import { RegisterFooter } from '@components/organisms/footers/RegisterFooter'
+import { UserDispatch } from '@redux/user/userContext'
+import dataFetching from '@libs/dataFetching'
+import writeLocalData from '@utils/writeLocalData'
 
 const RegisterComponent = styled.main`
   display: flex;
@@ -31,15 +33,25 @@ const RegisterComponent = styled.main`
 
 export const Register = () => {
   const router = useRouter()
-  const dispatch = useContext(RegisterDispatch)
+  const registerDispatch = useContext(RegisterDispatch)
+  const userDispatch = useContext(UserDispatch)
 
   useEffect(() => {
-    writeLocalData()
+    (async function () {
+      const user = await dataFetching('/api/register')
 
-    dispatch({
-      type: 'init',
-      payload: registerData
-    })
+      userDispatch({
+        type: 'update',
+        payload: user
+      })
+      writeLocalData({
+        id: user._id
+      })
+      registerDispatch({
+        type: 'init',
+        payload: registerData
+      })
+    })()
   }, [])
 
   const { isLoading, isDone } = useContext(RegisterState)

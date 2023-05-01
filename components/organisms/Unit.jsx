@@ -12,7 +12,7 @@ const UnitComponent = styled.section`
 `
 
 export const Unit = () => {
-  const { path } = useContext(UserState)
+  const { path = [] } = useContext(UserState)
 
   return (
     <UnitComponent>

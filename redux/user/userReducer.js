@@ -1,31 +1,21 @@
-export const initialState = {
-  userId: '1',
-  goal: '',
-  path: [],
-  beginner: true,
-  currentLevel: 0,
-  totalXp: 0,
-  fluency: 0
-}
+import dataFetching from '@libs/dataFetching'
+
+export const initialState = {}
 
 export const userReducer = (state, action) => {
   const { type, payload } = action
   switch (type) {
-    case 'init':{
-      return {
-        ...state
-      }
-    }
-    case 'goal': {
-      return {
-        ...state,
-        goal: payload
-      }
+    case 'update':{
+      return { ...payload }
     }
     case 'beginner': {
+      const updatedUser = dataFetching('/api/user/update', {
+        id: state._id,
+        beginner: payload
+      })
       return {
         ...state,
-        beginner: payload
+        ...updatedUser
       }
     }
     case 'path': {

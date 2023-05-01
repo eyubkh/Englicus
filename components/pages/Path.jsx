@@ -1,10 +1,10 @@
 import { MainHeader } from '@components/organisms/headers/MainHeader'
 import styled from 'styled-components'
-import smallSamples from '@utils/path/smallSamples'
 import { useContext, useEffect } from 'react'
 import { Unit } from '@components/organisms/Unit'
-import { UserDispatch, UserState } from '@redux/user/userContext'
-import writeLocalData from '@utils/writeLocalData'
+import { UserDispatch } from '@redux/user/userContext'
+import dataFetching from '@libs/dataFetching'
+import { useRouter } from 'next/router'
 
 const PathComponent = styled.main`
   display: flex;
@@ -18,22 +18,22 @@ const PathComponent = styled.main`
 `
 
 export const Path = () => {
-  const { goal } = useContext(UserState)
   const userDispatch = useContext(UserDispatch)
+  const router = useRouter()
 
   useEffect(() => {
-    let definePath = []
-
-    if (goal === 'school') definePath = smallSamples.school
-
-    userDispatch({
-      type: 'path',
-      payload: definePath
-    })
-
-    writeLocalData({
-      path: definePath
-    })
+    const localUser = window.localStorage.getItem('user')
+    if (localUser) {
+      (async function () {
+        const userUpdated = await dataFetching(`/api/user/${JSON.parse(localUser).id}`)
+        userDispatch({
+          type: 'update',
+          payload: userUpdated
+        })
+      })()
+    } else {
+      router.push('/')
+    }
   }, [])
 
   return (

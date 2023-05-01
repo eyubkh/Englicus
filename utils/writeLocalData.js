@@ -1,5 +1,5 @@
 export default function writeLocalData (data = {}) {
-  const name = 'state'
+  const name = 'user'
   const isRegisterCreated = window.localStorage.getItem(name)
   if (!isRegisterCreated) {
     window.localStorage.setItem(name, JSON.stringify({}))
