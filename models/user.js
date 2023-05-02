@@ -6,7 +6,9 @@ const userSchema = new mongoose.Schema({
   beginner: Boolean,
   currentLevel: Number,
   totalXp: Number,
-  fluency: Number
+  fluency: {
+    vocabulary: Number
+  }
 })
 
 export default mongoose.models.Users || mongoose.model('Users', userSchema)

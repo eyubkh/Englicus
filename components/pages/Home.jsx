@@ -6,8 +6,10 @@ import { DimensionSmall, NeutralDark300 } from '@tokens'
 import Image from 'next/image'
 import Stars from '@public/assets/Stars.svg'
 import Moon from '@public/assets/Moon.svg'
-import { useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import dataFetching from '@libs/dataFetching'
+import { UserDispatch } from '@redux/user/userContext'
 
 const HeroComponent = styled.div`
     position: absolute;
@@ -51,9 +53,20 @@ const MainComponent = styled.main`
 `
 export const Home = () => {
   const router = useRouter()
+  const userDispatch = useContext(UserDispatch)
+
   useEffect(() => {
-    const localData = window.localStorage.getItem('user')
-    if (localData) router.push('/path')
+    const localUser = window.localStorage.getItem('user')
+    if (localUser) {
+      (async function () {
+        const userUpdated = await dataFetching(`/api/user/${JSON.parse(localUser).id}`)
+        userDispatch({
+          type: 'update',
+          payload: userUpdated
+        })
+      })()
+      router.push('/path')
+    }
   }, [])
   return (
     <MainComponent>

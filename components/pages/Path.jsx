@@ -18,14 +18,16 @@ const PathComponent = styled.main`
 `
 
 export const Path = () => {
-  const userDispatch = useContext(UserDispatch)
   const router = useRouter()
+  const userDispatch = useContext(UserDispatch)
 
   useEffect(() => {
     const localUser = window.localStorage.getItem('user')
     if (localUser) {
       (async function () {
-        const userUpdated = await dataFetching(`/api/user/${JSON.parse(localUser).id}`)
+        const userUpdated = await dataFetching('/api/generate_challenges', {
+          id: JSON.parse(localUser).id
+        })
         userDispatch({
           type: 'update',
           payload: userUpdated
