@@ -1,10 +1,11 @@
 import { MainHeader } from '@components/organisms/headers/MainHeader'
 import styled from 'styled-components'
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { Unit } from '@components/organisms/Unit'
 import { UserDispatch } from '@redux/user/userContext'
 import dataFetching from '@libs/dataFetching'
 import { useRouter } from 'next/router'
+import { useCustomEffect } from 'hooks/useCustomEffect'
 
 const PathComponent = styled.main`
   display: flex;
@@ -21,7 +22,7 @@ export const Path = () => {
   const router = useRouter()
   const userDispatch = useContext(UserDispatch)
 
-  useEffect(() => {
+  useCustomEffect(() => {
     const localUser = window.localStorage.getItem('user')
     if (localUser) {
       (async function () {
@@ -36,7 +37,7 @@ export const Path = () => {
     } else {
       router.push('/')
     }
-  }, [])
+  })
 
   return (
     <PathComponent>

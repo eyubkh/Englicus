@@ -6,6 +6,7 @@ const userSchema = new mongoose.Schema({
   beginner: Boolean,
   currentLevel: Number,
   totalXp: Number,
+  fluencyRating: Number,
   fluency: {
     vocabulary: Number
   }

@@ -2,14 +2,14 @@ import { LessonFooter } from '@components/organisms/footers/LessonFooter'
 import { LessonHeader } from '@components/organisms/headers/LessonHeader'
 import { LessonSection } from '@components/organisms/LessonSection'
 import dataFetching from '@libs/dataFetching'
-import { handlerCleanUp, handlerEnterPress } from '@libs/handlerEventListener'
 import { LessonDispatch, LessonState } from '@redux/lesson/lessonContext'
-import { useContext, useEffect, useRef } from 'react'
+import { useContext } from 'react'
 import { Loading } from './Loading'
 import styled from 'styled-components'
 import { UserState } from '@redux/user/userContext'
 import { LessonRetry } from '@components/organisms/LessonRetry'
 import { LessonEnded } from '@components/organisms/LessonEnded'
+import { useCustomEffect } from 'hooks/useCustomEffect'
 
 const LessonComponent = styled.main`
   display: flex;
@@ -25,13 +25,7 @@ export const Lesson = () => {
   const { isLoading, isLessonEnded } = useContext(LessonState)
   const userStata = useContext(UserState)
 
-  const fetching = useRef(false)
-
-  useEffect(() => {
-    if (fetching.current === true) return handlerCleanUp
-    fetching.current = true
-    handlerEnterPress()
-
+  useCustomEffect(() => {
     dataFetching('/api/sessions', userStata)
       .then((data) => {
         if (data.challenges.length === 0) throw new Error('no sessions available')
@@ -45,7 +39,7 @@ export const Lesson = () => {
       .catch((error) => {
         console.error(error)
       })
-  }, [])
+  })
 
   if (isLoading) return <Loading />
 

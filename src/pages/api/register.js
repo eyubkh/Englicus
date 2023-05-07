@@ -11,9 +11,9 @@ export default async function register (request, response) {
       beginner: true,
       currentLevel: 0,
       totalXp: 0,
-      fluencyRating: 0,
+      fluencyRating: 1,
       fluency: {
-        vocabulary: 0
+        vocabulary: 1
       }
     })
     console.log(user)

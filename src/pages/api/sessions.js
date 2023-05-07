@@ -3,17 +3,15 @@ import data from '@utils/path/data.json'
 export default function sessions (request, response) {
   const { goal, path, currentLevel, fluency } = request.body
 
-  const { categories } = path[currentLevel]
+  const { name } = path[currentLevel]
 
-  console.log(fluency)
   const challenges = []
 
   for (const challenge of data) {
     if (challenges.length >= 10) break
 
-    const difficultyRange = Math.abs(fluency - challenge.difficulty) < 80
-    const cat = challenge.categories.some((c) => categories.includes(c))
-    if (cat && challenge.goals.includes(goal) && difficultyRange) {
+    const difficultyRange = Math.abs(fluency[name] - challenge.difficulty) < 80
+    if (difficultyRange) {
       challenges.push(challenge)
     }
   }
