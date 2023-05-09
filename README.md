@@ -53,3 +53,7 @@ I am currently learning English and coding, but the journey isn't easy. I am thi
 -   Figma
 
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+
+## Todo
+
+[] Update fluency depending of correct lesson 

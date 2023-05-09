@@ -29,6 +29,7 @@ export const Path = () => {
         const userUpdated = await dataFetching('/api/generate_challenges', {
           id: JSON.parse(localUser).id
         })
+        console.log(userUpdated)
         userDispatch({
           type: 'update',
           payload: userUpdated

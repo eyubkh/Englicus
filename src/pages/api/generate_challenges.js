@@ -5,7 +5,7 @@ export default async function handler (request, response) {
   const user = await User.findById(id)
 
   if (!user.path[user.currentLevel]) {
-    const generatedPath = []
+    const generatedPath = [...user.path]
     const numberChallengesLength = 6
     const fluencyKeys = Object.entries(user.fluency)
     for (const [key, value] of fluencyKeys) {
@@ -19,7 +19,7 @@ export default async function handler (request, response) {
         max_xp: 100 * numberOfChallenges
       })
     }
-    const updatedUser = await User.findByIdAndUpdate(id, { path: [...user.path, ...generatedPath] }, { new: true })
+    const updatedUser = await User.findByIdAndUpdate(id, { path: generatedPath }, { new: true })
     response.status(200).json(updatedUser)
   }
   response.status(200).json(user)

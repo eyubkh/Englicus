@@ -3,6 +3,8 @@ import { GreenButton } from '@components/atoms/buttons/GreenButton'
 import { TransparentButton } from '@components/atoms/buttons/TransparentButton'
 import styled from 'styled-components'
 import { LessonDispatch, LessonState } from '@redux/lesson/lessonContext'
+import { UserState } from '@redux/user/userContext'
+import dataFetching from '@libs/dataFetching'
 
 export const LessonFooterNeutralComponent = styled.div`
   display: flex;
@@ -15,10 +17,20 @@ export const LessonFooterNeutralComponent = styled.div`
 export const LessonFooterNeutral = () => {
   const dispatch = useContext(LessonDispatch)
   const { challenges, currentChallengeIndex, userInput } = useContext(LessonState)
-  const { choices, correctIndex } = challenges[currentChallengeIndex]
+  const { choices, correctIndex, difficulty } = challenges[currentChallengeIndex]
+
+  const { currentLevel, path, _id } = useContext(UserState)
+  const currentLesson = path[currentLevel]
 
   const handlerIsCorrect = () => {
-    if (choices[correctIndex] === userInput) {
+    const isCorrect = choices[correctIndex] === userInput
+    dataFetching('/api/lesson/check', {
+      _id,
+      name: currentLesson.name,
+      isCorrect,
+      difficulty
+    })
+    if (isCorrect) {
       dispatch({ type: 'isCorrect' })
     } else {
       dispatch({ type: 'isIncorrect' })
