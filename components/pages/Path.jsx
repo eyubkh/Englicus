@@ -2,7 +2,7 @@ import { MainHeader } from '@components/organisms/headers/MainHeader'
 import styled from 'styled-components'
 import { useContext } from 'react'
 import { Unit } from '@components/organisms/Unit'
-import { UserDispatch } from '@redux/user/userContext'
+import { UserDispatch, UserState } from '@redux/user/userContext'
 import dataFetching from '@libs/dataFetching'
 import { useRouter } from 'next/router'
 import { useCustomEffect } from 'hooks/useCustomEffect'
@@ -21,6 +21,7 @@ const PathComponent = styled.main`
 export const Path = () => {
   const router = useRouter()
   const userDispatch = useContext(UserDispatch)
+  const { path = [] } = useContext(UserState)
 
   useCustomEffect(() => {
     const localUser = window.localStorage.getItem('user')
@@ -44,6 +45,19 @@ export const Path = () => {
     <PathComponent>
       <MainHeader />
       <h1>Aprender Ingles</h1>
+      {
+        path
+          .map(({ target, sectionLevel, sections, id }) => {
+            return (
+              <Unit
+                key={id}
+                target={target}
+                sections={sections}
+                sectionLevel={sectionLevel}
+              />
+            )
+          })
+      }
       <Unit />
     </PathComponent>
   )

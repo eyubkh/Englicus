@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 import Link from 'next/link'
-import { useContext } from 'react'
-import { UserState } from '@redux/user/userContext'
 import { Border2, BrandSecondary, NeutralLight100, NeutralLight300 } from '@tokens'
 
 const UnitSectionComponent = styled.article`
@@ -46,11 +44,10 @@ const UnitSectionComponent = styled.article`
   }
 `
 
-export const UnitSection = ({ xp, maxXp, name, position }) => {
-  const { currentLevel } = useContext(UserState)
+export const UnitSection = ({ xp, maxXp, name, active }) => {
   return (
-    <Link href={position !== currentLevel ? '#' : 'lessons'}>
-      <UnitSectionComponent progress={xp / maxXp * 100} isDisabled={position !== currentLevel}>
+    <Link href={active ? 'lessons' : '#'}>
+      <UnitSectionComponent progress={xp / maxXp * 100} isDisabled={!active}>
         <h4>{name}</h4>
       </UnitSectionComponent>
     </Link>
