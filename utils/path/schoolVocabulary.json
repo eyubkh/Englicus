@@ -315,7 +315,7 @@
       "Idea"
     ],
     "correctIndex": 0,
-    "type": "vocabulary",
+    "type": "assist",
     "difficulty": 400,
     "goals": [
       "School"
@@ -329,7 +329,7 @@
       "Hospital"
     ],
     "correctIndex": 2,
-    "type": "vocabulary",
+    "type": "assist",
     "difficulty": 700,
     "goals": [
       "School"
@@ -343,7 +343,7 @@
       "Idea"
     ],
     "correctIndex": 2,
-    "type": "vocabulary",
+    "type": "assist",
     "difficulty": 500,
     "goals": [
       "School"
@@ -357,7 +357,7 @@
       "Internet"
     ],
     "correctIndex": 2,
-    "type": "vocabulary",
+    "type": "assist",
     "difficulty": 600,
     "goals": [
       "School"
@@ -371,7 +371,7 @@
       "Diente"
     ],
     "correctIndex": 1,
-    "type": "vocabulary",
+    "type": "assist",
     "difficulty": 450,
     "goals": [
       "School"
@@ -385,7 +385,7 @@
       "Text"
     ],
     "correctIndex": 0,
-    "type": "vocabulary",
+    "type": "assist",
     "difficulty": 350,
     "goals": [
       "School"
@@ -399,7 +399,7 @@
       "Sábado"
     ],
     "correctIndex": 0,
-    "type": "vocabulary",
+    "type": "assist",
     "difficulty": 400,
     "goals": [
       "School"
@@ -413,7 +413,7 @@
       "Parent"
     ],
     "correctIndex": 0,
-    "type": "vocabulary",
+    "type": "assist",
     "difficulty": 300,
     "goals": [
       "School"
@@ -427,7 +427,7 @@
       "Dirección"
     ],
     "correctIndex": 0,
-    "type": "vocabulary",
+    "type": "assist",
     "difficulty": 500,
     "goals": [
       "School"
@@ -441,7 +441,7 @@
       "Centro comercial"
     ],
     "correctIndex": 1,
-    "type": "vocabulary",
+    "type": "assist",
     "difficulty": 600,
     "goals": [
       "School"
@@ -455,7 +455,7 @@
       "Dirección"
     ],
     "correctIndex": 0,
-    "type": "vocabulary",
+    "type": "assist",
     "difficulty": 350,
     "goals": [
       "School"

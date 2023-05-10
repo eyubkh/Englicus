@@ -1,7 +1,7 @@
-import data from '@utils/path/data.json'
+import data from '@utils/path/schoolVocabulary.json'
 
 export default function sessions (request, response) {
-  const { goal, path, currentLevel, fluency } = request.body
+  const { path, currentLevel, fluency } = request.body
 
   const { name } = path[currentLevel]
 
@@ -10,7 +10,9 @@ export default function sessions (request, response) {
   for (const challenge of data) {
     if (challenges.length >= 10) break
 
-    const difficultyRange = Math.abs(fluency[name] - challenge.difficulty) < 80
+    const range = 200
+
+    const difficultyRange = Math.abs(fluency[name] - challenge.difficulty) < range
     if (difficultyRange) {
       challenges.push(challenge)
     }

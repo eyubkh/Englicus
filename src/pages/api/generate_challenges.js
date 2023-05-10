@@ -6,7 +6,7 @@ export default async function handler (request, response) {
 
   if (!user.path[user.currentLevel]) {
     const generatedPath = [...user.path]
-    const numberChallengesLength = 6
+    const numberChallengesLength = 1
     const fluencyKeys = Object.entries(user.fluency)
     for (const [key, value] of fluencyKeys) {
       const sectionPriority = Math.floor(value / user.fluencyRating)

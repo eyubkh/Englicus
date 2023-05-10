@@ -8,14 +8,12 @@ export default async function handler (request, response) {
   if (user) {
     const fluency = {
       ...user.fluency,
-      [name]: user.fluency[name] + difficulty
+      [name]: user.fluency[name] + ((isCorrect ? difficulty : -difficulty) / 6)
     }
     await User.findByIdAndUpdate(_id, { fluency })
     response.status(200).json({
-      success: 'user updated',
-      fluency
+      success: 'user updated'
     })
-    response.end()
   }
 
   response.status(300).json({

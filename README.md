@@ -56,4 +56,9 @@ I am currently learning English and coding, but the journey isn't easy. I am thi
 
 ## Todo
 
-[] Update fluency depending of correct lesson 
+[x] Update fluency depending of correct lesson 
+[x] Updating xp of the current section lesson 
+[x] Generate more lessons while completing 
+[x] fetching correct date depending on the fluency of the user
+[] Adding sections inside the path lesson to agroup the exercices 
+

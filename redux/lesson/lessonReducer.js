@@ -1,5 +1,4 @@
 export const initialState = {
-  lessonId: '',
   currentChallengeIndex: 0,
   challenges: [],
   failedChallenges: [],
@@ -38,7 +37,7 @@ export const reducer = (state, action) => {
         isCorrect: true,
         progress: progress + progressSteps,
         correctChallenges: correctChallenges + 1,
-        xp: xp + 2
+        xp: xp + 10
       }
     }
     case 'isIncorrect': {
