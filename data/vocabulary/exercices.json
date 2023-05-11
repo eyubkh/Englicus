@@ -1,0 +1,182 @@
+[
+  {
+    "prompt": "bus station",
+    "choices": ["estación de autobuses", "parada de autobús", "aparcamiento"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 600,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "bus stop",
+    "choices": ["estación de autobuses", "parada de autobús", "aparcamiento"],
+    "correctIndex": 1,
+    "type": "assist",
+    "difficulty": 500,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "car park",
+    "choices": ["parque infantil", "aparcamiento", "estación de tren"],
+    "correctIndex": 1,
+    "type": "assist",
+    "difficulty": 400,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "drive",
+    "choices": ["conducir", "andar", "navegar"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 700,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "driver",
+    "choices": ["conductor", "pasajero", "piloto"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 600,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "elevator",
+    "choices": ["ascensor", "escalera", "ventana"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 800,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "lift",
+    "choices": ["ascensor", "escalera", "ventana"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 800,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "road",
+    "choices": ["carretera", "acera", "autopista"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 650,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "sail",
+    "choices": ["remar", "navegar", "volar"],
+    "correctIndex": 1,
+    "type": "assist",
+    "difficulty": 750,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "skate",
+    "choices": ["patinar", "nadar", "saltar"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 500,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "walk",
+    "choices": ["andar", "nadar", "correr"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 200,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "bus station",
+    "choices": ["estación de autobuses", "estación de tren", "aeropuerto"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 350,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "car park",
+    "choices": ["aparcamiento", "plaza de toros", "parque infantil"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 250,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "trip",
+    "choices": ["viaje", "fiesta", "trabajo"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 400,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "bus stop",
+    "choices": ["parada de autobús", "parada de taxis", "parada de metro"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 300,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "drive",
+    "choices": ["conducir", "nadar", "correr"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 180,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "sail",
+    "choices": ["navegar", "montar a caballo", "esquiar"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 300,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "skate",
+    "choices": ["patinar", "nadar", "correr"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 250,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "road",
+    "choices": ["carretera", "paseo marítimo", "callejón"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 280,
+    "categories": ["travel"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "elevator",
+    "choices": ["ascensor", "escalera", "rampa"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 220,
+    "categories": ["travel"],
+    "goals": ["school"]
+  }
+]

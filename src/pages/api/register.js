@@ -16,7 +16,6 @@ export default async function register (request, response) {
         vocabulary: 1
       }
     })
-    console.log(user)
     await user.save()
     response.status(200).json(user)
   } catch (error) {

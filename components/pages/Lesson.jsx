@@ -23,10 +23,13 @@ const LessonComponent = styled.main`
 export const Lesson = () => {
   const lessonDispatch = useContext(LessonDispatch)
   const { isLoading, isLessonEnded } = useContext(LessonState)
-  const userStata = useContext(UserState)
+  const { path, currentLevel, _id } = useContext(UserState)
 
   useCustomEffect(() => {
-    dataFetching('/api/sessions', userStata)
+    dataFetching('/api/sessions', {
+      currentLesson: path[currentLevel],
+      _id
+    })
       .then((data) => {
         if (data.challenges.length === 0) throw new Error('no sessions available')
         lessonDispatch({

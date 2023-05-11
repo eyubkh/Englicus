@@ -37,7 +37,6 @@ export const RegisterTypeExperience = () => {
   const userState = useContext(UserState)
 
   const handler = async (event) => {
-    console.log(event.target.innerText)
     const updatedUser = await dataFetching('/api/user/update', {
       id: userState._id,
       beginner: event.target.innerText === 'beginner'

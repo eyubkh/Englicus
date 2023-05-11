@@ -20,13 +20,14 @@ export const LessonFooterNeutral = () => {
   const { choices, correctIndex, difficulty } = challenges[currentChallengeIndex]
 
   const { currentLevel, path, _id } = useContext(UserState)
+
   const currentLesson = path[currentLevel]
 
   const handlerIsCorrect = () => {
     const isCorrect = choices[correctIndex] === userInput
     dataFetching('/api/lesson/check', {
       _id,
-      name: currentLesson.name,
+      target: currentLesson.target,
       isCorrect,
       difficulty
     })

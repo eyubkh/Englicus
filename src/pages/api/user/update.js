@@ -4,7 +4,6 @@ export default async function handler (request, response) {
   const body = request.body
   const { id, goal, beginner } = body
 
-  console.log(request.body)
   if (body.hasOwnProperty('goal')) {
     const updatedUser = await User.findByIdAndUpdate(id, { goal }, { new: true })
     response.status(200).json(updatedUser)

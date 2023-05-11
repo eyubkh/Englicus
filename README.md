@@ -60,5 +60,6 @@ I am currently learning English and coding, but the journey isn't easy. I am thi
 [x] Updating xp of the current section lesson 
 [x] Generate more lessons while completing 
 [x] fetching correct date depending on the fluency of the user
-[] Adding sections inside the path lesson to agroup the exercices 
+[x] Adding sections inside the path lesson to agroup the exercices 
+[x] Filtering exercices by topic 
 

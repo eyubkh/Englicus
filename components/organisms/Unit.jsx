@@ -27,20 +27,6 @@ export const Unit = ({ target, sectionLevel, sections = [] }) => {
             )
           })
       }
-      {/* {
-        path
-          .map(({ name, xp, max_xp: maxXp }, index) => {
-            return (
-              <UnitSection
-                key={name}
-                name={name}
-                xp={xp}
-                position={index}
-                maxXp={maxXp}
-              />
-            )
-          })
-      } */}
     </UnitComponent>
   )
 }
