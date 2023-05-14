@@ -61,5 +61,6 @@ I am currently learning English and coding, but the journey isn't easy. I am thi
 [x] Generate more lessons while completing 
 [x] fetching correct date depending on the fluency of the user
 [x] Adding sections inside the path lesson to agroup the exercices 
-[x] Filtering exercices by topic 
+[x] Filtering exercices by diffuculty
+[] Filter exercices by topic 
 

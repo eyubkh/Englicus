@@ -16,7 +16,6 @@ export default async function handler (request, response) {
       const sections = []
 
       for (let i = 0; i < numberOfChallenges; i++) {
-        // "education",
         // "work"
         const topic = vocabularyTopicList[Math.floor(Math.random() * (vocabularyTopicList.length - 1))]
         sections.push({
