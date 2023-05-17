@@ -54,7 +54,7 @@ export const LessonTypeAssist = () => {
 
     lessonDispatch({
       type: 'userInput',
-      payload: targetText
+      payload: [targetText]
     })
   }
 

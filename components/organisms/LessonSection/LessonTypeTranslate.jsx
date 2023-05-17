@@ -1,28 +1,76 @@
-import { LessonState } from '@redux/lesson/lessonContext'
-import { useContext, useState } from 'react'
+import styled from 'styled-components'
+import { useContext, useEffect, useState } from 'react'
+import { LessonDispatch, LessonState } from '@redux/lesson/lessonContext'
+
+const LessonTypeTranslateComponent = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 10%;
+  height: 100%;
+  overflow-y: scroll;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+`
 
 export const LessonTypeTranslate = () => {
-  const { challenges, currentChallengeIndex } = useContext(LessonState)
+  const { challenges, currentChallengeIndex, userInput = [] } = useContext(LessonState)
   const challenge = challenges[currentChallengeIndex]
 
-  const [stack, setStack] = useState([])
+  const lessonDispatch = useContext(LessonDispatch)
+  const [choices, setChoices] = useState([], userInput)
 
-  const handler = (event) => {
-    setStack([...stack, event.target.innerText])
+  useEffect(() => {
+    setChoices([...challenge.choices])
+  }, [userInput.length === 0])
+
+  const unselectHandler = (event, choice) => {
+    choices[choice.indexFrom] = choice
+
+    userInput[choice.indexTo] = undefined
+    lessonDispatch({
+      type: 'userInput',
+      payload: userInput
+    })
   }
 
+  const selectHandler = (event, choice) => {
+    choices[choice.indexFrom] = undefined
+
+    const updatedSelect = [...userInput, choice]
+
+    lessonDispatch({
+      type: 'userInput',
+      payload: updatedSelect
+    })
+  }
+
+  console.log(userInput)
+
   return (
-    <>
-      <h3>Escribe esto en Castellano: {challenge.prompt} </h3>
-      <p>Select: {stack}</p>
-      {
-        challenge
-          .choices.map((choice, index) => {
+    <LessonTypeTranslateComponent>
+      <h3>Traduce el texto: {challenge.prompt} </h3>
+      <article>
+        <p>Selecciona: {userInput.map((choice, index) => {
+          if (!choice) return ''
+          return <button onClick={(event) => unselectHandler(event, { ...choice, indexTo: index })} key={index}>{choice.text}</button>
+        })}
+        </p>
+        <div>
+          {
+          choices.map((choice, index) => {
+            if (!choice) return ''
             return (
-              <button onClick={handler} key={index}>{choice.text}</button>
+              <button onClick={(event) => selectHandler(event, { ...choice, indexFrom: index })} key={index}>{choice.text}</button>
             )
           })
-      }
-    </>
+        }
+        </div>
+      </article>
+    </LessonTypeTranslateComponent>
   )
 }

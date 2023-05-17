@@ -15,27 +15,43 @@ export const LessonFooterNeutralComponent = styled.div`
 `
 
 export const LessonFooterNeutral = () => {
-  const dispatch = useContext(LessonDispatch)
+  const lessonDisptch = useContext(LessonDispatch)
   const { challenges, currentChallengeIndex, userInput } = useContext(LessonState)
-  const { choices, correctIndex, difficulty } = challenges[currentChallengeIndex]
+  const { choices, correctIndex, difficulty, type } = challenges[currentChallengeIndex]
 
   const { currentLevel, path, _id } = useContext(UserState)
 
   const currentLesson = path[currentLevel]
 
   const handlerIsCorrect = () => {
-    const isCorrect = choices[correctIndex] === userInput
+    let isCorrect = false
+
+    if (type === 'assist') {
+      isCorrect = choices[correctIndex] === userInput
+    }
+
+    if (type === 'translate') {
+      if (correctIndex.length === userInput.length) {
+        isCorrect = userInput
+          .filter(value => value !== undefined)
+          .every((value, index) => {
+            return correctIndex[index] === value.indexFrom
+          })
+      }
+    }
+
+    if (isCorrect) {
+      lessonDisptch({ type: 'isCorrect' })
+    } else {
+      lessonDisptch({ type: 'isIncorrect' })
+    }
+
     dataFetching('/api/lesson/check', {
       _id,
       target: currentLesson.target,
       isCorrect,
       difficulty
     })
-    if (isCorrect) {
-      dispatch({ type: 'isCorrect' })
-    } else {
-      dispatch({ type: 'isIncorrect' })
-    }
   }
   return (
     <LessonFooterNeutralComponent>

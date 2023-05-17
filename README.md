@@ -60,7 +60,9 @@ I am currently learning English and coding, but the journey isn't easy. I am thi
 [x] Updating xp of the current section lesson 
 [x] Generate more lessons while completing 
 [x] fetching correct date depending on the fluency of the user
-[x] Adding sections inside the path lesson to agroup the exercices 
-[x] Filtering exercices by diffuculty
-[] Filter exercices by topic 
+[x] Adding sections inside the path lesson to agroup the exercises 
+[x] Filtering exercises by diffuculty
+[x] Filter exercises by topic 
+[x] Add new lesson type translate
+[] Improve design of new lesson type
 

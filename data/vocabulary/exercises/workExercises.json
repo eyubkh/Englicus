@@ -1,0 +1,227 @@
+[
+  {
+    "prompt": "engineer",
+    "choices": ["ingeniero", "programador", "trabajador"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 500,
+    "categories": ["work"],
+    "goals": ["school"]
+    },
+    {
+    "prompt": "manager",
+    "choices": ["administrador", "trabajador", "director"],
+    "correctIndex": 2,
+    "type": "assist",
+    "difficulty": 600,
+    "categories": ["work"],
+    "goals": ["school"]
+    },
+    {
+    "prompt": "scientist",
+    "choices": ["científico", "estudiante", "profesor"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 700,
+    "categories": ["work"],
+    "goals": ["school"]
+    },
+    {
+    "prompt": "designer",
+    "choices": ["diseñador", "artista", "músico"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 400,
+    "categories": ["work"],
+    "goals": ["school"]
+    },
+    {
+    "prompt": "accountant",
+    "choices": ["contador", "abogado", "doctor"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 550,
+    "categories": ["work"],
+    "goals": ["school"]
+    },
+    {
+      "prompt": "engineer",
+      "choices": ["ingeniero", "programador", "trabajador"],
+      "correctIndex": 0,
+      "type": "assist",
+      "difficulty": 500,
+      "categories": ["work"],
+      "goals": ["school"]
+      },
+      {
+      "prompt": "manager",
+      "choices": ["administrador", "trabajador", "director"],
+      "correctIndex": 2,
+      "type": "assist",
+      "difficulty": 600,
+      "categories": ["work"],
+      "goals": ["school"]
+      },
+      {
+      "prompt": "scientist",
+      "choices": ["científico", "estudiante", "profesor"],
+      "correctIndex": 0,
+      "type": "assist",
+      "difficulty": 700,
+      "categories": ["work"],
+      "goals": ["school"]
+      },
+      {
+      "prompt": "designer",
+      "choices": ["diseñador", "artista", "músico"],
+      "correctIndex": 0,
+      "type": "assist",
+      "difficulty": 400,
+      "categories": ["work"],
+      "goals": ["school"]
+      },
+      {
+      "prompt": "accountant",
+      "choices": ["contador", "abogado", "doctor"],
+      "correctIndex": 0,
+      "type": "assist",
+      "difficulty": 550,
+      "categories": ["work"],
+      "goals": ["school"]
+      },
+      {
+      "prompt": "teacher",
+      "choices": ["maestro", "estudiante", "entrenador"],
+      "correctIndex": 0,
+      "type": "assist",
+      "difficulty": 450,
+      "categories": ["work"],
+      "goals": ["school"]
+      },
+      {
+      "prompt": "writer",
+      "choices": ["escritor", "actor", "pintor"],
+      "correctIndex": 0,
+      "type": "assist",
+      "difficulty": 400,
+      "categories": ["work"],
+      "goals": ["school"]
+      },
+      {
+      "prompt": "nurse",
+      "choices": ["enfermera", "policía", "abogada"],
+      "correctIndex": 0,
+      "type": "assist",
+      "difficulty": 600,
+      "categories": ["work"],
+      "goals": ["school"]
+      },
+      {
+      "prompt": "developer",
+      "choices": ["desarrollador", "diseñador", "artista"],
+      "correctIndex": 0,
+      "type": "assist",
+      "difficulty": 550,
+      "categories": ["work"],
+      "goals": ["school"]
+      },
+      {
+      "prompt": "manager",
+      "choices": ["gerente", "trabajador", "director"],
+      "correctIndex": 0,
+      "type": "assist",
+      "difficulty": 600,
+      "categories": ["work"],
+      "goals": ["school"]
+      },
+      {
+        "prompt": "engineer",
+        "choices": ["ingeniero", "programador", "trabajador"],
+        "correctIndex": 0,
+        "type": "assist",
+        "difficulty": 500,
+        "categories": ["work"],
+        "goals": ["school"]
+        },
+        {
+        "prompt": "manager",
+        "choices": ["administrador", "trabajador", "director"],
+        "correctIndex": 2,
+        "type": "assist",
+        "difficulty": 600,
+        "categories": ["work"],
+        "goals": ["school"]
+        },
+        {
+        "prompt": "scientist",
+        "choices": ["científico", "estudiante", "profesor"],
+        "correctIndex": 0,
+        "type": "assist",
+        "difficulty": 700,
+        "categories": ["work"],
+        "goals": ["school"]
+        },
+        {
+        "prompt": "designer",
+        "choices": ["diseñador", "artista", "músico"],
+        "correctIndex": 0,
+        "type": "assist",
+        "difficulty": 400,
+        "categories": ["work"],
+        "goals": ["school"]
+        },
+        {
+        "prompt": "accountant",
+        "choices": ["contador", "abogado", "doctor"],
+        "correctIndex": 0,
+        "type": "assist",
+        "difficulty": 550,
+        "categories": ["work"],
+        "goals": ["school"]
+        },
+        {
+        "prompt": "teacher",
+        "choices": ["maestro", "estudiante", "entrenador"],
+        "correctIndex": 0,
+        "type": "assist",
+        "difficulty": 450,
+        "categories": ["work"],
+        "goals": ["school"]
+        },
+        {
+        "prompt": "writer",
+        "choices": ["escritor", "actor", "pintor"],
+        "correctIndex": 0,
+        "type": "assist",
+        "difficulty": 400,
+        "categories": ["work"],
+        "goals": ["school"]
+        },
+        {
+        "prompt": "nurse",
+        "choices": ["enfermera", "policía", "abogada"],
+        "correctIndex": 0,
+        "type": "assist",
+        "difficulty": 600,
+        "categories": ["work"],
+        "goals": ["school"]
+        },
+        {
+        "prompt": "developer",
+        "choices": ["desarrollador", "diseñador", "artista"],
+        "correctIndex": 0,
+        "type": "assist",
+        "difficulty": 550,
+        "categories": ["work"],
+        "goals": ["school"]
+        },
+        {
+        "prompt": "manager",
+        "choices": ["gerente", "trabajador", "director"],
+        "correctIndex": 0,
+        "type": "assist",
+        "difficulty": 600,
+        "categories": ["work"],
+        "goals": ["school"]
+        }
+]

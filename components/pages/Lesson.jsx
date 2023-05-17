@@ -9,7 +9,7 @@ import styled from 'styled-components'
 import { UserState } from '@redux/user/userContext'
 import { LessonRetry } from '@components/organisms/LessonRetry'
 import { LessonEnded } from '@components/organisms/LessonEnded'
-import { useCustomEffect } from 'hooks/useCustomEffect'
+import { useCustomEffect } from '@libs/hooks/useCustomEffect'
 
 const LessonComponent = styled.main`
   display: flex;

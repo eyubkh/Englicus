@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid'
 import User from 'models/user'
-import vocabularyTopicList from '@data/vocabulary/topics.json'
+import data from '@data/index'
 
 export default async function handler (request, response) {
   const { id } = request.body
@@ -16,8 +16,8 @@ export default async function handler (request, response) {
       const sections = []
 
       for (let i = 0; i < numberOfChallenges; i++) {
-        // "work"
-        const topic = vocabularyTopicList[Math.floor(Math.random() * (vocabularyTopicList.length - 1))]
+        const topic = data[key].topics[Math.round(Math.random() * (data[key].topics.length - 1))]
+
         sections.push({
           id: uuidv4(),
           topic,

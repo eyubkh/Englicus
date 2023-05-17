@@ -1,5 +1,5 @@
-import vocabularyExercices from './vocabulary/exercices.json'
+import vocabulary from './vocabulary'
 
 export default {
-  vocabulary: vocabularyExercices
+  vocabulary
 }

@@ -5,7 +5,7 @@ import { Unit } from '@components/organisms/Unit'
 import { UserDispatch, UserState } from '@redux/user/userContext'
 import dataFetching from '@libs/dataFetching'
 import { useRouter } from 'next/router'
-import { useCustomEffect } from 'hooks/useCustomEffect'
+import { useCustomEffect } from '@libs/hooks/useCustomEffect'
 
 const PathComponent = styled.main`
   display: flex;
