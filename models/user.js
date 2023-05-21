@@ -8,7 +8,8 @@ const userSchema = new mongoose.Schema({
   totalXp: Number,
   fluencyRating: Number,
   fluency: {
-    vocabulary: Number
+    vocabulary: Number,
+    grammar: Number
   }
 })
 

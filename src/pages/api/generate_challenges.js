@@ -6,12 +6,13 @@ export default async function handler (request, response) {
   const { id } = request.body
   const user = await User.findById(id)
 
-  if (!user.path[user.currentLevel]) {
+  if (user.path[user.currentLevel] === undefined) {
     const numberChallengesLength = 1
     const fluencyKeys = Object.entries(user.fluency)
     for (const [key, value] of fluencyKeys) {
-      const sectionPriority = Math.floor(value / user.fluencyRating)
-      const numberOfChallenges = numberChallengesLength / sectionPriority
+      // const sectionPriority = Math.floor(value / user.fluencyRating)
+      // const numberOfChallenges = numberChallengesLength / sectionPriority
+      const numberOfChallenges = numberChallengesLength
 
       const sections = []
 

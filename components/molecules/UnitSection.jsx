@@ -1,12 +1,22 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import Link from 'next/link'
-import { ActionSuccess100, ActionSuccess200, ActionSuccess300, Border2, BrandSecondary, NeutralGrey100, NeutralLight100, NeutralLight300 } from '@tokens'
+import { ActionSuccess100, ActionSuccess300, BrandSecondary, NeutralGrey100, NeutralLight200, NeutralLight300 } from '@tokens'
 import educationSvg from '@public/icons/education.svg'
 import Image from 'next/image'
 
 const varibales = {
-  size: 200
+  size: 100,
+  full: 180
 }
+
+const completed = (progress) => keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(${progress + 'deg'});
+  }
+`
 
 const UnitSectionComponent = styled.article`
   position: relative;
@@ -25,11 +35,11 @@ const UnitSectionComponent = styled.article`
     left: 50%;
     top: 50%;
     border-radius: 100%;
-    background: ${ActionSuccess100};
+    background-color: ${({ isActive }) => isActive ? BrandSecondary : NeutralLight200};
     box-shadow: inset 0px 0px 5px ${ActionSuccess300};
     position: absolute;
     z-index: 3;
-    border: 10px solid white;
+    border: 5px solid white;
   }
 
   .circle .mask,
@@ -52,34 +62,24 @@ const UnitSectionComponent = styled.article`
 
   .mask.full,
   .circle .fill {
-    animation: fill ease-in-out 3s ;
+    animation: ${({ progress }) => completed(progress)} ease-in-out 3s forwards;
     transform: rotate(140deg);
   }
-
-@keyframes fill{
-  0% {
-    transform: rotate(100deg);
-  }
-  100% {
-    transform: rotate(140deg);
-  }
-}
-
 `
 
 export const UnitSection = ({ xp, maxXp, name, active }) => {
   return (
     <Link href={active ? 'lessons' : '#'}>
-      <UnitSectionComponent progress={xp / maxXp * 100} isActive={active}>
-        <div class='circle'>
-          <div class='inside-circle'>
+      <UnitSectionComponent progress={xp / maxXp * varibales.full} isActive={active}>
+        <div className='circle'>
+          <div className='inside-circle'>
             <Image src={educationSvg} width={varibales.size / 2} alt='education icon' />
           </div>
-          <div class='mask half'>
-            <div class='fill' />
+          <div className='mask half'>
+            <div className='fill' />
           </div>
-          <div class='mask full'>
-            <div class='fill' />
+          <div className='mask full'>
+            <div className='fill' />
           </div>
         </div>
       </UnitSectionComponent>

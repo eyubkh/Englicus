@@ -13,7 +13,8 @@ export default async function register (request, response) {
       totalXp: 0,
       fluencyRating: 1,
       fluency: {
-        vocabulary: 1
+        vocabulary: 1,
+        grammar: 1
       }
     })
     await user.save()

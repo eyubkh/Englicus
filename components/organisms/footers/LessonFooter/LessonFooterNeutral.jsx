@@ -27,13 +27,11 @@ export const LessonFooterNeutral = () => {
     let isCorrect = false
 
     if (type === 'assist') {
-      isCorrect = choices[correctIndex] === userInput
+      isCorrect = choices[correctIndex] === userInput[0]
     }
-
     if (type === 'translate') {
       if (correctIndex.length === userInput.length) {
         isCorrect = userInput
-          .filter(value => value !== undefined)
           .every((value, index) => {
             return correctIndex[index] === value.indexFrom
           })

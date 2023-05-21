@@ -66,7 +66,7 @@ export const LessonTypeAssist = () => {
           challenge
             .choices.map((choice, index) => {
               return (
-                <SelectChoice active={userInput === choice} onClick={handlerSelect} key={index}>
+                <SelectChoice active={userInput[0] === choice} onClick={handlerSelect} key={index}>
                   <span>{index + 1}</span>
                   <p>{choice}</p>
                 </SelectChoice>

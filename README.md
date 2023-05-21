@@ -64,6 +64,7 @@ I am currently learning English and coding, but the journey isn't easy. I am thi
 [x] Filtering exercises by diffuculty
 [x] Filter exercises by topic 
 [x] Add new lesson type translate
+[x] Add new section target grammar
 [] Improve path design
 [] Improve design of new lesson type
 

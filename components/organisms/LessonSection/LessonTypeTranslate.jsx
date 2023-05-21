@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import { LessonDispatch, LessonState } from '@redux/lesson/lessonContext'
 
 const LessonTypeTranslateComponent = styled.section`
@@ -22,34 +22,26 @@ export const LessonTypeTranslate = () => {
   const challenge = challenges[currentChallengeIndex]
 
   const lessonDispatch = useContext(LessonDispatch)
-  const [choices, setChoices] = useState([], userInput)
-
-  useEffect(() => {
-    setChoices([...challenge.choices])
-  }, [userInput.length === 0])
 
   const unselectHandler = (event, choice) => {
-    choices[choice.indexFrom] = choice
+    challenge.choices[choice.indexFrom] = choice
 
     userInput[choice.indexTo] = undefined
     lessonDispatch({
       type: 'userInput',
-      payload: userInput
+      payload: userInput.filter(value => value !== undefined)
     })
   }
 
   const selectHandler = (event, choice) => {
-    choices[choice.indexFrom] = undefined
+    challenge.choices[choice.indexFrom] = undefined
 
     const updatedSelect = [...userInput, choice]
-
     lessonDispatch({
       type: 'userInput',
       payload: updatedSelect
     })
   }
-
-  console.log(userInput)
 
   return (
     <LessonTypeTranslateComponent>
@@ -62,7 +54,7 @@ export const LessonTypeTranslate = () => {
         </p>
         <div>
           {
-          choices.map((choice, index) => {
+          challenge.choices.map((choice, index) => {
             if (!choice) return ''
             return (
               <button onClick={(event) => selectHandler(event, { ...choice, indexFrom: index })} key={index}>{choice.text}</button>

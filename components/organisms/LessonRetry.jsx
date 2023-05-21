@@ -3,6 +3,10 @@ import { NeutralLight100 } from '@tokens'
 import { useContext } from 'react'
 import styled, { keyframes } from 'styled-components'
 
+const variables = {
+  duration: 1000
+}
+
 const hide = keyframes`
     to {
       opacity: 0;
@@ -16,7 +20,7 @@ const LessonRetryComponent = styled.div`
   height: 100vh;
   display: grid;
   place-content: center;
-  animation: ${hide} 1s forwards step-end; 
+  animation: ${hide} ${variables.duration + 'ms'} forwards step-end; 
   background-color: ${NeutralLight100};
   z-index: 3;
 `
