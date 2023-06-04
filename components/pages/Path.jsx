@@ -12,9 +12,15 @@ const PathComponent = styled.main`
   flex-direction: column;
   gap: 20px;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 100px auto;
   padding: 0 50px;
   height: auto;
+
+  .section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
 
 `
 
@@ -45,6 +51,7 @@ export const Path = () => {
     <PathComponent>
       <MainHeader />
       <h1>Aprender Ingles</h1>
+      <div className='section'>
       {
         path
           .map(({ target, sectionLevel, sections, id }) => {
@@ -58,7 +65,7 @@ export const Path = () => {
             )
           })
       }
-      <Unit />
+      </div>
     </PathComponent>
   )
 }

@@ -9,7 +9,8 @@ const userSchema = new mongoose.Schema({
   fluencyRating: Number,
   fluency: {
     vocabulary: Number,
-    grammar: Number
+    grammar: Number,
+    listening: Number
   }
 })
 

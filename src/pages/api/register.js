@@ -14,7 +14,8 @@ export default async function register (request, response) {
       fluencyRating: 1,
       fluency: {
         vocabulary: 1,
-        grammar: 1
+        grammar: 1,
+        listening: 1
       }
     })
     await user.save()

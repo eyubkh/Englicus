@@ -37,13 +37,21 @@ export const LessonFooterNeutral = () => {
           })
       }
     }
+    if (type === 'listenAssist') {
+      if (correctIndex.length === userInput.length) {
+        isCorrect = userInput
+          .every((value, index) => {
+            return correctIndex[index] === value.indexFrom
+          })
+      }
+    }
 
     if (isCorrect) {
       lessonDisptch({ type: 'isCorrect' })
     } else {
       lessonDisptch({ type: 'isIncorrect' })
     }
-
+    
     dataFetching('/api/lesson/check', {
       _id,
       target: currentLesson.target,

@@ -7,26 +7,27 @@ const UnitComponent = styled.section`
   flex-direction: column;
   gap: 25px;
   justify-content: center;
+  align-items: center;
 `
 
 export const Unit = ({ target, sectionLevel, sections = [] }) => {
   return (
     <UnitComponent>
       <h3>{target}</h3>
-      {
-        sections
-          .map(({ id, topic, xp, max_xp: maxXp }, index) => {
-            return (
-              <UnitSection
-                key={id}
-                name={topic}
-                xp={xp}
-                active={sectionLevel === index}
-                maxXp={maxXp}
-              />
-            )
-          })
-      }
+        {
+          sections
+            .map(({ id, topic, xp, max_xp: maxXp }, index) => {
+              return (
+                <UnitSection
+                  key={id}
+                  name={topic}
+                  xp={xp}
+                  active={sectionLevel === index}
+                  maxXp={maxXp}
+                />
+              )
+            })
+        }
     </UnitComponent>
   )
 }

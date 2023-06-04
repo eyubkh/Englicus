@@ -152,6 +152,6 @@ export default [
     audio: 'https://d1vq87e9lcf771.cloudfront.net/miranda/86a8dfc3067bea57238c56588724fd00',
     choices: ['hello', 'Julia', 'sugar', 'and', 'please', 'no'],
     correctIndex: [0, 1],
-    type: 'listenTap'
+    type: 'listenAssist'
   }
 ]

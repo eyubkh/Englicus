@@ -7,11 +7,10 @@ export default async function sessions (request, response) {
   const user = await User.findById(_id)
 
   if (user) {
-    const challenges = []
+    let challenges = []
     // const range = 200
     const currentSection = currentLesson.sections[currentLesson.sectionLevel]
     const exercises = data[currentLesson.target].exercises[currentSection.topic]
-    console.log(currentLesson)
 
     for (const challenge of exercises) {
       if (challenges.length >= 10) break
