@@ -1,0 +1,67 @@
+import { MainHeader } from "@components/organisms/headers/MainHeader";
+import styled from "styled-components";
+import { useContext } from "react";
+import { Unit } from "@components/organisms/Unit";
+import { UserDispatch, UserState } from "@redux/user/userContext";
+import dataFetching from "@libs/dataFetching";
+import { useRouter } from "next/navigation";
+import { useCustomEffect } from "@libs/hooks/useCustomEffect";
+
+const PathComponent = styled.main`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 100px auto;
+  padding: 0 50px;
+  height: auto;
+
+  .section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+`;
+
+export const Path = () => {
+	const router = useRouter();
+	const userDispatch = useContext(UserDispatch);
+	const { path = [] } = useContext(UserState);
+
+	useCustomEffect(() => {
+		const localUser = window.localStorage.getItem("user");
+		if (localUser) {
+			(async () => {
+				const userUpdated = await dataFetching("/api/generate_challenges", {
+					id: JSON.parse(localUser).id,
+				});
+				console.log(userUpdated);
+				userDispatch({
+					type: "update",
+					payload: userUpdated,
+				});
+			})();
+		} else {
+			router.push("/");
+		}
+	});
+
+	return (
+		<PathComponent>
+			<MainHeader />
+			<h1>Aprender Ingles</h1>
+			<div className="section">
+				{path.map(({ target, sectionLevel, sections, id }) => {
+					return (
+						<Unit
+							key={id}
+							target={target}
+							sections={sections}
+							sectionLevel={sectionLevel}
+						/>
+					);
+				})}
+			</div>
+		</PathComponent>
+	);
+};

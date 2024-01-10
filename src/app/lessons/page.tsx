@@ -1,3 +1,5 @@
+"use client";
+
 import { Lesson } from "@components/pages/Lesson";
 import { LessonContextProvider } from "@redux/lesson/lessonContext";
 
