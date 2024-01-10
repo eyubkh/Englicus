@@ -52,7 +52,7 @@ export const Path = () => {
       <MainHeader />
       <h1>Aprender Ingles</h1>
       <div className='section'>
-      {
+        {
         path
           .map(({ target, sectionLevel, sections, id }) => {
             return (

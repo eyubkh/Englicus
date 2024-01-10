@@ -14,7 +14,7 @@ export const Unit = ({ target, sectionLevel, sections = [] }) => {
   return (
     <UnitComponent>
       <h3>{target}</h3>
-        {
+      {
           sections
             .map(({ id, topic, xp, max_xp: maxXp }, index) => {
               return (

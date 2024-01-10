@@ -51,7 +51,7 @@ export const LessonFooterNeutral = () => {
     } else {
       lessonDisptch({ type: 'isIncorrect' })
     }
-    
+
     dataFetching('/api/lesson/check', {
       _id,
       target: currentLesson.target,
