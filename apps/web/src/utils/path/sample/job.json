@@ -1,0 +1,56 @@
+{
+  "A1": {
+    "Basic Communication": [
+      "Basics",
+      "Phrases"
+    ],
+    "Vocabulary": [
+      "Occupations",
+      "Education"
+    ],
+    "Job Opportunities": [
+      "Verbs",
+      "Questions"
+    ]
+  },
+  "A2": {
+    "Vocabulary": [
+      "Business",
+      "Numbers",
+      "Holidays"
+    ],
+    "Job Opportunities": [
+      "Education",
+      "Pronouns",
+      "Conjunctions",
+      "Prepositions"
+    ]
+  },
+  "B1": {
+    "Language Structures": [
+      "Modal verbs",
+      "Infinitives",
+      "Gerunds",
+      "Participles",
+      "Present perfect tense"
+    ],
+    "Job Opportunities": [
+      "Reflexive pronouns",
+      "Possessive pronouns",
+      "Demonstrative pronouns",
+      "Superlatives",
+      "Conditional tense"
+    ]
+  },
+  "B2": {
+    "Grammar Structures": [
+      "Passive voice",
+      "Imperative mood",
+      "Subjunctive mood"
+    ],
+    "Job Opportunities": [
+      "Occupations",
+      "Business"
+    ]
+  }
+}

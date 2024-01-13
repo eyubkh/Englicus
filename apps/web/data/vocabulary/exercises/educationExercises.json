@@ -1,0 +1,187 @@
+[
+  {
+    "prompt": "math",
+    "choices": ["matemáticas", "ciencias", "historia"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 300,
+    "categories": ["education"],
+    "goals": ["school"]
+  }
+  ,
+  {
+    "prompt": "biology",
+    "choices": ["biología", "física", "arte"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 450,
+    "categories": ["education"],
+    "goals": ["school"]
+  }
+  ,
+  {
+    "prompt": "library",
+    "choices": ["biblioteca", "piscina", "restaurante"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 600,
+    "categories": ["education"],
+    "goals": ["school"]
+  }
+  ,
+  {
+    "prompt": "teacher",
+    "choices": ["profesor", "doctor", "abogado"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 250,
+    "categories": ["education"],
+    "goals": ["school"]
+  }
+,
+  {
+    "prompt": "history",
+    "choices": ["historia", "matemáticas", "geografía"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 400,
+    "categories": ["education"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "chemistry",
+    "choices": ["química", "biología", "geografía"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 500,
+    "categories": ["education"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "homework",
+    "choices": ["tarea", "clase", "proyecto"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 350,
+    "categories": ["education"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "desk",
+    "choices": ["escritorio", "pizarra", "puerta"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 600,
+    "categories": ["education"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "examination",
+    "choices": ["examen", "taller", "investigación"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 450,
+    "categories": ["education"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "computer",
+    "choices": ["computadora", "libro", "reloj"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 400,
+    "categories": ["education"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "chemistry",
+    "choices": ["química", "biología", "física"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 500,
+    "categories": ["education"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "geography",
+    "choices": ["geografía", "historia", "matemáticas"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 350,
+    "categories": ["education"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "classroom",
+    "choices": ["aula", "biblioteca", "gimnasio"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 450,
+    "categories": ["education"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "homework",
+    "choices": ["deberes", "examen", "actividades"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 250,
+    "categories": ["education"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "language",
+    "choices": ["idioma", "música", "arte"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 400,
+    "categories": ["education"],
+    "goals": ["school"]
+  },
+  {
+    "prompt": "chemistry",
+    "choices": ["química", "biología", "literatura"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 500,
+    "categories": ["education"],
+    "goals": ["school"]
+},
+{
+    "prompt": "language",
+    "choices": ["idioma", "historia", "arte"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 350,
+    "categories": ["education"],
+    "goals": ["school"]
+},
+{
+    "prompt": "geography",
+    "choices": ["geografía", "matemáticas", "física"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 400,
+    "categories": ["education"],
+    "goals": ["school"]
+},
+{
+    "prompt": "algebra",
+    "choices": ["álgebra", "trigonometría", "cálculo"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 550,
+    "categories": ["education"],
+    "goals": ["school"]
+},
+{
+    "prompt": "physics",
+    "choices": ["física", "biología", "arte"],
+    "correctIndex": 0,
+    "type": "assist",
+    "difficulty": 450,
+    "categories": ["education"],
+    "goals": ["school"]
+}
+
+]

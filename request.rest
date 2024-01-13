@@ -1,6 +1,0 @@
-POST http://localhost:3000/api/generate_challenges HTTP/1.1
-content-type: application/json
-
-{
-  "id":"64520622aaeaac5ed85f6b3e"
-}

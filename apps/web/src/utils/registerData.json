@@ -1,0 +1,17 @@
+[
+  {
+    "prompt": "Que te motiva a aprender un idoma?",
+    "choices": [
+      "school"
+    ],
+    "type": "goal"
+  }, 
+  {
+    "prompt": "Elige tu ruta",
+    "type": "experience"
+  },
+  {
+    "prompt": "Guarda tu progreso",
+    "type": "signup"
+  }
+]

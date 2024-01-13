@@ -1,0 +1,46 @@
+[
+  {
+    "prompt": "Please send me the report",
+    "choices": [
+      {
+        "text": "Por"
+      },
+      {
+        "text": "favor"
+      },
+      {
+        "text": "envíame"
+      },
+      {
+        "text": "el"
+      },
+      {
+        "text": "informe"
+      },
+      {
+        "text": "lo"
+      },
+      {
+        "text": "necesito"
+      },
+      {
+        "text": "urgente"
+      }
+    ],
+    "correctIndex": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "type": "translate",
+    "difficulty": 100,
+    "categories": [
+      "work"
+    ],
+    "goals": [
+      "school"
+    ]
+  }
+]

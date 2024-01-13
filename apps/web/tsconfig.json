@@ -1,0 +1,41 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"baseUrl": ".",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"module": "esnext",
+		"moduleResolution": "bundler",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"incremental": true,
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"paths": {
+			"@src/*": ["./src/*"],
+			"@components/*": ["./src/components/*"],
+			"@tokens": ["tokens/build/js/_variables.js"],
+			"@public/*": ["public/*"],
+			"@utils/*": ["./src/utils/*"],
+			"@libs/*": ["./src/libs/*"],
+			"@redux/*": ["./src/redux/*"],
+			"@data/*": ["data/*"]
+		}
+	},
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		".next/types/**/*.ts",
+		"src/components/pages/Register.jsx"
+	],
+	"exclude": ["node_modules"]
+}
