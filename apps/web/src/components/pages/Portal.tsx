@@ -1,10 +1,15 @@
 import { PortalContextProvider } from "@src/redux/portal/portalContext";
-import { LessonHeader } from "../organisms/headers/LessonHeader";
+import { CrossedProgressBar } from "../molecules/CrossedProgressBar";
+import WelcomeFooter from "../organisms/footers/WelcomeFooter";
 
 export default function Portal() {
 	return (
 		<PortalContextProvider>
-			<h1>hello</h1>
+			<main className="flex flex-col justify-between h-full">
+				<CrossedProgressBar progress={50} />
+				<h1>hello</h1>
+				<WelcomeFooter />
+			</main>
 		</PortalContextProvider>
 	);
 }
