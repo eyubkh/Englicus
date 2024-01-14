@@ -7,11 +7,11 @@
 /coverage
 
 # next.js
-.next/
+**/.next/
 /out/
 
 #bun
-**/.next/
+*lockb
 
 # production
 /build
