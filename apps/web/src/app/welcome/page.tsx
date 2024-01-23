@@ -1,12 +1,12 @@
 "use client";
 
-import { Register } from "@components/pages/Register";
+import Welcome from "@components/pages/Welcome";
 import { RegisterContextProvider } from "@redux/register/registerContext";
 
 export default function register() {
 	return (
 		<RegisterContextProvider>
-			<Register />
+			<Welcome />
 		</RegisterContextProvider>
 	);
 }

@@ -1,11 +1,14 @@
 {
-  "name": "englicus-api",
-  "module": "index.ts",
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+	"name": "englicus-api",
+	"private": true,
+
+	"scripts": {
+		"dev": "bun run --hot src/index.ts"
+	},
+	"dependencies": {
+		"hono": "^3.12.6"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.0.0"
+	}
 }
