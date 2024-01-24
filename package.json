@@ -4,6 +4,8 @@
 	"private": true,
 	"workspaces": ["apps/*"],
 	"scripts": {
-		"web:dev": "bun run --cwd apps/web dev"
+		"dev": "bun run web:dev & bun run api:dev",
+		"web:dev": "bun run --cwd apps/web dev",
+		"api:dev": "bun run --cwd apps/api dev"
 	}
 }

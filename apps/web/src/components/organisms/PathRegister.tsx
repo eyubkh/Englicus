@@ -1,5 +1,5 @@
 "use client";
-import { GreenButton } from "../atoms/buttons/GreenButton";
+import { GreenButton } from "../atoms/buttons/Button";
 import { TransparentButton } from "../atoms/buttons/TransparentButton";
 import { CrossedProgressBar } from "../molecules/CrossedProgressBar";
 import { LessonSection } from "./LessonSection";

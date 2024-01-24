@@ -1,10 +1,10 @@
-import styled from 'styled-components'
-import { ActionSuccess100, ActionSuccess300 } from '@tokens'
-import { useContext } from 'react'
-import { CircleCheckIcon } from '@components/molecules/CircleCheckIcon'
-import { LessonFooterNeutralComponent } from './LessonFooterNeutral'
-import { GreenButton } from '@components/atoms/buttons/GreenButton'
-import { LessonDispatch } from '@redux/lesson/lessonContext'
+import styled from "styled-components";
+import { ActionSuccess100, ActionSuccess300 } from "@tokens";
+import { useContext } from "react";
+import { CircleCheckIcon } from "@components/molecules/CircleCheckIcon";
+import { LessonFooterNeutralComponent } from "./LessonFooterNeutral";
+import { GreenButton } from "@src/components/atoms/buttons/Button";
+import { LessonDispatch } from "@redux/lesson/lessonContext";
 
 const LessonFooterSuccessComponent = styled(LessonFooterNeutralComponent)`
   background-color: ${ActionSuccess100};
@@ -22,26 +22,24 @@ const LessonFooterSuccessComponent = styled(LessonFooterNeutralComponent)`
   h3 {
     color: ${ActionSuccess300};
   }
-`
+`;
 
 export const LessonFooterSuccess = () => {
-  const lessonDispatch = useContext(LessonDispatch)
+	const lessonDispatch = useContext(LessonDispatch);
 
-  const handler = () => {
-    lessonDispatch({
-      type: 'finishChecking'
-    })
-  }
+	const handler = () => {
+		lessonDispatch({
+			type: "finishChecking",
+		});
+	};
 
-  return (
-    <LessonFooterSuccessComponent>
-      <div>
-        <CircleCheckIcon />
-        <h3>!Well done!</h3>
-      </div>
-      <GreenButton onClick={handler}>
-        Continue
-      </GreenButton>
-    </LessonFooterSuccessComponent>
-  )
-}
+	return (
+		<LessonFooterSuccessComponent>
+			<div>
+				<CircleCheckIcon />
+				<h3>!Well done!</h3>
+			</div>
+			<GreenButton onClick={handler}>Continue</GreenButton>
+		</LessonFooterSuccessComponent>
+	);
+};
