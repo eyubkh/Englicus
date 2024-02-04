@@ -1,14 +1,15 @@
 {
-	"name": "englicus-api",
-	"private": true,
-
-	"scripts": {
-		"dev": "bun run --hot src/index.ts"
-	},
-	"dependencies": {
-		"hono": "^3.12.6"
-	},
-	"devDependencies": {
-		"@types/bun": "^1.0.0"
-	}
+  "name": "englicus-api",
+  "private": true,
+  "scripts": {
+    "dev": "bun run --hot src/index.ts"
+  },
+  "dependencies": {
+    "hono": "^3.12.6",
+    "mysql2": "^3.9.1"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.0.0",
+    "dotenv": "^16.4.1"
+  }
 }
