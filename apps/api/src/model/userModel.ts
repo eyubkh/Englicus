@@ -23,19 +23,63 @@ export class UserModel {
 		return { id };
 	}
 
-	static async getUser({ id }: { id: string }) {
+	static async returnUserInfoById(userId: string) {
 		const connection = await mysql.createConnection(
 			`${process.env.PSCALE_DB_URL}`,
 		);
 
-		const [user] = await connection.execute(
-			`SELECT bin_to_uuid(user_id) as user_id, motivation, welcome_completed FROM user WHERE user_id = uuid_to_bin(?);`,
-			[id],
+		const [userData] = await connection.execute(
+			`SELECT bin_to_uuid(user_id) as user_id, motivation, welcome_completed 
+			FROM user 
+			WHERE user_id = uuid_to_bin(?);`,
+			[userId],
 		);
 		connection.end();
 
-		console.log(user);
+		return userData[0];
+	}
 
-		return { user: user[0] };
+	static async updateUser(userId: string, body: any) {
+		const { motivation, welcome_completed } = body;
+
+		const connection = await mysql.createConnection(
+			`${process.env.PSCALE_DB_URL}`,
+		);
+
+		console.log(welcome_completed);
+
+		if (welcome_completed) {
+			await connection.execute(
+				`UPDATE user SET welcome_completed = ? WHERE user_id = uuid_to_bin(?) `,
+				[welcome_completed, userId],
+			);
+		}
+
+		if (motivation) {
+			const [motivationData] = await connection.query(
+				`SELECT motivation_pk FROM motivation WHERE motivation_type = ?`,
+				[motivation],
+			);
+
+			const motivationId = motivationData[0].motivation_pk;
+
+			if (motivationId) {
+				await connection.execute(
+					`UPDATE user SET motivation = ? WHERE user_id = uuid_to_bin(?) `,
+					[motivationId, userId],
+				);
+			}
+		}
+
+		const [userData] = await connection.execute(
+			`SELECT bin_to_uuid(user_id) as user_id, motivation, welcome_completed 
+				FROM user 
+				WHERE user_id = uuid_to_bin(?);`,
+			[userId],
+		);
+
+		connection.end();
+
+		return userData[0];
 	}
 }

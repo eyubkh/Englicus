@@ -3,6 +3,7 @@ import WelcomeFooter from "../organisms/footers/WelcomeFooter";
 import { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { ContainerType } from "../organisms/containerType";
+import { getLocalUserId, setLocalUserId } from "@src/utils/localStorageHandler";
 
 const data = [
 	{
@@ -29,12 +30,14 @@ export default function Welcome() {
 	const router = useRouter();
 
 	useEffect(() => {
-		const user = window.localStorage.getItem("user");
-		if (!user) {
-			const userObject = {
-				id: "1",
-			};
-			window.localStorage.setItem("user", JSON.stringify(userObject));
+		const userId = getLocalUserId();
+		if (!userId) {
+			(async () => {
+				const user = await fetch("http://localhost:3001/user/create").then(
+					(res) => res.json(),
+				);
+				setLocalUserId(user.id);
+			})();
 		}
 	}, []);
 

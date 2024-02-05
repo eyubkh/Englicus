@@ -1,9 +1,13 @@
 GET http://localhost:3001/user/create
 
 ###
-POST  http://localhost:3001/user
+PATCH  http://localhost:3001/user/e9c5bc38-c414-11ee-b76f-3a1a895bcf10
 Content-Type: application/json
 
 {
-    "id": "e9c5bc38-c414-11ee-b76f-3a1a895bcf10"
+    "welcome_completed": true
 }
+
+###
+GET  http://localhost:3001/user/e9c5bc38-c414-11ee-b76f-3a1a895bcf10
+

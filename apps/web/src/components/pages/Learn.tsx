@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Path from "./Path";
 import { Button } from "@components/atoms/buttons/Button";
+import { getLocalUserId } from "@src/utils/localStorageHandler";
 
 type UserProps = {
 	info: {
@@ -18,11 +19,19 @@ export default function Learn() {
 	const [user, setUser] = useState<null | UserProps>(null);
 
 	useEffect(() => {
-		const user = window.localStorage.getItem("user");
-		console.log("from learn path", user);
-		if (user) {
-			const userObject: UserProps = JSON.parse(user);
-			setUser(userObject);
+		const userId = getLocalUserId();
+		if (userId) {
+			(async () => {
+				const user = await fetch("http://localhost:3001/user", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({ id: userId }),
+				}).then((res) => res.json());
+
+				setUser(user);
+			})();
 		}
 	}, []);
 

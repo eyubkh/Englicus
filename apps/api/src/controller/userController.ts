@@ -9,16 +9,31 @@ export class UserController {
 	}
 
 	static async getUser(context: Context) {
-		const { id } = await context.req.json();
-
 		try {
+			const id = context.req.param("id");
 			if (!id) throw new Error("No user id provided");
 
-			const user = await UserModel.getUser({ id });
+			const userData = await UserModel.returnUserInfoById(id);
 
-			return context.json({ user });
+			return context.json(userData);
 		} catch (error) {
 			return context.json({ error: "No user id provided" });
+		}
+	}
+
+	static async updateUser(context: Context) {
+		try {
+			const body = await context.req.json();
+
+			const id = context.req.param("id");
+
+			if (!id) throw new Error("No user id provided");
+
+			const userData = await UserModel.updateUser(id, body);
+
+			return context.json(userData);
+		} catch (error) {
+			return context.json({ error: "general error" });
 		}
 	}
 }
