@@ -1,0 +1,9 @@
+GET http://localhost:3001/user/create
+
+###
+POST  http://localhost:3001/user
+Content-Type: application/json
+
+{
+    "id": "e9c5bc38-c414-11ee-b76f-3a1a895bcf10"
+}
