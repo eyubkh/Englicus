@@ -46,8 +46,6 @@ export class UserModel {
 			`${process.env.PSCALE_DB_URL}`,
 		);
 
-		console.log(welcome_completed);
-
 		if (welcome_completed) {
 			await connection.execute(
 				`UPDATE user SET welcome_completed = ? WHERE user_id = uuid_to_bin(?) `,
