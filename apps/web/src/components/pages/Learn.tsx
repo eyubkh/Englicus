@@ -22,14 +22,9 @@ export default function Learn() {
 		const userId = getLocalUserId();
 		if (userId) {
 			(async () => {
-				const user = await fetch("http://localhost:3001/user", {
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify({ id: userId }),
-				}).then((res) => res.json());
-
+				const user = await fetch(`${process.env.API_URL}/user/${userId}`).then(
+					(res) => res.json(),
+				);
 				setUser(user);
 			})();
 		}

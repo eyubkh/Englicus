@@ -1,6 +1,7 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import userRouter from "./router/userRouter";
+import lessonsRouter from "./router/lessonsRouter";
 require("dotenv").config();
 
 const app = new Hono();
@@ -13,6 +14,7 @@ app.use(
 );
 
 app.route("/user", userRouter);
+app.route("/lessons", lessonsRouter);
 
 export default {
 	port: 3001,

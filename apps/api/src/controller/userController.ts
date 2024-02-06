@@ -24,6 +24,7 @@ export class UserController {
 	static async updateUser(context: Context) {
 		try {
 			const body = await context.req.json();
+			console.log(body);
 
 			const id = context.req.param("id");
 

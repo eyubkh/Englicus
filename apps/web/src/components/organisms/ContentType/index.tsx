@@ -1,16 +1,32 @@
+import { AssistType } from "./AssistType";
+
 type Props = {
 	prompt: string;
 	options: string[];
 	setSelect: React.Dispatch<React.SetStateAction<string>>;
 	select: string;
+	type: string;
+	lesson: {
+		prompt: string;
+		choices: string[];
+	};
+	state: {
+		setUserAnswer: React.Dispatch<React.SetStateAction<string>>;
+		userAnswer: string;
+	};
 };
 
-export function ContainerType({
+export function ContentType({
 	prompt,
 	options = [],
 	setSelect,
 	select,
+	type,
+	lesson,
+	state,
 }: Props) {
+	if (type === "assist") return <AssistType state={state} lesson={lesson} />;
+
 	return (
 		<div className="h-full flex flex-col justify-center p-10">
 			<h1 className="text-2xl font-bold">{prompt}</h1>

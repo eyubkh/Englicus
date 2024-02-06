@@ -2,7 +2,7 @@ import { CrossedProgressBar } from "../molecules/CrossedProgressBar";
 import WelcomeFooter from "../organisms/footers/WelcomeFooter";
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
-import { ContainerType } from "../organisms/containerType";
+import { ContainerType } from "../organisms/ContentType";
 
 const data = [
 	{

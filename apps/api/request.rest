@@ -1,3 +1,6 @@
+
+
+######## USERS #########
 GET http://localhost:3001/user/create
 
 ###
@@ -10,4 +13,10 @@ Content-Type: application/json
 
 ###
 GET  http://localhost:3001/user/e9c5bc38-c414-11ee-b76f-3a1a895bcf10
+
+
+######## LESSONS #########
+GET  http://localhost:3001/lessons
+###
+GET  http://localhost:3001/lessons/vocabulary
 
